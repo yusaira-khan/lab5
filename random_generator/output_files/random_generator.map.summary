@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Tue Dec 01 19:21:18 2015
+Quartus II 64-Bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Full Version
+Revision Name : random_generator
+Top-level Entity Name : random_generator
+Family : Cyclone II
+Total logic elements : 34
+    Total combinational functions : 22
+    Dedicated logic registers : 25
+Total registers : 25
+Total pins : 14
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

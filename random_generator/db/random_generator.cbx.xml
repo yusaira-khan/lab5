@@ -1,0 +1,6 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="random_generator">
+		<CBX_INST_ENTRY INSTANCE_NAME="|random_generator|g24_possibility_table:i1|altsyncram:table_memory[0]__1" CBX_FILE_NAME="altsyncram_cug1.tdf"/>
+	</PROJECT>
+</LOG_ROOT>
