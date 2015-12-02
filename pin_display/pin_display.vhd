@@ -64,15 +64,15 @@ begin
 
 generate_now<=not(pushed);
 --saved<="00000000000";
-code0<=("0"&saved(2 downTO 0))+"0010";
-code1<=("0"&saved(5 downTO 3)) +"0010";
-code2<=("0"&saved(8 downTO 6)) +"0010";
-code3<=("0"&saved(11 downto 9)) +"0010";
+code0<=("0"&saved(2 downTO 0))+"1010";
+code1<=("0"&saved(5 downTO 3)) +"1010";
+code2<=("0"&saved(8 downTO 6)) +"1010";
+code3<=("0"&saved(11 downto 9)) +"1010";
 
 dec0:g24_7_segment_decoder port map(segments=>segments0,code=>code0,RippleBlank_In=>'1');
 dec1:g24_7_segment_decoder port map(segments=>segments1,code=>code1,RippleBlank_In=>'1');
 dec2:g24_7_segment_decoder port map(segments=>segments2,code=>code2,RippleBlank_In=>'1');
-dec3:g24_7_segment_decoder port map(segments=>segments3,code=>code3,RippleBlank_In=>'1');
+dec3:g24_7_segment_decoder port map(segments=>segments3,code=>code3,RippleBlank_In=>'1'); 
 
 rando: random_generator  port map(get_Output=>generate_now,clk=>clk,PATTERN=>PATTERN);
 	process (clk)

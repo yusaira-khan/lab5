@@ -12,7 +12,6 @@ signal reset : std_logic;
 signal last: std_logic;
 signal enable: std_logic;
 signal counter_Color :  std_logic_vector(11 downto 0);
-
 component g24_possibility_table is
 	port (TC_EN 	: in std_logic; -- table counter enable
 		  	TC_RST 	: in std_logic; -- table counter reset
@@ -31,7 +30,9 @@ i1: g24_possibility_table port map (TC_EN=>'1', TC_RST=>reset,Clk=>clk, tm_ADDR=
 reset_last: process(clk)
 begin
 	if rising_edge(clk) then
-		if last='1' then
+		if reset ='U' then 
+			reset<='1';
+		elsif last='1' then
 			reset<='1';
 		elsif last='0' then
 			reset<='0';
