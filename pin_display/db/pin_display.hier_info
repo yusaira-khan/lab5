@@ -1,17 +1,5 @@
 |pin_display
 pushed => random_generator:rando.Get_Output
-pushed => saved[0].ENA
-pushed => saved[1].ENA
-pushed => saved[2].ENA
-pushed => saved[3].ENA
-pushed => saved[4].ENA
-pushed => saved[5].ENA
-pushed => saved[6].ENA
-pushed => saved[7].ENA
-pushed => saved[8].ENA
-pushed => saved[9].ENA
-pushed => saved[10].ENA
-pushed => saved[11].ENA
 segments0[0] <= g24_7_segment_decoder:dec0.segments[0]
 segments0[1] <= g24_7_segment_decoder:dec0.segments[1]
 segments0[2] <= g24_7_segment_decoder:dec0.segments[2]
@@ -41,18 +29,6 @@ segments3[4] <= g24_7_segment_decoder:dec3.segments[4]
 segments3[5] <= g24_7_segment_decoder:dec3.segments[5]
 segments3[6] <= g24_7_segment_decoder:dec3.segments[6]
 CLK => random_generator:rando.CLK
-CLK => saved[0].CLK
-CLK => saved[1].CLK
-CLK => saved[2].CLK
-CLK => saved[3].CLK
-CLK => saved[4].CLK
-CLK => saved[5].CLK
-CLK => saved[6].CLK
-CLK => saved[7].CLK
-CLK => saved[8].CLK
-CLK => saved[9].CLK
-CLK => saved[10].CLK
-CLK => saved[11].CLK
 
 
 |pin_display|g24_7_segment_decoder:dec0
@@ -260,31 +236,19 @@ segments[6] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |pin_display|random_generator:rando
-Get_Output => PATTERN[0]~reg0.ENA
-Get_Output => PATTERN[1]~reg0.ENA
-Get_Output => PATTERN[2]~reg0.ENA
-Get_Output => PATTERN[3]~reg0.ENA
-Get_Output => PATTERN[4]~reg0.ENA
-Get_Output => PATTERN[5]~reg0.ENA
-Get_Output => PATTERN[6]~reg0.ENA
-Get_Output => PATTERN[7]~reg0.ENA
-Get_Output => PATTERN[8]~reg0.ENA
-Get_Output => PATTERN[9]~reg0.ENA
-Get_Output => PATTERN[10]~reg0.ENA
-Get_Output => PATTERN[11]~reg0.ENA
+Get_Output => PATTERN[0]~reg0.CLK
+Get_Output => PATTERN[1]~reg0.CLK
+Get_Output => PATTERN[2]~reg0.CLK
+Get_Output => PATTERN[3]~reg0.CLK
+Get_Output => PATTERN[4]~reg0.CLK
+Get_Output => PATTERN[5]~reg0.CLK
+Get_Output => PATTERN[6]~reg0.CLK
+Get_Output => PATTERN[7]~reg0.CLK
+Get_Output => PATTERN[8]~reg0.CLK
+Get_Output => PATTERN[9]~reg0.CLK
+Get_Output => PATTERN[10]~reg0.CLK
+Get_Output => PATTERN[11]~reg0.CLK
 CLK => g24_possibility_table:i1.CLK
-CLK => PATTERN[0]~reg0.CLK
-CLK => PATTERN[1]~reg0.CLK
-CLK => PATTERN[2]~reg0.CLK
-CLK => PATTERN[3]~reg0.CLK
-CLK => PATTERN[4]~reg0.CLK
-CLK => PATTERN[5]~reg0.CLK
-CLK => PATTERN[6]~reg0.CLK
-CLK => PATTERN[7]~reg0.CLK
-CLK => PATTERN[8]~reg0.CLK
-CLK => PATTERN[9]~reg0.CLK
-CLK => PATTERN[10]~reg0.CLK
-CLK => PATTERN[11]~reg0.CLK
 CLK => reset.CLK
 PATTERN[0] <= PATTERN[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 PATTERN[1] <= PATTERN[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE

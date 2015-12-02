@@ -37,17 +37,15 @@ begin
 		elsif last='0' then
 			reset<='0';
 		end if;
-		if get_Output ='1'
-			then PATTERN <=counter_Color;
-		end if;
+		
 	end if;
 end process;
 
---set_color: process(clk)
---begin
---	if rising_edge(clk) then
---		
---	end if;
---end process;
+set_color: process(get_Output)
+begin
+	if falling_edge(get_Output) then
+			PATTERN <=counter_Color;
+	end if;
+end process;
 
 end behavior;
