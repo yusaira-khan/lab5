@@ -48,3 +48,53 @@ set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
 set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 1
 set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (VHDL)"
 set_global_assignment -name EDA_OUTPUT_DATA_FORMAT VHDL -section_id eda_simulation
+set_global_assignment -name VHDL_FILE ../../lab4/lab4/datapath/g24_score_encoder.vhd
+set_global_assignment -name VHDL_FILE ../../lab4/lab4/datapath/color_counter.vhd
+set_global_assignment -name VHDL_FILE ../../lab4/lab4/datapath/datapath.vhd
+set_global_assignment -name VHDL_FILE ../../lab4/lab4/datapath/g24_color_matches.vhd
+set_global_assignment -name VHDL_FILE ../../lab4/lab4/datapath/g24_comp6.vhd
+set_global_assignment -name VHDL_FILE ../../lab4/lab4/datapath/g24_mastermind_score.vhd
+set_global_assignment -name VHDL_FILE ../../lab4/lab4/datapath/g24_minimum3.vhd
+set_global_assignment -name VHDL_FILE ../../lab4/lab4/datapath/g24_num_matches.vhd
+set_global_assignment -name VHDL_FILE ../../lab4/lab4/datapath/g24_num1s.vhd
+set_global_assignment -name VHDL_FILE ../../lab4/lab4/datapath/g24_possibility_table.vhd
+set_global_assignment -name VHDL_FILE ../random_generator/random_generator.vhd
+set_global_assignment -name VHDL_FILE pin_display.vhd
+set_global_assignment -name VHDL_FILE g24_mastermind_controller.vhd
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "3.3-V LVTTL"
+set_location_assignment PIN_L1 -to CLK
+set_location_assignment PIN_R22 -to pushed
+set_global_assignment -name SDC_FILE ../../lab3/possibilities/time.sdc
+set_global_assignment -name VHDL_FILE ../../lab3/g24_7_segment_decoder.vhd
+set_location_assignment PIN_J2 -to segments0[6]
+set_location_assignment PIN_J1 -to segments0[5]
+set_location_assignment PIN_H2 -to segments0[4]
+set_location_assignment PIN_H1 -to segments0[3]
+set_location_assignment PIN_F2 -to segments0[2]
+set_location_assignment PIN_F1 -to segments0[1]
+set_location_assignment PIN_E2 -to segments0[0]
+set_location_assignment PIN_E1 -to segments1[6]
+set_location_assignment PIN_H6 -to segments1[5]
+set_location_assignment PIN_H5 -to segments1[4]
+set_location_assignment PIN_H4 -to segments1[3]
+set_location_assignment PIN_G3 -to segments1[2]
+set_location_assignment PIN_D2 -to segments1[1]
+set_location_assignment PIN_D1 -to segments1[0]
+set_location_assignment PIN_G5 -to segments2[6]
+set_location_assignment PIN_G6 -to segments2[5]
+set_location_assignment PIN_C2 -to segments2[4]
+set_location_assignment PIN_C1 -to segments2[3]
+set_location_assignment PIN_E3 -to segments2[2]
+set_location_assignment PIN_E4 -to segments2[1]
+set_location_assignment PIN_D3 -to segments2[0]
+set_location_assignment PIN_F4 -to segments3[6]
+set_location_assignment PIN_D5 -to segments3[5]
+set_location_assignment PIN_D6 -to segments3[4]
+set_location_assignment PIN_J4 -to segments3[3]
+set_location_assignment PIN_L8 -to segments3[2]
+set_location_assignment PIN_F3 -to segments3[1]
+set_location_assignment PIN_D4 -to segments3[0]
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

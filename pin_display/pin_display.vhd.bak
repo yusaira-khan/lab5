@@ -1,0 +1,17 @@
+library ieee; -- allows use of the std_logic_vector type 
+use ieee.std_logic_1164.all; 
+
+entity pin_planner is
+	port (	Get_Output 	: in std_logic; -- table counter enable
+				CLK 	: in std_logic;
+				Color : out std_logic_vector(11 downto 0));
+end pin_planner;
+
+architecture arch of is pin_planner
+component random_generator is
+	port (	Get_Output 	: in std_logic; -- table counter enable
+				CLK 	: in std_logic;
+				Color : out std_logic_vector(11 downto 0));
+end component;
+begin
+end;
