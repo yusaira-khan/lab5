@@ -105,11 +105,6 @@ begin
 			end case;
 		end if;
 		elsif current_interface = user then
-		GR_LD <='1'; --save table guess
-		P_Sel <='0'; --use hidden pattern
-		GR_SEL <='1';--use user guess stored in initial guess
-		SR_LD<='0';--don't save scores
-		SR_SEL<='1';--don't use system score
 		end if;
 	end process;
 
