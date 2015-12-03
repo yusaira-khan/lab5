@@ -11,7 +11,9 @@ end g24_mastermind_controller;
 
 architecture arch of g24_mastermind_controller is
 	type algorithm_state is (A,B,C,D,E,F,G,H); 
+	type user_input_state is (INIT, HOLD, DISPLAY);
 	signal present_state: algorithm_state;
+	signal present_intput_state: user_input_state;
 	type interface_type is (User,system); 
 	signal current_interface: interface_type;
 begin
@@ -19,7 +21,7 @@ begin
 	begin
 	if current_interface = system then
 		if START = '0' then --asyncronous
-			solVED <= '0';
+			SOlVED <= '0';
 			present_state <=  A;
 			TC_RST <='1';
 		elsif  rising_edge(clk) then 
@@ -96,7 +98,7 @@ begin
 			when H=> 
 				TC_RST <='0';
 				if TM_OUT = '1' then
-					present_state <=D;
+					present_state <= D;
 					GR_LD <='1'; --save table guess
 					P_Sel <='0'; --use hidden pattern
 					TC_EN <='0'; --don't increment table guess
@@ -105,11 +107,30 @@ begin
 			end case;
 		end if;
 		elsif current_interface = user then
-		GR_LD <='1'; --save table guess
-		P_Sel <='0'; --use hidden pattern
-		GR_SEL <='1';--use user guess stored in initial guess
-		SR_LD<='0';--don't save scores
-		SR_SEL<='1';--don't use system score
+			if START = '0' then --asyncronous
+				SOlVED <= '0';
+				present_input_state <= INIT;
+				TC_RST <='1';
+			elsif  rising_edge(clk) then 
+			
+				case present_input_state is
+					
+					when INIT=>
+					
+					when HOLD=>
+					
+					when DISPLAY=>
+					
+					-- if start = '1' then
+					-- 	GR_LD <='1'; --save table guess
+					-- 	P_Sel <='0'; --use hidden pattern
+					-- 	GR_SEL <='1';--use user guess stored in initial guess
+					-- 	SR_LD <='0';--don't save scores
+					-- 	SR_SEL<='1';--don't use system score
+					-- end if;
+				
+				end case;
+			end if;
 		end if;
 	end process;
 
