@@ -16,7 +16,7 @@
 -- PROGRAM "Quartus II 64-Bit"
 -- VERSION "Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version"
 
--- DATE "12/02/2015 18:45:45"
+-- DATE "12/03/2015 13:53:24"
 
 -- 
 -- Device: Altera EP2C20F484C7 Package FBGA484
@@ -75,8 +75,8 @@ END user_pins;
 -- last	=>  Location: PIN_R20,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 -- color[1]	=>  Location: PIN_L21,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
 -- shift	=>  Location: PIN_R22,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
--- color[2]	=>  Location: PIN_L22,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
--- color[0]	=>  Location: PIN_M22,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+-- color[2]	=>  Location: PIN_M22,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+-- color[0]	=>  Location: PIN_L22,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
 
 
 ARCHITECTURE structure OF user_pins IS
@@ -96,10 +96,10 @@ SIGNAL ww_segments1 : std_logic_vector(6 DOWNTO 0);
 SIGNAL ww_segments2 : std_logic_vector(6 DOWNTO 0);
 SIGNAL ww_segments3 : std_logic_vector(6 DOWNTO 0);
 SIGNAL ww_last : std_logic;
+SIGNAL \rando|PATTERN[2]~feeder_combout\ : std_logic;
 SIGNAL \rando|current_pin[0]~0_combout\ : std_logic;
 SIGNAL \rando|Mux13~0_combout\ : std_logic;
 SIGNAL \rando|Mux10~0_combout\ : std_logic;
-SIGNAL \rando|PATTERN[0]~feeder_combout\ : std_logic;
 SIGNAL \dec0|Mux7~0_combout\ : std_logic;
 SIGNAL \dec0|Mux6~0_combout\ : std_logic;
 SIGNAL \dec0|Mux5~0_combout\ : std_logic;
@@ -108,7 +108,6 @@ SIGNAL \dec0|Mux3~0_combout\ : std_logic;
 SIGNAL \dec0|Mux2~0_combout\ : std_logic;
 SIGNAL \dec0|Mux1~0_combout\ : std_logic;
 SIGNAL \rando|Mux4~0_combout\ : std_logic;
-SIGNAL \rando|PATTERN[5]~feeder_combout\ : std_logic;
 SIGNAL \rando|PATTERN[4]~feeder_combout\ : std_logic;
 SIGNAL \dec1|Mux7~0_combout\ : std_logic;
 SIGNAL \dec1|Mux6~0_combout\ : std_logic;
@@ -118,7 +117,7 @@ SIGNAL \dec1|Mux3~0_combout\ : std_logic;
 SIGNAL \dec1|Mux2~0_combout\ : std_logic;
 SIGNAL \dec1|Mux1~0_combout\ : std_logic;
 SIGNAL \rando|Mux4~1_combout\ : std_logic;
-SIGNAL \rando|PATTERN[6]~feeder_combout\ : std_logic;
+SIGNAL \rando|PATTERN[8]~feeder_combout\ : std_logic;
 SIGNAL \dec2|Mux7~0_combout\ : std_logic;
 SIGNAL \dec2|Mux6~0_combout\ : std_logic;
 SIGNAL \dec2|Mux5~0_combout\ : std_logic;
@@ -174,7 +173,7 @@ ww_devpor <= devpor;
 \dec0|ALT_INV_Mux1~0_combout\ <= NOT \dec0|Mux1~0_combout\;
 \dec0|ALT_INV_Mux6~0_combout\ <= NOT \dec0|Mux6~0_combout\;
 
--- Location: PIN_L22,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+-- Location: PIN_M22,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
 \color[2]~I\ : cycloneii_io
 -- pragma translate_off
 GENERIC MAP (
@@ -199,6 +198,20 @@ PORT MAP (
 	oe => GND,
 	padio => ww_color(2),
 	combout => \color~combout\(2));
+
+-- Location: LCCOMB_X2_Y18_N14
+\rando|PATTERN[2]~feeder\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \rando|PATTERN[2]~feeder_combout\ = \color~combout\(2)
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1111111100000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	datad => \color~combout\(2),
+	combout => \rando|PATTERN[2]~feeder_combout\);
 
 -- Location: LCCOMB_X3_Y18_N30
 \rando|current_pin[0]~0\ : cycloneii_lcell_comb
@@ -266,14 +279,13 @@ PORT MAP (
 \rando|PATTERN[2]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \ALT_INV_shift~combout\,
-	sdata => \color~combout\(2),
-	sload => VCC,
+	datain => \rando|PATTERN[2]~feeder_combout\,
 	ena => \rando|Mux10~0_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	regout => \rando|PATTERN\(2));
 
--- Location: PIN_M22,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+-- Location: PIN_L22,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
 \color[0]~I\ : cycloneii_io
 -- pragma translate_off
 GENERIC MAP (
@@ -299,25 +311,12 @@ PORT MAP (
 	padio => ww_color(0),
 	combout => \color~combout\(0));
 
--- Location: LCCOMB_X2_Y18_N16
-\rando|PATTERN[0]~feeder\ : cycloneii_lcell_comb
--- Equation(s):
--- \rando|PATTERN[0]~feeder_combout\ = \color~combout\(0)
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1111111100000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	datad => \color~combout\(0),
-	combout => \rando|PATTERN[0]~feeder_combout\);
-
 -- Location: LCFF_X2_Y18_N17
 \rando|PATTERN[0]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \ALT_INV_shift~combout\,
-	datain => \rando|PATTERN[0]~feeder_combout\,
+	sdata => \color~combout\(0),
+	sload => VCC,
 	ena => \rando|Mux10~0_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
@@ -496,25 +495,12 @@ PORT MAP (
 	devpor => ww_devpor,
 	regout => \rando|PATTERN\(3));
 
--- Location: LCCOMB_X3_Y18_N14
-\rando|PATTERN[5]~feeder\ : cycloneii_lcell_comb
--- Equation(s):
--- \rando|PATTERN[5]~feeder_combout\ = \color~combout\(2)
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1111111100000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	datad => \color~combout\(2),
-	combout => \rando|PATTERN[5]~feeder_combout\);
-
 -- Location: LCFF_X3_Y18_N15
 \rando|PATTERN[5]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \ALT_INV_shift~combout\,
-	datain => \rando|PATTERN[5]~feeder_combout\,
+	sdata => \color~combout\(2),
+	sload => VCC,
 	ena => \rando|Mux4~0_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
@@ -680,10 +666,21 @@ PORT MAP (
 	devpor => ww_devpor,
 	regout => \rando|PATTERN\(7));
 
--- Location: LCCOMB_X2_Y18_N30
-\rando|PATTERN[6]~feeder\ : cycloneii_lcell_comb
+-- Location: LCFF_X2_Y18_N31
+\rando|PATTERN[6]\ : cycloneii_lcell_ff
+PORT MAP (
+	clk => \ALT_INV_shift~combout\,
+	sdata => \color~combout\(0),
+	sload => VCC,
+	ena => \rando|Mux4~1_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	regout => \rando|PATTERN\(6));
+
+-- Location: LCCOMB_X2_Y18_N12
+\rando|PATTERN[8]~feeder\ : cycloneii_lcell_comb
 -- Equation(s):
--- \rando|PATTERN[6]~feeder_combout\ = \color~combout\(0)
+-- \rando|PATTERN[8]~feeder_combout\ = \color~combout\(2)
 
 -- pragma translate_off
 GENERIC MAP (
@@ -691,25 +688,14 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	datad => \color~combout\(0),
-	combout => \rando|PATTERN[6]~feeder_combout\);
-
--- Location: LCFF_X2_Y18_N31
-\rando|PATTERN[6]\ : cycloneii_lcell_ff
-PORT MAP (
-	clk => \ALT_INV_shift~combout\,
-	datain => \rando|PATTERN[6]~feeder_combout\,
-	ena => \rando|Mux4~1_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	regout => \rando|PATTERN\(6));
+	datad => \color~combout\(2),
+	combout => \rando|PATTERN[8]~feeder_combout\);
 
 -- Location: LCFF_X2_Y18_N13
 \rando|PATTERN[8]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \ALT_INV_shift~combout\,
-	sdata => \color~combout\(2),
-	sload => VCC,
+	datain => \rando|PATTERN[8]~feeder_combout\,
 	ena => \rando|Mux4~1_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,

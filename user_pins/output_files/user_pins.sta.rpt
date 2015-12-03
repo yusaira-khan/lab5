@@ -1,5 +1,5 @@
 TimeQuest Timing Analyzer report for user_pins
-Wed Dec 02 18:45:42 2015
+Thu Dec 03 13:53:18 2015
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
 
 
@@ -308,10 +308,10 @@ No paths to report.
 +-----------+------------+--------+--------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
 +-----------+------------+--------+--------+------------+-----------------+
-; color[*]  ; shift      ; -0.388 ; -0.388 ; Fall       ; shift           ;
-;  color[0] ; shift      ; -0.388 ; -0.388 ; Fall       ; shift           ;
+; color[*]  ; shift      ; -0.387 ; -0.387 ; Fall       ; shift           ;
+;  color[0] ; shift      ; -0.393 ; -0.393 ; Fall       ; shift           ;
 ;  color[1] ; shift      ; -0.409 ; -0.409 ; Fall       ; shift           ;
-;  color[2] ; shift      ; -0.395 ; -0.395 ; Fall       ; shift           ;
+;  color[2] ; shift      ; -0.387 ; -0.387 ; Fall       ; shift           ;
 +-----------+------------+--------+--------+------------+-----------------+
 
 
@@ -321,9 +321,9 @@ No paths to report.
 ; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +-----------+------------+-------+-------+------------+-----------------+
 ; color[*]  ; shift      ; 1.072 ; 1.072 ; Fall       ; shift           ;
-;  color[0] ; shift      ; 1.049 ; 1.049 ; Fall       ; shift           ;
+;  color[0] ; shift      ; 0.788 ; 0.788 ; Fall       ; shift           ;
 ;  color[1] ; shift      ; 1.072 ; 1.072 ; Fall       ; shift           ;
-;  color[2] ; shift      ; 0.788 ; 0.788 ; Fall       ; shift           ;
+;  color[2] ; shift      ; 1.049 ; 1.049 ; Fall       ; shift           ;
 +-----------+------------+-------+-------+------------+-----------------+
 
 
@@ -600,10 +600,10 @@ No paths to report.
 +-----------+------------+--------+--------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
 +-----------+------------+--------+--------+------------+-----------------+
-; color[*]  ; shift      ; -0.308 ; -0.308 ; Fall       ; shift           ;
-;  color[0] ; shift      ; -0.308 ; -0.308 ; Fall       ; shift           ;
+; color[*]  ; shift      ; -0.307 ; -0.307 ; Fall       ; shift           ;
+;  color[0] ; shift      ; -0.318 ; -0.318 ; Fall       ; shift           ;
 ;  color[1] ; shift      ; -0.330 ; -0.330 ; Fall       ; shift           ;
-;  color[2] ; shift      ; -0.317 ; -0.317 ; Fall       ; shift           ;
+;  color[2] ; shift      ; -0.307 ; -0.307 ; Fall       ; shift           ;
 +-----------+------------+--------+--------+------------+-----------------+
 
 
@@ -613,9 +613,9 @@ No paths to report.
 ; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +-----------+------------+-------+-------+------------+-----------------+
 ; color[*]  ; shift      ; 0.635 ; 0.635 ; Fall       ; shift           ;
-;  color[0] ; shift      ; 0.612 ; 0.612 ; Fall       ; shift           ;
+;  color[0] ; shift      ; 0.527 ; 0.527 ; Fall       ; shift           ;
 ;  color[1] ; shift      ; 0.635 ; 0.635 ; Fall       ; shift           ;
-;  color[2] ; shift      ; 0.527 ; 0.527 ; Fall       ; shift           ;
+;  color[2] ; shift      ; 0.612 ; 0.612 ; Fall       ; shift           ;
 +-----------+------------+-------+-------+------------+-----------------+
 
 
@@ -718,10 +718,10 @@ No paths to report.
 +-----------+------------+--------+--------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
 +-----------+------------+--------+--------+------------+-----------------+
-; color[*]  ; shift      ; -0.308 ; -0.308 ; Fall       ; shift           ;
-;  color[0] ; shift      ; -0.308 ; -0.308 ; Fall       ; shift           ;
+; color[*]  ; shift      ; -0.307 ; -0.307 ; Fall       ; shift           ;
+;  color[0] ; shift      ; -0.318 ; -0.318 ; Fall       ; shift           ;
 ;  color[1] ; shift      ; -0.330 ; -0.330 ; Fall       ; shift           ;
-;  color[2] ; shift      ; -0.317 ; -0.317 ; Fall       ; shift           ;
+;  color[2] ; shift      ; -0.307 ; -0.307 ; Fall       ; shift           ;
 +-----------+------------+--------+--------+------------+-----------------+
 
 
@@ -731,9 +731,9 @@ No paths to report.
 ; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +-----------+------------+-------+-------+------------+-----------------+
 ; color[*]  ; shift      ; 1.072 ; 1.072 ; Fall       ; shift           ;
-;  color[0] ; shift      ; 1.049 ; 1.049 ; Fall       ; shift           ;
+;  color[0] ; shift      ; 0.788 ; 0.788 ; Fall       ; shift           ;
 ;  color[1] ; shift      ; 1.072 ; 1.072 ; Fall       ; shift           ;
-;  color[2] ; shift      ; 0.788 ; 0.788 ; Fall       ; shift           ;
+;  color[2] ; shift      ; 1.049 ; 1.049 ; Fall       ; shift           ;
 +-----------+------------+-------+-------+------------+-----------------+
 
 
@@ -871,7 +871,7 @@ No dedicated SERDES Receiver circuitry present in device or used in design
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
-    Info: Processing started: Wed Dec 02 18:45:38 2015
+    Info: Processing started: Thu Dec 03 13:53:13 2015
 Info: Command: quartus_sta user_pins -c user_pins
 Info: qsta_default_script.tcl version: #1
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -920,8 +920,8 @@ Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 3 warnings
     Info: Peak virtual memory: 431 megabytes
-    Info: Processing ended: Wed Dec 02 18:45:42 2015
-    Info: Elapsed time: 00:00:04
+    Info: Processing ended: Thu Dec 03 13:53:18 2015
+    Info: Elapsed time: 00:00:05
     Info: Total CPU time (on all processors): 00:00:01
 
 

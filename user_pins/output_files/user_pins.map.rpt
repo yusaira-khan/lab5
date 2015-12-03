@@ -1,5 +1,5 @@
 Analysis & Synthesis report for user_pins
-Wed Dec 02 18:45:14 2015
+Thu Dec 03 13:52:48 2015
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
 
 
@@ -45,7 +45,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                          ;
 +------------------------------------+--------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Dec 02 18:45:14 2015            ;
+; Analysis & Synthesis Status        ; Successful - Thu Dec 03 13:52:48 2015            ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Full Version ;
 ; Revision Name                      ; user_pins                                        ;
 ; Top-level Entity Name              ; user_pins                                        ;
@@ -280,7 +280,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -290,7 +290,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
-    Info: Processing started: Wed Dec 02 18:45:09 2015
+    Info: Processing started: Thu Dec 03 13:52:38 2015
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off user_pins -c user_pins
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file /323/lab5/user_input/user_input.vhd
@@ -302,6 +302,9 @@ Info (12021): Found 2 design units, including 1 entities, in source file /323/la
 Info (12021): Found 2 design units, including 1 entities, in source file /323/lab3/g24_7_segment_decoder.vhd
     Info (12022): Found design unit 1: g24_7_segment_decoder-arch
     Info (12023): Found entity 1: g24_7_segment_decoder
+Info (12021): Found 2 design units, including 1 entities, in source file g24_mastermind_controller.vhd
+    Info (12022): Found design unit 1: g24_mastermind_controller-arch
+    Info (12023): Found entity 1: g24_mastermind_controller
 Info (12127): Elaborating entity "user_pins" for the top level hierarchy
 Info (12128): Elaborating entity "g24_7_segment_decoder" for hierarchy "g24_7_segment_decoder:dec0"
 Info (12128): Elaborating entity "user_input" for hierarchy "user_input:rando"
@@ -312,9 +315,9 @@ Info (21057): Implemented 80 device resources after synthesis - the final resour
     Info (21059): Implemented 29 output pins
     Info (21061): Implemented 47 logic cells
 Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 505 megabytes
-    Info: Processing ended: Wed Dec 02 18:45:14 2015
-    Info: Elapsed time: 00:00:05
+    Info: Peak virtual memory: 490 megabytes
+    Info: Processing ended: Thu Dec 03 13:52:48 2015
+    Info: Elapsed time: 00:00:10
     Info: Total CPU time (on all processors): 00:00:02
 
 

@@ -10,17 +10,20 @@ TM_IN,TM_EN,TC_EN,TC_RST :out std_logic
 end g24_mastermind_controller;
 
 architecture arch of g24_mastermind_controller is
-	type state_type is (A,B,C,D,E,F,G,H); 
-	signal present_state: state_type;
+	type algorithm_state is (A,B,C,D,E,F,G,H); 
+	signal present_state: algorithm_state;
+	type interface_type is (User,system); 
+	signal current_interface: interface_type;
 begin
 	process(start,clk)
 	begin
-
+	if current_interface = system then
 		if START = '0' then --asyncronous
 			solVED <= '0';
 			present_state <=  A;
 			TC_RST <='1';
 		elsif  rising_edge(clk) then 
+		
 			case present_state is
 			when A => --writing all possibilities as possible
 				if START = '1' then
@@ -100,7 +103,8 @@ begin
 					--GR_SEL=0;--use guess given in 
 				end if;
 			end case;
-
+		end if;
+		elsif current_interface = user then
 		end if;
 	end process;
 
