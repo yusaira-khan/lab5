@@ -1,5 +1,5 @@
-Assembler report for random_generator
-Wed Dec 02 17:14:27 2015
+Assembler report for user_pins
+Wed Dec 02 18:45:37 2015
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
 
 
@@ -10,8 +10,8 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Ver
   2. Assembler Summary
   3. Assembler Settings
   4. Assembler Generated Files
-  5. Assembler Device Options: P:/323/lab5/random_generator/output_files/random_generator.sof
-  6. Assembler Device Options: P:/323/lab5/random_generator/output_files/random_generator.pof
+  5. Assembler Device Options: P:/323/lab5/user_pins/output_files/user_pins.sof
+  6. Assembler Device Options: P:/323/lab5/user_pins/output_files/user_pins.pof
   7. Assembler Messages
 
 
@@ -38,9 +38,9 @@ applicable agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Wed Dec 02 17:14:27 2015 ;
-; Revision Name         ; random_generator                      ;
-; Top-level Entity Name ; random_generator                      ;
+; Assembler Status      ; Successful - Wed Dec 02 18:45:37 2015 ;
+; Revision Name         ; user_pins                             ;
+; Top-level Entity Name ; user_pins                             ;
 ; Family                ; Cyclone II                            ;
 ; Device                ; EP2C20F484C7                          ;
 +-----------------------+---------------------------------------+
@@ -78,37 +78,37 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------------+----------+---------------+
 
 
-+----------------------------------------------------------------+
-; Assembler Generated Files                                      ;
-+----------------------------------------------------------------+
-; File Name                                                      ;
-+----------------------------------------------------------------+
-; P:/323/lab5/random_generator/output_files/random_generator.sof ;
-; P:/323/lab5/random_generator/output_files/random_generator.pof ;
-+----------------------------------------------------------------+
++--------------------------------------------------+
+; Assembler Generated Files                        ;
++--------------------------------------------------+
+; File Name                                        ;
++--------------------------------------------------+
+; P:/323/lab5/user_pins/output_files/user_pins.sof ;
+; P:/323/lab5/user_pins/output_files/user_pins.pof ;
++--------------------------------------------------+
 
 
-+------------------------------------------------------------------------------------------+
-; Assembler Device Options: P:/323/lab5/random_generator/output_files/random_generator.sof ;
-+----------------+-------------------------------------------------------------------------+
-; Option         ; Setting                                                                 ;
-+----------------+-------------------------------------------------------------------------+
-; Device         ; EP2C20F484C7                                                            ;
-; JTAG usercode  ; 0x001B5983                                                              ;
-; Checksum       ; 0x001B5983                                                              ;
-+----------------+-------------------------------------------------------------------------+
++----------------------------------------------------------------------------+
+; Assembler Device Options: P:/323/lab5/user_pins/output_files/user_pins.sof ;
++----------------+-----------------------------------------------------------+
+; Option         ; Setting                                                   ;
++----------------+-----------------------------------------------------------+
+; Device         ; EP2C20F484C7                                              ;
+; JTAG usercode  ; 0x001B8F2C                                                ;
+; Checksum       ; 0x001B8F2C                                                ;
++----------------+-----------------------------------------------------------+
 
 
-+------------------------------------------------------------------------------------------+
-; Assembler Device Options: P:/323/lab5/random_generator/output_files/random_generator.pof ;
-+--------------------+---------------------------------------------------------------------+
-; Option             ; Setting                                                             ;
-+--------------------+---------------------------------------------------------------------+
-; Device             ; EPCS16                                                              ;
-; JTAG usercode      ; 0x00000000                                                          ;
-; Checksum           ; 0x1DD92985                                                          ;
-; Compression Ratio  ; 3                                                                   ;
-+--------------------+---------------------------------------------------------------------+
++----------------------------------------------------------------------------+
+; Assembler Device Options: P:/323/lab5/user_pins/output_files/user_pins.pof ;
++--------------------+-------------------------------------------------------+
+; Option             ; Setting                                               ;
++--------------------+-------------------------------------------------------+
+; Device             ; EPCS16                                                ;
+; JTAG usercode      ; 0x00000000                                            ;
+; Checksum           ; 0x1DD89AC7                                            ;
+; Compression Ratio  ; 3                                                     ;
++--------------------+-------------------------------------------------------+
 
 
 +--------------------+
@@ -117,14 +117,14 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Assembler
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
-    Info: Processing started: Wed Dec 02 17:14:22 2015
-Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off random_generator -c random_generator
+    Info: Processing started: Wed Dec 02 18:45:33 2015
+Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off user_pins -c user_pins
 Info (115031): Writing out detailed assembly data for power analysis
 Info (115030): Assembler is generating device programming files
 Info: Quartus II 64-Bit Assembler was successful. 0 errors, 0 warnings
     Info: Peak virtual memory: 419 megabytes
-    Info: Processing ended: Wed Dec 02 17:14:27 2015
-    Info: Elapsed time: 00:00:05
-    Info: Total CPU time (on all processors): 00:00:01
+    Info: Processing ended: Wed Dec 02 18:45:37 2015
+    Info: Elapsed time: 00:00:04
+    Info: Total CPU time (on all processors): 00:00:02
 
 

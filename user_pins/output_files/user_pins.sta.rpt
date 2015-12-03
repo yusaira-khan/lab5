@@ -1,0 +1,927 @@
+TimeQuest Timing Analyzer report for user_pins
+Wed Dec 02 18:45:42 2015
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow Model Fmax Summary
+  6. Slow Model Setup Summary
+  7. Slow Model Hold Summary
+  8. Slow Model Recovery Summary
+  9. Slow Model Removal Summary
+ 10. Slow Model Minimum Pulse Width Summary
+ 11. Slow Model Setup: 'shift'
+ 12. Slow Model Hold: 'shift'
+ 13. Slow Model Minimum Pulse Width: 'shift'
+ 14. Setup Times
+ 15. Hold Times
+ 16. Clock to Output Times
+ 17. Minimum Clock to Output Times
+ 18. Fast Model Setup Summary
+ 19. Fast Model Hold Summary
+ 20. Fast Model Recovery Summary
+ 21. Fast Model Removal Summary
+ 22. Fast Model Minimum Pulse Width Summary
+ 23. Fast Model Setup: 'shift'
+ 24. Fast Model Hold: 'shift'
+ 25. Fast Model Minimum Pulse Width: 'shift'
+ 26. Setup Times
+ 27. Hold Times
+ 28. Clock to Output Times
+ 29. Minimum Clock to Output Times
+ 30. Multicorner Timing Analysis Summary
+ 31. Setup Times
+ 32. Hold Times
+ 33. Clock to Output Times
+ 34. Minimum Clock to Output Times
+ 35. Setup Transfers
+ 36. Hold Transfers
+ 37. Report TCCS
+ 38. Report RSKM
+ 39. Unconstrained Paths
+ 40. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-----------------------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                                       ;
++--------------------+--------------------------------------------------------------------+
+; Quartus II Version ; Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version ;
+; Revision Name      ; user_pins                                                          ;
+; Device Family      ; Cyclone II                                                         ;
+; Device Name        ; EP2C20F484C7                                                       ;
+; Timing Models      ; Final                                                              ;
+; Delay Model        ; Combined                                                           ;
+; Rise/Fall Delays   ; Unavailable                                                        ;
++--------------------+--------------------------------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-4         ;   0.0%      ;
++----------------------------+-------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                            ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------+
+; Clock Name ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets   ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------+
+; shift      ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { shift } ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------+
+
+
++-----------------------------------------------------------------------------------------------------------+
+; Slow Model Fmax Summary                                                                                   ;
++------------+-----------------+------------+---------------------------------------------------------------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note                                                          ;
++------------+-----------------+------------+---------------------------------------------------------------+
+; 474.16 MHz ; 405.02 MHz      ; shift      ; limit due to minimum period restriction (max I/O toggle rate) ;
++------------+-----------------+------------+---------------------------------------------------------------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++--------------------------------+
+; Slow Model Setup Summary       ;
++-------+--------+---------------+
+; Clock ; Slack  ; End Point TNS ;
++-------+--------+---------------+
+; shift ; -1.109 ; -12.645       ;
++-------+--------+---------------+
+
+
++-------------------------------+
+; Slow Model Hold Summary       ;
++-------+-------+---------------+
+; Clock ; Slack ; End Point TNS ;
++-------+-------+---------------+
+; shift ; 0.445 ; 0.000         ;
++-------+-------+---------------+
+
+
+-------------------------------
+; Slow Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Slow Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++----------------------------------------+
+; Slow Model Minimum Pulse Width Summary ;
++-------+--------+-----------------------+
+; Clock ; Slack  ; End Point TNS         ;
++-------+--------+-----------------------+
+; shift ; -1.469 ; -19.799               ;
++-------+--------+-----------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'shift'                                                                                                                        ;
++--------+---------------------------------+---------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                       ; To Node                         ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+---------------------------------+---------------------------------+--------------+-------------+--------------+------------+------------+
+; -1.109 ; user_input:rando|current_pin[0] ; user_input:rando|PATTERN[10]    ; shift        ; shift       ; 1.000        ; 0.229      ; 2.376      ;
+; -1.109 ; user_input:rando|current_pin[0] ; user_input:rando|PATTERN[11]    ; shift        ; shift       ; 1.000        ; 0.229      ; 2.376      ;
+; -1.109 ; user_input:rando|current_pin[0] ; user_input:rando|PATTERN[9]     ; shift        ; shift       ; 1.000        ; 0.229      ; 2.376      ;
+; -1.048 ; user_input:rando|current_pin[0] ; user_input:rando|PATTERN[1]     ; shift        ; shift       ; 1.000        ; 0.239      ; 2.325      ;
+; -1.048 ; user_input:rando|current_pin[0] ; user_input:rando|PATTERN[2]     ; shift        ; shift       ; 1.000        ; 0.239      ; 2.325      ;
+; -1.048 ; user_input:rando|current_pin[0] ; user_input:rando|PATTERN[0]     ; shift        ; shift       ; 1.000        ; 0.239      ; 2.325      ;
+; -1.014 ; user_input:rando|current_pin[0] ; user_input:rando|PATTERN[7]     ; shift        ; shift       ; 1.000        ; 0.239      ; 2.291      ;
+; -1.014 ; user_input:rando|current_pin[0] ; user_input:rando|PATTERN[8]     ; shift        ; shift       ; 1.000        ; 0.239      ; 2.291      ;
+; -1.014 ; user_input:rando|current_pin[0] ; user_input:rando|PATTERN[6]     ; shift        ; shift       ; 1.000        ; 0.239      ; 2.291      ;
+; -0.871 ; user_input:rando|current_pin[1] ; user_input:rando|PATTERN[4]     ; shift        ; shift       ; 1.000        ; 0.231      ; 2.140      ;
+; -0.871 ; user_input:rando|current_pin[1] ; user_input:rando|PATTERN[5]     ; shift        ; shift       ; 1.000        ; 0.231      ; 2.140      ;
+; -0.871 ; user_input:rando|current_pin[1] ; user_input:rando|PATTERN[3]     ; shift        ; shift       ; 1.000        ; 0.231      ; 2.140      ;
+; -0.825 ; user_input:rando|current_pin[1] ; user_input:rando|PATTERN[10]    ; shift        ; shift       ; 1.000        ; 0.229      ; 2.092      ;
+; -0.825 ; user_input:rando|current_pin[1] ; user_input:rando|PATTERN[11]    ; shift        ; shift       ; 1.000        ; 0.229      ; 2.092      ;
+; -0.825 ; user_input:rando|current_pin[1] ; user_input:rando|PATTERN[9]     ; shift        ; shift       ; 1.000        ; 0.229      ; 2.092      ;
+; -0.807 ; user_input:rando|current_pin[1] ; user_input:rando|PATTERN[7]     ; shift        ; shift       ; 1.000        ; 0.239      ; 2.084      ;
+; -0.807 ; user_input:rando|current_pin[1] ; user_input:rando|PATTERN[8]     ; shift        ; shift       ; 1.000        ; 0.239      ; 2.084      ;
+; -0.807 ; user_input:rando|current_pin[1] ; user_input:rando|PATTERN[6]     ; shift        ; shift       ; 1.000        ; 0.239      ; 2.084      ;
+; -0.806 ; user_input:rando|current_pin[1] ; user_input:rando|PATTERN[1]     ; shift        ; shift       ; 1.000        ; 0.239      ; 2.083      ;
+; -0.806 ; user_input:rando|current_pin[1] ; user_input:rando|PATTERN[2]     ; shift        ; shift       ; 1.000        ; 0.239      ; 2.083      ;
+; -0.806 ; user_input:rando|current_pin[1] ; user_input:rando|PATTERN[0]     ; shift        ; shift       ; 1.000        ; 0.239      ; 2.083      ;
+; -0.590 ; user_input:rando|current_pin[0] ; user_input:rando|PATTERN[4]     ; shift        ; shift       ; 1.000        ; 0.231      ; 1.859      ;
+; -0.590 ; user_input:rando|current_pin[0] ; user_input:rando|PATTERN[5]     ; shift        ; shift       ; 1.000        ; 0.231      ; 1.859      ;
+; -0.590 ; user_input:rando|current_pin[0] ; user_input:rando|PATTERN[3]     ; shift        ; shift       ; 1.000        ; 0.231      ; 1.859      ;
+; -0.519 ; user_input:rando|current_pin[0] ; user_input:rando|last           ; shift        ; shift       ; 1.000        ; 0.224      ; 1.781      ;
+; 0.097  ; user_input:rando|current_pin[1] ; user_input:rando|last           ; shift        ; shift       ; 1.000        ; 0.224      ; 1.165      ;
+; 0.109  ; user_input:rando|current_pin[0] ; user_input:rando|current_pin[1] ; shift        ; shift       ; 1.000        ; 0.000      ; 0.929      ;
+; 0.307  ; user_input:rando|current_pin[0] ; user_input:rando|current_pin[0] ; shift        ; shift       ; 1.000        ; 0.000      ; 0.731      ;
+; 0.307  ; user_input:rando|last           ; user_input:rando|last           ; shift        ; shift       ; 1.000        ; 0.000      ; 0.731      ;
+; 0.307  ; user_input:rando|current_pin[1] ; user_input:rando|current_pin[1] ; shift        ; shift       ; 1.000        ; 0.000      ; 0.731      ;
++--------+---------------------------------+---------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'shift'                                                                                                                        ;
++-------+---------------------------------+---------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                       ; To Node                         ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+---------------------------------+---------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.445 ; user_input:rando|current_pin[0] ; user_input:rando|current_pin[0] ; shift        ; shift       ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; user_input:rando|current_pin[1] ; user_input:rando|current_pin[1] ; shift        ; shift       ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; user_input:rando|last           ; user_input:rando|last           ; shift        ; shift       ; 0.000        ; 0.000      ; 0.731      ;
+; 0.643 ; user_input:rando|current_pin[0] ; user_input:rando|current_pin[1] ; shift        ; shift       ; 0.000        ; 0.000      ; 0.929      ;
+; 0.655 ; user_input:rando|current_pin[1] ; user_input:rando|last           ; shift        ; shift       ; 0.000        ; 0.224      ; 1.165      ;
+; 1.271 ; user_input:rando|current_pin[0] ; user_input:rando|last           ; shift        ; shift       ; 0.000        ; 0.224      ; 1.781      ;
+; 1.342 ; user_input:rando|current_pin[0] ; user_input:rando|PATTERN[4]     ; shift        ; shift       ; 0.000        ; 0.231      ; 1.859      ;
+; 1.342 ; user_input:rando|current_pin[0] ; user_input:rando|PATTERN[5]     ; shift        ; shift       ; 0.000        ; 0.231      ; 1.859      ;
+; 1.342 ; user_input:rando|current_pin[0] ; user_input:rando|PATTERN[3]     ; shift        ; shift       ; 0.000        ; 0.231      ; 1.859      ;
+; 1.558 ; user_input:rando|current_pin[1] ; user_input:rando|PATTERN[1]     ; shift        ; shift       ; 0.000        ; 0.239      ; 2.083      ;
+; 1.558 ; user_input:rando|current_pin[1] ; user_input:rando|PATTERN[2]     ; shift        ; shift       ; 0.000        ; 0.239      ; 2.083      ;
+; 1.558 ; user_input:rando|current_pin[1] ; user_input:rando|PATTERN[0]     ; shift        ; shift       ; 0.000        ; 0.239      ; 2.083      ;
+; 1.559 ; user_input:rando|current_pin[1] ; user_input:rando|PATTERN[7]     ; shift        ; shift       ; 0.000        ; 0.239      ; 2.084      ;
+; 1.559 ; user_input:rando|current_pin[1] ; user_input:rando|PATTERN[8]     ; shift        ; shift       ; 0.000        ; 0.239      ; 2.084      ;
+; 1.559 ; user_input:rando|current_pin[1] ; user_input:rando|PATTERN[6]     ; shift        ; shift       ; 0.000        ; 0.239      ; 2.084      ;
+; 1.577 ; user_input:rando|current_pin[1] ; user_input:rando|PATTERN[10]    ; shift        ; shift       ; 0.000        ; 0.229      ; 2.092      ;
+; 1.577 ; user_input:rando|current_pin[1] ; user_input:rando|PATTERN[11]    ; shift        ; shift       ; 0.000        ; 0.229      ; 2.092      ;
+; 1.577 ; user_input:rando|current_pin[1] ; user_input:rando|PATTERN[9]     ; shift        ; shift       ; 0.000        ; 0.229      ; 2.092      ;
+; 1.623 ; user_input:rando|current_pin[1] ; user_input:rando|PATTERN[4]     ; shift        ; shift       ; 0.000        ; 0.231      ; 2.140      ;
+; 1.623 ; user_input:rando|current_pin[1] ; user_input:rando|PATTERN[5]     ; shift        ; shift       ; 0.000        ; 0.231      ; 2.140      ;
+; 1.623 ; user_input:rando|current_pin[1] ; user_input:rando|PATTERN[3]     ; shift        ; shift       ; 0.000        ; 0.231      ; 2.140      ;
+; 1.766 ; user_input:rando|current_pin[0] ; user_input:rando|PATTERN[7]     ; shift        ; shift       ; 0.000        ; 0.239      ; 2.291      ;
+; 1.766 ; user_input:rando|current_pin[0] ; user_input:rando|PATTERN[8]     ; shift        ; shift       ; 0.000        ; 0.239      ; 2.291      ;
+; 1.766 ; user_input:rando|current_pin[0] ; user_input:rando|PATTERN[6]     ; shift        ; shift       ; 0.000        ; 0.239      ; 2.291      ;
+; 1.800 ; user_input:rando|current_pin[0] ; user_input:rando|PATTERN[1]     ; shift        ; shift       ; 0.000        ; 0.239      ; 2.325      ;
+; 1.800 ; user_input:rando|current_pin[0] ; user_input:rando|PATTERN[2]     ; shift        ; shift       ; 0.000        ; 0.239      ; 2.325      ;
+; 1.800 ; user_input:rando|current_pin[0] ; user_input:rando|PATTERN[0]     ; shift        ; shift       ; 0.000        ; 0.239      ; 2.325      ;
+; 1.861 ; user_input:rando|current_pin[0] ; user_input:rando|PATTERN[10]    ; shift        ; shift       ; 0.000        ; 0.229      ; 2.376      ;
+; 1.861 ; user_input:rando|current_pin[0] ; user_input:rando|PATTERN[11]    ; shift        ; shift       ; 0.000        ; 0.229      ; 2.376      ;
+; 1.861 ; user_input:rando|current_pin[0] ; user_input:rando|PATTERN[9]     ; shift        ; shift       ; 0.000        ; 0.229      ; 2.376      ;
++-------+---------------------------------+---------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'shift'                                                                          ;
++--------+--------------+----------------+------------------+-------+------------+---------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                          ;
++--------+--------------+----------------+------------------+-------+------------+---------------------------------+
+; -1.469 ; 1.000        ; 2.469          ; Port Rate        ; shift ; Rise       ; shift                           ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; shift ; Fall       ; user_input:rando|PATTERN[0]     ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; shift ; Fall       ; user_input:rando|PATTERN[0]     ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; shift ; Fall       ; user_input:rando|PATTERN[10]    ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; shift ; Fall       ; user_input:rando|PATTERN[10]    ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; shift ; Fall       ; user_input:rando|PATTERN[11]    ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; shift ; Fall       ; user_input:rando|PATTERN[11]    ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; shift ; Fall       ; user_input:rando|PATTERN[1]     ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; shift ; Fall       ; user_input:rando|PATTERN[1]     ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; shift ; Fall       ; user_input:rando|PATTERN[2]     ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; shift ; Fall       ; user_input:rando|PATTERN[2]     ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; shift ; Fall       ; user_input:rando|PATTERN[3]     ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; shift ; Fall       ; user_input:rando|PATTERN[3]     ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; shift ; Fall       ; user_input:rando|PATTERN[4]     ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; shift ; Fall       ; user_input:rando|PATTERN[4]     ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; shift ; Fall       ; user_input:rando|PATTERN[5]     ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; shift ; Fall       ; user_input:rando|PATTERN[5]     ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; shift ; Fall       ; user_input:rando|PATTERN[6]     ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; shift ; Fall       ; user_input:rando|PATTERN[6]     ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; shift ; Fall       ; user_input:rando|PATTERN[7]     ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; shift ; Fall       ; user_input:rando|PATTERN[7]     ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; shift ; Fall       ; user_input:rando|PATTERN[8]     ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; shift ; Fall       ; user_input:rando|PATTERN[8]     ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; shift ; Fall       ; user_input:rando|PATTERN[9]     ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; shift ; Fall       ; user_input:rando|PATTERN[9]     ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; shift ; Fall       ; user_input:rando|current_pin[0] ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; shift ; Fall       ; user_input:rando|current_pin[0] ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; shift ; Fall       ; user_input:rando|current_pin[1] ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; shift ; Fall       ; user_input:rando|current_pin[1] ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; shift ; Fall       ; user_input:rando|last           ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; shift ; Fall       ; user_input:rando|last           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; shift ; Rise       ; rando|PATTERN[0]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; shift ; Rise       ; rando|PATTERN[0]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; shift ; Rise       ; rando|PATTERN[10]|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; shift ; Rise       ; rando|PATTERN[10]|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; shift ; Rise       ; rando|PATTERN[11]|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; shift ; Rise       ; rando|PATTERN[11]|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; shift ; Rise       ; rando|PATTERN[1]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; shift ; Rise       ; rando|PATTERN[1]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; shift ; Rise       ; rando|PATTERN[2]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; shift ; Rise       ; rando|PATTERN[2]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; shift ; Rise       ; rando|PATTERN[3]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; shift ; Rise       ; rando|PATTERN[3]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; shift ; Rise       ; rando|PATTERN[4]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; shift ; Rise       ; rando|PATTERN[4]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; shift ; Rise       ; rando|PATTERN[5]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; shift ; Rise       ; rando|PATTERN[5]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; shift ; Rise       ; rando|PATTERN[6]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; shift ; Rise       ; rando|PATTERN[6]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; shift ; Rise       ; rando|PATTERN[7]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; shift ; Rise       ; rando|PATTERN[7]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; shift ; Rise       ; rando|PATTERN[8]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; shift ; Rise       ; rando|PATTERN[8]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; shift ; Rise       ; rando|PATTERN[9]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; shift ; Rise       ; rando|PATTERN[9]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; shift ; Rise       ; rando|current_pin[0]|clk        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; shift ; Rise       ; rando|current_pin[0]|clk        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; shift ; Rise       ; rando|current_pin[1]|clk        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; shift ; Rise       ; rando|current_pin[1]|clk        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; shift ; Rise       ; rando|last|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; shift ; Rise       ; rando|last|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; shift ; Rise       ; shift|combout                   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; shift ; Rise       ; shift|combout                   ;
++--------+--------------+----------------+------------------+-------+------------+---------------------------------+
+
+
++-------------------------------------------------------------------------+
+; Setup Times                                                             ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; color[*]  ; shift      ; -0.388 ; -0.388 ; Fall       ; shift           ;
+;  color[0] ; shift      ; -0.388 ; -0.388 ; Fall       ; shift           ;
+;  color[1] ; shift      ; -0.409 ; -0.409 ; Fall       ; shift           ;
+;  color[2] ; shift      ; -0.395 ; -0.395 ; Fall       ; shift           ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Hold Times                                                            ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; color[*]  ; shift      ; 1.072 ; 1.072 ; Fall       ; shift           ;
+;  color[0] ; shift      ; 1.049 ; 1.049 ; Fall       ; shift           ;
+;  color[1] ; shift      ; 1.072 ; 1.072 ; Fall       ; shift           ;
+;  color[2] ; shift      ; 0.788 ; 0.788 ; Fall       ; shift           ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------------+
+; Clock to Output Times                                                       ;
++---------------+------------+--------+--------+------------+-----------------+
+; Data Port     ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++---------------+------------+--------+--------+------------+-----------------+
+; last          ; shift      ; 10.551 ; 10.551 ; Fall       ; shift           ;
+; segments0[*]  ; shift      ; 9.658  ; 9.658  ; Fall       ; shift           ;
+;  segments0[0] ; shift      ; 9.362  ; 9.362  ; Fall       ; shift           ;
+;  segments0[1] ; shift      ; 9.324  ; 9.324  ; Fall       ; shift           ;
+;  segments0[2] ; shift      ; 9.236  ; 9.236  ; Fall       ; shift           ;
+;  segments0[3] ; shift      ; 9.658  ; 9.658  ; Fall       ; shift           ;
+;  segments0[4] ; shift      ; 9.094  ; 9.094  ; Fall       ; shift           ;
+;  segments0[5] ; shift      ; 8.896  ; 8.896  ; Fall       ; shift           ;
+;  segments0[6] ; shift      ; 8.839  ; 8.839  ; Fall       ; shift           ;
+; segments1[*]  ; shift      ; 9.924  ; 9.924  ; Fall       ; shift           ;
+;  segments1[0] ; shift      ; 9.917  ; 9.917  ; Fall       ; shift           ;
+;  segments1[1] ; shift      ; 9.888  ; 9.888  ; Fall       ; shift           ;
+;  segments1[2] ; shift      ; 9.723  ; 9.723  ; Fall       ; shift           ;
+;  segments1[3] ; shift      ; 9.924  ; 9.924  ; Fall       ; shift           ;
+;  segments1[4] ; shift      ; 9.701  ; 9.701  ; Fall       ; shift           ;
+;  segments1[5] ; shift      ; 9.906  ; 9.906  ; Fall       ; shift           ;
+;  segments1[6] ; shift      ; 9.510  ; 9.510  ; Fall       ; shift           ;
+; segments2[*]  ; shift      ; 9.762  ; 9.762  ; Fall       ; shift           ;
+;  segments2[0] ; shift      ; 9.756  ; 9.756  ; Fall       ; shift           ;
+;  segments2[1] ; shift      ; 9.710  ; 9.710  ; Fall       ; shift           ;
+;  segments2[2] ; shift      ; 9.725  ; 9.725  ; Fall       ; shift           ;
+;  segments2[3] ; shift      ; 9.762  ; 9.762  ; Fall       ; shift           ;
+;  segments2[4] ; shift      ; 9.672  ; 9.672  ; Fall       ; shift           ;
+;  segments2[5] ; shift      ; 9.725  ; 9.725  ; Fall       ; shift           ;
+;  segments2[6] ; shift      ; 9.342  ; 9.342  ; Fall       ; shift           ;
+; segments3[*]  ; shift      ; 10.174 ; 10.174 ; Fall       ; shift           ;
+;  segments3[0] ; shift      ; 9.972  ; 9.972  ; Fall       ; shift           ;
+;  segments3[1] ; shift      ; 9.554  ; 9.554  ; Fall       ; shift           ;
+;  segments3[2] ; shift      ; 9.739  ; 9.739  ; Fall       ; shift           ;
+;  segments3[3] ; shift      ; 9.115  ; 9.115  ; Fall       ; shift           ;
+;  segments3[4] ; shift      ; 9.937  ; 9.937  ; Fall       ; shift           ;
+;  segments3[5] ; shift      ; 10.174 ; 10.174 ; Fall       ; shift           ;
+;  segments3[6] ; shift      ; 9.875  ; 9.875  ; Fall       ; shift           ;
++---------------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                               ;
++---------------+------------+--------+--------+------------+-----------------+
+; Data Port     ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++---------------+------------+--------+--------+------------+-----------------+
+; last          ; shift      ; 10.551 ; 10.551 ; Fall       ; shift           ;
+; segments0[*]  ; shift      ; 8.731  ; 8.731  ; Fall       ; shift           ;
+;  segments0[0] ; shift      ; 9.104  ; 9.104  ; Fall       ; shift           ;
+;  segments0[1] ; shift      ; 9.107  ; 9.107  ; Fall       ; shift           ;
+;  segments0[2] ; shift      ; 9.100  ; 9.100  ; Fall       ; shift           ;
+;  segments0[3] ; shift      ; 9.434  ; 9.434  ; Fall       ; shift           ;
+;  segments0[4] ; shift      ; 8.986  ; 8.986  ; Fall       ; shift           ;
+;  segments0[5] ; shift      ; 8.760  ; 8.760  ; Fall       ; shift           ;
+;  segments0[6] ; shift      ; 8.731  ; 8.731  ; Fall       ; shift           ;
+; segments1[*]  ; shift      ; 9.250  ; 9.250  ; Fall       ; shift           ;
+;  segments1[0] ; shift      ; 9.605  ; 9.605  ; Fall       ; shift           ;
+;  segments1[1] ; shift      ; 9.607  ; 9.607  ; Fall       ; shift           ;
+;  segments1[2] ; shift      ; 9.570  ; 9.570  ; Fall       ; shift           ;
+;  segments1[3] ; shift      ; 9.570  ; 9.570  ; Fall       ; shift           ;
+;  segments1[4] ; shift      ; 9.554  ; 9.554  ; Fall       ; shift           ;
+;  segments1[5] ; shift      ; 9.552  ; 9.552  ; Fall       ; shift           ;
+;  segments1[6] ; shift      ; 9.250  ; 9.250  ; Fall       ; shift           ;
+; segments2[*]  ; shift      ; 9.208  ; 9.208  ; Fall       ; shift           ;
+;  segments2[0] ; shift      ; 9.584  ; 9.584  ; Fall       ; shift           ;
+;  segments2[1] ; shift      ; 9.565  ; 9.565  ; Fall       ; shift           ;
+;  segments2[2] ; shift      ; 9.378  ; 9.378  ; Fall       ; shift           ;
+;  segments2[3] ; shift      ; 9.585  ; 9.585  ; Fall       ; shift           ;
+;  segments2[4] ; shift      ; 9.389  ; 9.389  ; Fall       ; shift           ;
+;  segments2[5] ; shift      ; 9.551  ; 9.551  ; Fall       ; shift           ;
+;  segments2[6] ; shift      ; 9.208  ; 9.208  ; Fall       ; shift           ;
+; segments3[*]  ; shift      ; 8.761  ; 8.761  ; Fall       ; shift           ;
+;  segments3[0] ; shift      ; 9.611  ; 9.611  ; Fall       ; shift           ;
+;  segments3[1] ; shift      ; 9.252  ; 9.252  ; Fall       ; shift           ;
+;  segments3[2] ; shift      ; 9.590  ; 9.590  ; Fall       ; shift           ;
+;  segments3[3] ; shift      ; 8.761  ; 8.761  ; Fall       ; shift           ;
+;  segments3[4] ; shift      ; 9.784  ; 9.784  ; Fall       ; shift           ;
+;  segments3[5] ; shift      ; 9.783  ; 9.783  ; Fall       ; shift           ;
+;  segments3[6] ; shift      ; 9.579  ; 9.579  ; Fall       ; shift           ;
++---------------+------------+--------+--------+------------+-----------------+
+
+
++-------------------------------+
+; Fast Model Setup Summary      ;
++-------+-------+---------------+
+; Clock ; Slack ; End Point TNS ;
++-------+-------+---------------+
+; shift ; 0.070 ; 0.000         ;
++-------+-------+---------------+
+
+
++-------------------------------+
+; Fast Model Hold Summary       ;
++-------+-------+---------------+
+; Clock ; Slack ; End Point TNS ;
++-------+-------+---------------+
+; shift ; 0.215 ; 0.000         ;
++-------+-------+---------------+
+
+
+-------------------------------
+; Fast Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Fast Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++----------------------------------------+
+; Fast Model Minimum Pulse Width Summary ;
++-------+--------+-----------------------+
+; Clock ; Slack  ; End Point TNS         ;
++-------+--------+-----------------------+
+; shift ; -1.222 ; -16.222               ;
++-------+--------+-----------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'shift'                                                                                                                       ;
++-------+---------------------------------+---------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                       ; To Node                         ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+---------------------------------+---------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.070 ; user_input:rando|current_pin[0] ; user_input:rando|PATTERN[10]    ; shift        ; shift       ; 1.000        ; 0.074      ; 1.036      ;
+; 0.070 ; user_input:rando|current_pin[0] ; user_input:rando|PATTERN[11]    ; shift        ; shift       ; 1.000        ; 0.074      ; 1.036      ;
+; 0.070 ; user_input:rando|current_pin[0] ; user_input:rando|PATTERN[9]     ; shift        ; shift       ; 1.000        ; 0.074      ; 1.036      ;
+; 0.082 ; user_input:rando|current_pin[0] ; user_input:rando|PATTERN[1]     ; shift        ; shift       ; 1.000        ; 0.082      ; 1.032      ;
+; 0.082 ; user_input:rando|current_pin[0] ; user_input:rando|PATTERN[2]     ; shift        ; shift       ; 1.000        ; 0.082      ; 1.032      ;
+; 0.082 ; user_input:rando|current_pin[0] ; user_input:rando|PATTERN[0]     ; shift        ; shift       ; 1.000        ; 0.082      ; 1.032      ;
+; 0.087 ; user_input:rando|current_pin[0] ; user_input:rando|PATTERN[7]     ; shift        ; shift       ; 1.000        ; 0.082      ; 1.027      ;
+; 0.087 ; user_input:rando|current_pin[0] ; user_input:rando|PATTERN[8]     ; shift        ; shift       ; 1.000        ; 0.082      ; 1.027      ;
+; 0.087 ; user_input:rando|current_pin[0] ; user_input:rando|PATTERN[6]     ; shift        ; shift       ; 1.000        ; 0.082      ; 1.027      ;
+; 0.150 ; user_input:rando|current_pin[1] ; user_input:rando|PATTERN[4]     ; shift        ; shift       ; 1.000        ; 0.076      ; 0.958      ;
+; 0.150 ; user_input:rando|current_pin[1] ; user_input:rando|PATTERN[5]     ; shift        ; shift       ; 1.000        ; 0.076      ; 0.958      ;
+; 0.150 ; user_input:rando|current_pin[1] ; user_input:rando|PATTERN[3]     ; shift        ; shift       ; 1.000        ; 0.076      ; 0.958      ;
+; 0.188 ; user_input:rando|current_pin[1] ; user_input:rando|PATTERN[10]    ; shift        ; shift       ; 1.000        ; 0.074      ; 0.918      ;
+; 0.188 ; user_input:rando|current_pin[1] ; user_input:rando|PATTERN[11]    ; shift        ; shift       ; 1.000        ; 0.074      ; 0.918      ;
+; 0.188 ; user_input:rando|current_pin[1] ; user_input:rando|PATTERN[9]     ; shift        ; shift       ; 1.000        ; 0.074      ; 0.918      ;
+; 0.200 ; user_input:rando|current_pin[1] ; user_input:rando|PATTERN[1]     ; shift        ; shift       ; 1.000        ; 0.082      ; 0.914      ;
+; 0.200 ; user_input:rando|current_pin[1] ; user_input:rando|PATTERN[2]     ; shift        ; shift       ; 1.000        ; 0.082      ; 0.914      ;
+; 0.200 ; user_input:rando|current_pin[1] ; user_input:rando|PATTERN[0]     ; shift        ; shift       ; 1.000        ; 0.082      ; 0.914      ;
+; 0.200 ; user_input:rando|current_pin[1] ; user_input:rando|PATTERN[7]     ; shift        ; shift       ; 1.000        ; 0.082      ; 0.914      ;
+; 0.200 ; user_input:rando|current_pin[1] ; user_input:rando|PATTERN[8]     ; shift        ; shift       ; 1.000        ; 0.082      ; 0.914      ;
+; 0.200 ; user_input:rando|current_pin[1] ; user_input:rando|PATTERN[6]     ; shift        ; shift       ; 1.000        ; 0.082      ; 0.914      ;
+; 0.272 ; user_input:rando|current_pin[0] ; user_input:rando|PATTERN[4]     ; shift        ; shift       ; 1.000        ; 0.076      ; 0.836      ;
+; 0.272 ; user_input:rando|current_pin[0] ; user_input:rando|PATTERN[5]     ; shift        ; shift       ; 1.000        ; 0.076      ; 0.836      ;
+; 0.272 ; user_input:rando|current_pin[0] ; user_input:rando|PATTERN[3]     ; shift        ; shift       ; 1.000        ; 0.076      ; 0.836      ;
+; 0.401 ; user_input:rando|current_pin[0] ; user_input:rando|last           ; shift        ; shift       ; 1.000        ; 0.073      ; 0.704      ;
+; 0.621 ; user_input:rando|current_pin[1] ; user_input:rando|last           ; shift        ; shift       ; 1.000        ; 0.073      ; 0.484      ;
+; 0.631 ; user_input:rando|current_pin[0] ; user_input:rando|current_pin[1] ; shift        ; shift       ; 1.000        ; 0.000      ; 0.401      ;
+; 0.665 ; user_input:rando|current_pin[0] ; user_input:rando|current_pin[0] ; shift        ; shift       ; 1.000        ; 0.000      ; 0.367      ;
+; 0.665 ; user_input:rando|last           ; user_input:rando|last           ; shift        ; shift       ; 1.000        ; 0.000      ; 0.367      ;
+; 0.665 ; user_input:rando|current_pin[1] ; user_input:rando|current_pin[1] ; shift        ; shift       ; 1.000        ; 0.000      ; 0.367      ;
++-------+---------------------------------+---------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'shift'                                                                                                                        ;
++-------+---------------------------------+---------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                       ; To Node                         ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+---------------------------------+---------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.215 ; user_input:rando|current_pin[0] ; user_input:rando|current_pin[0] ; shift        ; shift       ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; user_input:rando|current_pin[1] ; user_input:rando|current_pin[1] ; shift        ; shift       ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; user_input:rando|last           ; user_input:rando|last           ; shift        ; shift       ; 0.000        ; 0.000      ; 0.367      ;
+; 0.249 ; user_input:rando|current_pin[0] ; user_input:rando|current_pin[1] ; shift        ; shift       ; 0.000        ; 0.000      ; 0.401      ;
+; 0.259 ; user_input:rando|current_pin[1] ; user_input:rando|last           ; shift        ; shift       ; 0.000        ; 0.073      ; 0.484      ;
+; 0.479 ; user_input:rando|current_pin[0] ; user_input:rando|last           ; shift        ; shift       ; 0.000        ; 0.073      ; 0.704      ;
+; 0.608 ; user_input:rando|current_pin[0] ; user_input:rando|PATTERN[4]     ; shift        ; shift       ; 0.000        ; 0.076      ; 0.836      ;
+; 0.608 ; user_input:rando|current_pin[0] ; user_input:rando|PATTERN[5]     ; shift        ; shift       ; 0.000        ; 0.076      ; 0.836      ;
+; 0.608 ; user_input:rando|current_pin[0] ; user_input:rando|PATTERN[3]     ; shift        ; shift       ; 0.000        ; 0.076      ; 0.836      ;
+; 0.680 ; user_input:rando|current_pin[1] ; user_input:rando|PATTERN[1]     ; shift        ; shift       ; 0.000        ; 0.082      ; 0.914      ;
+; 0.680 ; user_input:rando|current_pin[1] ; user_input:rando|PATTERN[2]     ; shift        ; shift       ; 0.000        ; 0.082      ; 0.914      ;
+; 0.680 ; user_input:rando|current_pin[1] ; user_input:rando|PATTERN[0]     ; shift        ; shift       ; 0.000        ; 0.082      ; 0.914      ;
+; 0.680 ; user_input:rando|current_pin[1] ; user_input:rando|PATTERN[7]     ; shift        ; shift       ; 0.000        ; 0.082      ; 0.914      ;
+; 0.680 ; user_input:rando|current_pin[1] ; user_input:rando|PATTERN[8]     ; shift        ; shift       ; 0.000        ; 0.082      ; 0.914      ;
+; 0.680 ; user_input:rando|current_pin[1] ; user_input:rando|PATTERN[6]     ; shift        ; shift       ; 0.000        ; 0.082      ; 0.914      ;
+; 0.692 ; user_input:rando|current_pin[1] ; user_input:rando|PATTERN[10]    ; shift        ; shift       ; 0.000        ; 0.074      ; 0.918      ;
+; 0.692 ; user_input:rando|current_pin[1] ; user_input:rando|PATTERN[11]    ; shift        ; shift       ; 0.000        ; 0.074      ; 0.918      ;
+; 0.692 ; user_input:rando|current_pin[1] ; user_input:rando|PATTERN[9]     ; shift        ; shift       ; 0.000        ; 0.074      ; 0.918      ;
+; 0.730 ; user_input:rando|current_pin[1] ; user_input:rando|PATTERN[4]     ; shift        ; shift       ; 0.000        ; 0.076      ; 0.958      ;
+; 0.730 ; user_input:rando|current_pin[1] ; user_input:rando|PATTERN[5]     ; shift        ; shift       ; 0.000        ; 0.076      ; 0.958      ;
+; 0.730 ; user_input:rando|current_pin[1] ; user_input:rando|PATTERN[3]     ; shift        ; shift       ; 0.000        ; 0.076      ; 0.958      ;
+; 0.793 ; user_input:rando|current_pin[0] ; user_input:rando|PATTERN[7]     ; shift        ; shift       ; 0.000        ; 0.082      ; 1.027      ;
+; 0.793 ; user_input:rando|current_pin[0] ; user_input:rando|PATTERN[8]     ; shift        ; shift       ; 0.000        ; 0.082      ; 1.027      ;
+; 0.793 ; user_input:rando|current_pin[0] ; user_input:rando|PATTERN[6]     ; shift        ; shift       ; 0.000        ; 0.082      ; 1.027      ;
+; 0.798 ; user_input:rando|current_pin[0] ; user_input:rando|PATTERN[1]     ; shift        ; shift       ; 0.000        ; 0.082      ; 1.032      ;
+; 0.798 ; user_input:rando|current_pin[0] ; user_input:rando|PATTERN[2]     ; shift        ; shift       ; 0.000        ; 0.082      ; 1.032      ;
+; 0.798 ; user_input:rando|current_pin[0] ; user_input:rando|PATTERN[0]     ; shift        ; shift       ; 0.000        ; 0.082      ; 1.032      ;
+; 0.810 ; user_input:rando|current_pin[0] ; user_input:rando|PATTERN[10]    ; shift        ; shift       ; 0.000        ; 0.074      ; 1.036      ;
+; 0.810 ; user_input:rando|current_pin[0] ; user_input:rando|PATTERN[11]    ; shift        ; shift       ; 0.000        ; 0.074      ; 1.036      ;
+; 0.810 ; user_input:rando|current_pin[0] ; user_input:rando|PATTERN[9]     ; shift        ; shift       ; 0.000        ; 0.074      ; 1.036      ;
++-------+---------------------------------+---------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'shift'                                                                          ;
++--------+--------------+----------------+------------------+-------+------------+---------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                          ;
++--------+--------------+----------------+------------------+-------+------------+---------------------------------+
+; -1.222 ; 1.000        ; 2.222          ; Port Rate        ; shift ; Rise       ; shift                           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; shift ; Fall       ; user_input:rando|PATTERN[0]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; shift ; Fall       ; user_input:rando|PATTERN[0]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; shift ; Fall       ; user_input:rando|PATTERN[10]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; shift ; Fall       ; user_input:rando|PATTERN[10]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; shift ; Fall       ; user_input:rando|PATTERN[11]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; shift ; Fall       ; user_input:rando|PATTERN[11]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; shift ; Fall       ; user_input:rando|PATTERN[1]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; shift ; Fall       ; user_input:rando|PATTERN[1]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; shift ; Fall       ; user_input:rando|PATTERN[2]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; shift ; Fall       ; user_input:rando|PATTERN[2]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; shift ; Fall       ; user_input:rando|PATTERN[3]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; shift ; Fall       ; user_input:rando|PATTERN[3]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; shift ; Fall       ; user_input:rando|PATTERN[4]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; shift ; Fall       ; user_input:rando|PATTERN[4]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; shift ; Fall       ; user_input:rando|PATTERN[5]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; shift ; Fall       ; user_input:rando|PATTERN[5]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; shift ; Fall       ; user_input:rando|PATTERN[6]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; shift ; Fall       ; user_input:rando|PATTERN[6]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; shift ; Fall       ; user_input:rando|PATTERN[7]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; shift ; Fall       ; user_input:rando|PATTERN[7]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; shift ; Fall       ; user_input:rando|PATTERN[8]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; shift ; Fall       ; user_input:rando|PATTERN[8]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; shift ; Fall       ; user_input:rando|PATTERN[9]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; shift ; Fall       ; user_input:rando|PATTERN[9]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; shift ; Fall       ; user_input:rando|current_pin[0] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; shift ; Fall       ; user_input:rando|current_pin[0] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; shift ; Fall       ; user_input:rando|current_pin[1] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; shift ; Fall       ; user_input:rando|current_pin[1] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; shift ; Fall       ; user_input:rando|last           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; shift ; Fall       ; user_input:rando|last           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; shift ; Rise       ; rando|PATTERN[0]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; shift ; Rise       ; rando|PATTERN[0]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; shift ; Rise       ; rando|PATTERN[10]|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; shift ; Rise       ; rando|PATTERN[10]|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; shift ; Rise       ; rando|PATTERN[11]|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; shift ; Rise       ; rando|PATTERN[11]|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; shift ; Rise       ; rando|PATTERN[1]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; shift ; Rise       ; rando|PATTERN[1]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; shift ; Rise       ; rando|PATTERN[2]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; shift ; Rise       ; rando|PATTERN[2]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; shift ; Rise       ; rando|PATTERN[3]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; shift ; Rise       ; rando|PATTERN[3]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; shift ; Rise       ; rando|PATTERN[4]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; shift ; Rise       ; rando|PATTERN[4]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; shift ; Rise       ; rando|PATTERN[5]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; shift ; Rise       ; rando|PATTERN[5]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; shift ; Rise       ; rando|PATTERN[6]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; shift ; Rise       ; rando|PATTERN[6]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; shift ; Rise       ; rando|PATTERN[7]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; shift ; Rise       ; rando|PATTERN[7]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; shift ; Rise       ; rando|PATTERN[8]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; shift ; Rise       ; rando|PATTERN[8]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; shift ; Rise       ; rando|PATTERN[9]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; shift ; Rise       ; rando|PATTERN[9]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; shift ; Rise       ; rando|current_pin[0]|clk        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; shift ; Rise       ; rando|current_pin[0]|clk        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; shift ; Rise       ; rando|current_pin[1]|clk        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; shift ; Rise       ; rando|current_pin[1]|clk        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; shift ; Rise       ; rando|last|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; shift ; Rise       ; rando|last|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; shift ; Rise       ; shift|combout                   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; shift ; Rise       ; shift|combout                   ;
++--------+--------------+----------------+------------------+-------+------------+---------------------------------+
+
+
++-------------------------------------------------------------------------+
+; Setup Times                                                             ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; color[*]  ; shift      ; -0.308 ; -0.308 ; Fall       ; shift           ;
+;  color[0] ; shift      ; -0.308 ; -0.308 ; Fall       ; shift           ;
+;  color[1] ; shift      ; -0.330 ; -0.330 ; Fall       ; shift           ;
+;  color[2] ; shift      ; -0.317 ; -0.317 ; Fall       ; shift           ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Hold Times                                                            ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; color[*]  ; shift      ; 0.635 ; 0.635 ; Fall       ; shift           ;
+;  color[0] ; shift      ; 0.612 ; 0.612 ; Fall       ; shift           ;
+;  color[1] ; shift      ; 0.635 ; 0.635 ; Fall       ; shift           ;
+;  color[2] ; shift      ; 0.527 ; 0.527 ; Fall       ; shift           ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++---------------------------------------------------------------------------+
+; Clock to Output Times                                                     ;
++---------------+------------+-------+-------+------------+-----------------+
+; Data Port     ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++---------------+------------+-------+-------+------------+-----------------+
+; last          ; shift      ; 4.960 ; 4.960 ; Fall       ; shift           ;
+; segments0[*]  ; shift      ; 4.511 ; 4.511 ; Fall       ; shift           ;
+;  segments0[0] ; shift      ; 4.396 ; 4.396 ; Fall       ; shift           ;
+;  segments0[1] ; shift      ; 4.401 ; 4.401 ; Fall       ; shift           ;
+;  segments0[2] ; shift      ; 4.349 ; 4.349 ; Fall       ; shift           ;
+;  segments0[3] ; shift      ; 4.511 ; 4.511 ; Fall       ; shift           ;
+;  segments0[4] ; shift      ; 4.272 ; 4.272 ; Fall       ; shift           ;
+;  segments0[5] ; shift      ; 4.214 ; 4.214 ; Fall       ; shift           ;
+;  segments0[6] ; shift      ; 4.184 ; 4.184 ; Fall       ; shift           ;
+; segments1[*]  ; shift      ; 4.618 ; 4.618 ; Fall       ; shift           ;
+;  segments1[0] ; shift      ; 4.613 ; 4.613 ; Fall       ; shift           ;
+;  segments1[1] ; shift      ; 4.618 ; 4.618 ; Fall       ; shift           ;
+;  segments1[2] ; shift      ; 4.547 ; 4.547 ; Fall       ; shift           ;
+;  segments1[3] ; shift      ; 4.586 ; 4.586 ; Fall       ; shift           ;
+;  segments1[4] ; shift      ; 4.522 ; 4.522 ; Fall       ; shift           ;
+;  segments1[5] ; shift      ; 4.572 ; 4.572 ; Fall       ; shift           ;
+;  segments1[6] ; shift      ; 4.484 ; 4.484 ; Fall       ; shift           ;
+; segments2[*]  ; shift      ; 4.577 ; 4.577 ; Fall       ; shift           ;
+;  segments2[0] ; shift      ; 4.567 ; 4.567 ; Fall       ; shift           ;
+;  segments2[1] ; shift      ; 4.555 ; 4.555 ; Fall       ; shift           ;
+;  segments2[2] ; shift      ; 4.553 ; 4.553 ; Fall       ; shift           ;
+;  segments2[3] ; shift      ; 4.577 ; 4.577 ; Fall       ; shift           ;
+;  segments2[4] ; shift      ; 4.557 ; 4.557 ; Fall       ; shift           ;
+;  segments2[5] ; shift      ; 4.534 ; 4.534 ; Fall       ; shift           ;
+;  segments2[6] ; shift      ; 4.406 ; 4.406 ; Fall       ; shift           ;
+; segments3[*]  ; shift      ; 4.758 ; 4.758 ; Fall       ; shift           ;
+;  segments3[0] ; shift      ; 4.633 ; 4.633 ; Fall       ; shift           ;
+;  segments3[1] ; shift      ; 4.489 ; 4.489 ; Fall       ; shift           ;
+;  segments3[2] ; shift      ; 4.558 ; 4.558 ; Fall       ; shift           ;
+;  segments3[3] ; shift      ; 4.270 ; 4.270 ; Fall       ; shift           ;
+;  segments3[4] ; shift      ; 4.708 ; 4.708 ; Fall       ; shift           ;
+;  segments3[5] ; shift      ; 4.758 ; 4.758 ; Fall       ; shift           ;
+;  segments3[6] ; shift      ; 4.603 ; 4.603 ; Fall       ; shift           ;
++---------------+------------+-------+-------+------------+-----------------+
+
+
++---------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                             ;
++---------------+------------+-------+-------+------------+-----------------+
+; Data Port     ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++---------------+------------+-------+-------+------------+-----------------+
+; last          ; shift      ; 4.960 ; 4.960 ; Fall       ; shift           ;
+; segments0[*]  ; shift      ; 4.126 ; 4.126 ; Fall       ; shift           ;
+;  segments0[0] ; shift      ; 4.319 ; 4.319 ; Fall       ; shift           ;
+;  segments0[1] ; shift      ; 4.319 ; 4.319 ; Fall       ; shift           ;
+;  segments0[2] ; shift      ; 4.342 ; 4.342 ; Fall       ; shift           ;
+;  segments0[3] ; shift      ; 4.434 ; 4.434 ; Fall       ; shift           ;
+;  segments0[4] ; shift      ; 4.262 ; 4.262 ; Fall       ; shift           ;
+;  segments0[5] ; shift      ; 4.156 ; 4.156 ; Fall       ; shift           ;
+;  segments0[6] ; shift      ; 4.126 ; 4.126 ; Fall       ; shift           ;
+; segments1[*]  ; shift      ; 4.357 ; 4.357 ; Fall       ; shift           ;
+;  segments1[0] ; shift      ; 4.500 ; 4.500 ; Fall       ; shift           ;
+;  segments1[1] ; shift      ; 4.502 ; 4.502 ; Fall       ; shift           ;
+;  segments1[2] ; shift      ; 4.465 ; 4.465 ; Fall       ; shift           ;
+;  segments1[3] ; shift      ; 4.460 ; 4.460 ; Fall       ; shift           ;
+;  segments1[4] ; shift      ; 4.449 ; 4.449 ; Fall       ; shift           ;
+;  segments1[5] ; shift      ; 4.466 ; 4.466 ; Fall       ; shift           ;
+;  segments1[6] ; shift      ; 4.357 ; 4.357 ; Fall       ; shift           ;
+; segments2[*]  ; shift      ; 4.325 ; 4.325 ; Fall       ; shift           ;
+;  segments2[0] ; shift      ; 4.488 ; 4.488 ; Fall       ; shift           ;
+;  segments2[1] ; shift      ; 4.468 ; 4.468 ; Fall       ; shift           ;
+;  segments2[2] ; shift      ; 4.447 ; 4.447 ; Fall       ; shift           ;
+;  segments2[3] ; shift      ; 4.488 ; 4.488 ; Fall       ; shift           ;
+;  segments2[4] ; shift      ; 4.458 ; 4.458 ; Fall       ; shift           ;
+;  segments2[5] ; shift      ; 4.453 ; 4.453 ; Fall       ; shift           ;
+;  segments2[6] ; shift      ; 4.325 ; 4.325 ; Fall       ; shift           ;
+; segments3[*]  ; shift      ; 4.138 ; 4.138 ; Fall       ; shift           ;
+;  segments3[0] ; shift      ; 4.499 ; 4.499 ; Fall       ; shift           ;
+;  segments3[1] ; shift      ; 4.354 ; 4.354 ; Fall       ; shift           ;
+;  segments3[2] ; shift      ; 4.479 ; 4.479 ; Fall       ; shift           ;
+;  segments3[3] ; shift      ; 4.138 ; 4.138 ; Fall       ; shift           ;
+;  segments3[4] ; shift      ; 4.627 ; 4.627 ; Fall       ; shift           ;
+;  segments3[5] ; shift      ; 4.644 ; 4.644 ; Fall       ; shift           ;
+;  segments3[6] ; shift      ; 4.468 ; 4.468 ; Fall       ; shift           ;
++---------------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                           ;
++------------------+---------+-------+----------+---------+---------------------+
+; Clock            ; Setup   ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+---------+-------+----------+---------+---------------------+
+; Worst-case Slack ; -1.109  ; 0.215 ; N/A      ; N/A     ; -1.469              ;
+;  shift           ; -1.109  ; 0.215 ; N/A      ; N/A     ; -1.469              ;
+; Design-wide TNS  ; -12.645 ; 0.0   ; 0.0      ; 0.0     ; -19.799             ;
+;  shift           ; -12.645 ; 0.000 ; N/A      ; N/A     ; -19.799             ;
++------------------+---------+-------+----------+---------+---------------------+
+
+
++-------------------------------------------------------------------------+
+; Setup Times                                                             ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; color[*]  ; shift      ; -0.308 ; -0.308 ; Fall       ; shift           ;
+;  color[0] ; shift      ; -0.308 ; -0.308 ; Fall       ; shift           ;
+;  color[1] ; shift      ; -0.330 ; -0.330 ; Fall       ; shift           ;
+;  color[2] ; shift      ; -0.317 ; -0.317 ; Fall       ; shift           ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Hold Times                                                            ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; color[*]  ; shift      ; 1.072 ; 1.072 ; Fall       ; shift           ;
+;  color[0] ; shift      ; 1.049 ; 1.049 ; Fall       ; shift           ;
+;  color[1] ; shift      ; 1.072 ; 1.072 ; Fall       ; shift           ;
+;  color[2] ; shift      ; 0.788 ; 0.788 ; Fall       ; shift           ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------------+
+; Clock to Output Times                                                       ;
++---------------+------------+--------+--------+------------+-----------------+
+; Data Port     ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++---------------+------------+--------+--------+------------+-----------------+
+; last          ; shift      ; 10.551 ; 10.551 ; Fall       ; shift           ;
+; segments0[*]  ; shift      ; 9.658  ; 9.658  ; Fall       ; shift           ;
+;  segments0[0] ; shift      ; 9.362  ; 9.362  ; Fall       ; shift           ;
+;  segments0[1] ; shift      ; 9.324  ; 9.324  ; Fall       ; shift           ;
+;  segments0[2] ; shift      ; 9.236  ; 9.236  ; Fall       ; shift           ;
+;  segments0[3] ; shift      ; 9.658  ; 9.658  ; Fall       ; shift           ;
+;  segments0[4] ; shift      ; 9.094  ; 9.094  ; Fall       ; shift           ;
+;  segments0[5] ; shift      ; 8.896  ; 8.896  ; Fall       ; shift           ;
+;  segments0[6] ; shift      ; 8.839  ; 8.839  ; Fall       ; shift           ;
+; segments1[*]  ; shift      ; 9.924  ; 9.924  ; Fall       ; shift           ;
+;  segments1[0] ; shift      ; 9.917  ; 9.917  ; Fall       ; shift           ;
+;  segments1[1] ; shift      ; 9.888  ; 9.888  ; Fall       ; shift           ;
+;  segments1[2] ; shift      ; 9.723  ; 9.723  ; Fall       ; shift           ;
+;  segments1[3] ; shift      ; 9.924  ; 9.924  ; Fall       ; shift           ;
+;  segments1[4] ; shift      ; 9.701  ; 9.701  ; Fall       ; shift           ;
+;  segments1[5] ; shift      ; 9.906  ; 9.906  ; Fall       ; shift           ;
+;  segments1[6] ; shift      ; 9.510  ; 9.510  ; Fall       ; shift           ;
+; segments2[*]  ; shift      ; 9.762  ; 9.762  ; Fall       ; shift           ;
+;  segments2[0] ; shift      ; 9.756  ; 9.756  ; Fall       ; shift           ;
+;  segments2[1] ; shift      ; 9.710  ; 9.710  ; Fall       ; shift           ;
+;  segments2[2] ; shift      ; 9.725  ; 9.725  ; Fall       ; shift           ;
+;  segments2[3] ; shift      ; 9.762  ; 9.762  ; Fall       ; shift           ;
+;  segments2[4] ; shift      ; 9.672  ; 9.672  ; Fall       ; shift           ;
+;  segments2[5] ; shift      ; 9.725  ; 9.725  ; Fall       ; shift           ;
+;  segments2[6] ; shift      ; 9.342  ; 9.342  ; Fall       ; shift           ;
+; segments3[*]  ; shift      ; 10.174 ; 10.174 ; Fall       ; shift           ;
+;  segments3[0] ; shift      ; 9.972  ; 9.972  ; Fall       ; shift           ;
+;  segments3[1] ; shift      ; 9.554  ; 9.554  ; Fall       ; shift           ;
+;  segments3[2] ; shift      ; 9.739  ; 9.739  ; Fall       ; shift           ;
+;  segments3[3] ; shift      ; 9.115  ; 9.115  ; Fall       ; shift           ;
+;  segments3[4] ; shift      ; 9.937  ; 9.937  ; Fall       ; shift           ;
+;  segments3[5] ; shift      ; 10.174 ; 10.174 ; Fall       ; shift           ;
+;  segments3[6] ; shift      ; 9.875  ; 9.875  ; Fall       ; shift           ;
++---------------+------------+--------+--------+------------+-----------------+
+
+
++---------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                             ;
++---------------+------------+-------+-------+------------+-----------------+
+; Data Port     ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++---------------+------------+-------+-------+------------+-----------------+
+; last          ; shift      ; 4.960 ; 4.960 ; Fall       ; shift           ;
+; segments0[*]  ; shift      ; 4.126 ; 4.126 ; Fall       ; shift           ;
+;  segments0[0] ; shift      ; 4.319 ; 4.319 ; Fall       ; shift           ;
+;  segments0[1] ; shift      ; 4.319 ; 4.319 ; Fall       ; shift           ;
+;  segments0[2] ; shift      ; 4.342 ; 4.342 ; Fall       ; shift           ;
+;  segments0[3] ; shift      ; 4.434 ; 4.434 ; Fall       ; shift           ;
+;  segments0[4] ; shift      ; 4.262 ; 4.262 ; Fall       ; shift           ;
+;  segments0[5] ; shift      ; 4.156 ; 4.156 ; Fall       ; shift           ;
+;  segments0[6] ; shift      ; 4.126 ; 4.126 ; Fall       ; shift           ;
+; segments1[*]  ; shift      ; 4.357 ; 4.357 ; Fall       ; shift           ;
+;  segments1[0] ; shift      ; 4.500 ; 4.500 ; Fall       ; shift           ;
+;  segments1[1] ; shift      ; 4.502 ; 4.502 ; Fall       ; shift           ;
+;  segments1[2] ; shift      ; 4.465 ; 4.465 ; Fall       ; shift           ;
+;  segments1[3] ; shift      ; 4.460 ; 4.460 ; Fall       ; shift           ;
+;  segments1[4] ; shift      ; 4.449 ; 4.449 ; Fall       ; shift           ;
+;  segments1[5] ; shift      ; 4.466 ; 4.466 ; Fall       ; shift           ;
+;  segments1[6] ; shift      ; 4.357 ; 4.357 ; Fall       ; shift           ;
+; segments2[*]  ; shift      ; 4.325 ; 4.325 ; Fall       ; shift           ;
+;  segments2[0] ; shift      ; 4.488 ; 4.488 ; Fall       ; shift           ;
+;  segments2[1] ; shift      ; 4.468 ; 4.468 ; Fall       ; shift           ;
+;  segments2[2] ; shift      ; 4.447 ; 4.447 ; Fall       ; shift           ;
+;  segments2[3] ; shift      ; 4.488 ; 4.488 ; Fall       ; shift           ;
+;  segments2[4] ; shift      ; 4.458 ; 4.458 ; Fall       ; shift           ;
+;  segments2[5] ; shift      ; 4.453 ; 4.453 ; Fall       ; shift           ;
+;  segments2[6] ; shift      ; 4.325 ; 4.325 ; Fall       ; shift           ;
+; segments3[*]  ; shift      ; 4.138 ; 4.138 ; Fall       ; shift           ;
+;  segments3[0] ; shift      ; 4.499 ; 4.499 ; Fall       ; shift           ;
+;  segments3[1] ; shift      ; 4.354 ; 4.354 ; Fall       ; shift           ;
+;  segments3[2] ; shift      ; 4.479 ; 4.479 ; Fall       ; shift           ;
+;  segments3[3] ; shift      ; 4.138 ; 4.138 ; Fall       ; shift           ;
+;  segments3[4] ; shift      ; 4.627 ; 4.627 ; Fall       ; shift           ;
+;  segments3[5] ; shift      ; 4.644 ; 4.644 ; Fall       ; shift           ;
+;  segments3[6] ; shift      ; 4.468 ; 4.468 ; Fall       ; shift           ;
++---------------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------+
+; Setup Transfers                                                   ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; shift      ; shift    ; 0        ; 0        ; 0        ; 30       ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Hold Transfers                                                    ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; shift      ; shift    ; 0        ; 0        ; 0        ; 30       ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 3     ; 3    ;
+; Unconstrained Input Port Paths  ; 12    ; 12   ;
+; Unconstrained Output Ports      ; 29    ; 29   ;
+; Unconstrained Output Port Paths ; 77    ; 77   ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
+    Info: Processing started: Wed Dec 02 18:45:38 2015
+Info: Command: quartus_sta user_pins -c user_pins
+Info: qsta_default_script.tcl version: #1
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'user_pins.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name shift shift
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -1.109
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.109       -12.645 shift 
+Info (332146): Worst-case hold slack is 0.445
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.445         0.000 shift 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.469
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.469       -19.799 shift 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info: Analyzing Fast Model
+Info (332146): Worst-case setup slack is 0.070
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.070         0.000 shift 
+Info (332146): Worst-case hold slack is 0.215
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.215         0.000 shift 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case minimum pulse width slack is -1.222
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.222       -16.222 shift 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 3 warnings
+    Info: Peak virtual memory: 431 megabytes
+    Info: Processing ended: Wed Dec 02 18:45:42 2015
+    Info: Elapsed time: 00:00:04
+    Info: Total CPU time (on all processors): 00:00:01
+
+

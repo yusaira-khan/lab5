@@ -1,0 +1,51 @@
+library ieee; -- allows use of the std_logic_vector type 
+use ieee.std_logic_1164.all; 
+use ieee.std_logic_signed.all; 
+
+entity pin_display is
+	port (	pushed 	: in std_logic; -- table counter enable
+segments0 : out std_logic_vector(6 downto 0);
+segments1 : out std_logic_vector(6 downto 0);
+segments2 : out std_logic_vector(6 downto 0);
+segments3 : out std_logic_vector(6 downto 0);
+				CLK 	: in std_logic
+				--Color : out std_logic_vector(11 downto 0)
+				);
+end pin_display;
+
+architecture arch of pin_display is 
+
+component lab4 is
+	port (	clock 			: in std_logic;
+			reset			: in std_logic;
+			mode: in std_logic_vector(1 downto 0);
+			enable			: in std_logic;
+			--last_reached	: out std_logic;
+			next_prime 		: out std_logic_vector(6 downto 0));
+			
+end component;
+component g24_7_segment_decoder is
+port( code : in std_logic_vector(3 downto 0);
+RippleBlank_In:in std_logic;
+RippleBlank_Out:out std_logic;
+segments : out std_logic_vector(6 downto 0));
+end component;
+
+signal code0 :  std_logic_vector(3 downto 0);
+signal code1 :  std_logic_vector(3 downto 0);
+signal code2 : std_logic_vector(3 downto 0);
+signal code3 :  std_logic_vector(3 downto 0);
+
+begin
+
+generate_now<=not(pushed);
+--saved<="00000000000";
+code0<=("0"&saved(2 downTO 0))+"1010";
+code1<=("0"&saved(5 downTO 3)) +"1010";
+code2<=("0"&saved(8 downTO 6)) +"1010";
+code3<=("0"&saved(11 downto 9)) +"1010";
+saved<=patTERN;
+dec0:g24_7_segment_decoder port map(segments=>segments0,code=>code0,RippleBlank_In=>'0');
+dec1:g24_7_segment_decoder port map(segments=>segments1,code=>code1,RippleBlank_In=>'0');
+dec2:g24_7_segment_decoder port map(segments=>segments2,code=>code2,RippleBlank_In=>'1');
+dec3:g24_7_segment_decoder port map(segments=>segments3,code=>code3,RippleBlank_In=>'1'); 
