@@ -103,9 +103,7 @@ BEGIN
 		P2=>mux_output_pattern(5 downTO 3),P1=>mux_output_pattern(2 downTO 0),
 		G4=> register_guess(11 downto 9), G3=>register_guess(8 downTO 6),
 		G2=>register_guess(5 downTO 3),G1=>register_guess(2 downTO 0),
-		score_code=> current_score,
-		exact_match_score=>NUM_EXACT,
-		color_match_score=>Num_Color
+		score_code=> current_score
 	);
 	
 	table: g24_possibility_table port map(TC_EN 	=>TC_EN,
