@@ -7,7 +7,7 @@ START,READY,
 INPUT_RECEIVED,
 switch_input,
 CLK,TM_OUT,
-reset_not_pushed : in std_logic;
+reset_not_pushed,PG_EQ : in std_logic;
 SR_SEL,SR_LD,P_SEL,SOLVED,Waiting_for_ready ,
 GR_SEL,GR_LD,
 TM_IN,TM_EN,TC_EN,TC_RST :out std_logic
@@ -15,7 +15,7 @@ TM_IN,TM_EN,TC_EN,TC_RST :out std_logic
 end g24_mastermind_controller;
 
 architecture arch of g24_mastermind_controller is
-	type algorithm_state is (A,B,C,D,E,F,G,H); 
+	type algorithm_state is (A,B,C,D,E,F,G,H,F1); 
 	type user_input_state is (INIT, HOLD);
 	signal present_state: algorithm_state;
 	signal present_input_state: user_input_state;
@@ -98,8 +98,8 @@ begin
 					
 				
 				when F => --wait for a clock cycle to check saved score against table pattern
-						if SC_CMP = '0' then --entry in the table does not give the same score as hidden pattern's
-							present_state <= G;
+						if SC_CMP = '0' or PG_EQ = '1' then --entry in the table does not give the same score as hidden pattern's or is the same as previous guess
+							present_state <= F;
 							TC_EN <= '0';--don't iterate table in next clock cycle
 							TM_EN<='1';--write invalid score to table memory
 							TM_IN<='0';	--pattern not possible	

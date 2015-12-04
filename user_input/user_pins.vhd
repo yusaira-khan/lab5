@@ -51,6 +51,7 @@ end component;
 		working_guess : out std_logic_vector(11 downto 0);
 		EXT_PATTERN :  IN  STD_LOGIC_VECTOR(11 DOWNTO 0);
 		Initial_guess :  IN  STD_LOGIC_VECTOR(11 DOWNTO 0);
+		PG_EQ :  OUT  STD_LOGIC;
 		SC_CMP :  OUT  STD_LOGIC;
 		TC_LAST :  OUT  STD_LOGIC;
 		TM_OUT :  OUT  STD_LOGIC;
@@ -59,7 +60,7 @@ end component;
 	);END component;
 	
 component g24_mastermind_controller	 is port( 
-	SC_CMP ,TC_LAST,START,READY,CLK,TM_OUT, switch_input,input_received,reset_not_pushed: in std_logic;
+	SC_CMP ,TC_LAST,START,READY,CLK,TM_OUT, switch_input,input_received,reset_not_pushed,PG_EQ : in std_logic;
 	SR_SEL,SR_LD,P_SEL,SOLVED,
 	GR_SEL,GR_LD,Waiting_for_ready,
 	
@@ -79,6 +80,7 @@ signal code2 : std_logic_vector(3 downto 0);
 signal code3 :  std_logic_vector(3 downto 0);
 signal padder :  std_logic_vector(3 downto 0);
 signal input_received : std_LOGIC;
+signal PG_EQ :    STD_LOGIC;
 
 signal SR_SEL,SR_LD,P_SEL,SOLVED,
 	waiti,GR_SEL,GR_LD,
@@ -126,11 +128,13 @@ controller: g24_mastermind_controller	  port map(
 		TM_EN =>TM_EN,
 		TM_IN =>TM_IN,SC_CMP =>SC_CMP,
 		TC_LAST =>TC_LAST,
+		PG_EQ=>PG_EQ,
 		TM_OUT =>TM_OUT);
 		
 main: datapath  PORT map(
 		P_SEL => P_SEL,
 		GR_SEL => GR_SEL,
+		PG_EQ=>PG_EQ,
 		CLK =>CLK,
 		GR_LD =>GR_LD,
 		SR_LD =>SR_LD,

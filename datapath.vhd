@@ -39,6 +39,7 @@ ENTITY datapath IS
 		SC_CMP :  OUT  STD_LOGIC;
 		TC_LAST :  OUT  STD_LOGIC;
 		TM_OUT :  OUT  STD_LOGIC;
+		PG_EQ :  OUT  STD_LOGIC;
 		working_guess : out std_logic_vector(11 downto 0);
 		NUM_EXACT: OUT  std_logic_vector(2 downto 0);
 		NUM_Color: OUT  std_logic_vector(2 downto 0)
@@ -83,6 +84,7 @@ signal mux_output_guess: std_LOGIC_VECTOR(11 DOWNTO 0);
 signal register_guess: std_LOGIC_VECTOR(11 DOWNTO 0);
 signal mux_output_score: std_LOGIC_VECTOR(3 DOWNTO 0);
 signal solved_score: std_LOGIC_VECTOR(3 DOWNTO 0);
+signal first_half_eq, second_half_eq : std_LOGIC;
 
 BEGIN 
 	solved_score<="0001";
@@ -142,7 +144,9 @@ BEGIN
 	
 	comparison: g24_comp6 port map(A=>score1,B=>score2,AeqB=>SC_CMP);
 
-
+	first_half: g24_comp6 port map(A=>register_guess(5 downTO 0),B=>mux_output_pattern(5 downTO 0),AeqB=>first_half_eq);
+	second_half: g24_comp6 port map(A=>register_guess(11 downTO 6),B=>mux_output_pattern(11 downTO 6),AeqB=>second_half_eq);
+	PG_EQ<= first_half_eq and second_half_eq;
 
 
 
