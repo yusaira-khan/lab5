@@ -1,5 +1,5 @@
 Analysis & Synthesis report for user_pins
-Thu Dec 03 13:52:48 2015
+Thu Dec 03 20:33:35 2015
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
 
 
@@ -13,13 +13,41 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Ver
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. General Register Statistics
-  9. Port Connectivity Checks: "g24_7_segment_decoder:dec3"
- 10. Port Connectivity Checks: "g24_7_segment_decoder:dec2"
- 11. Port Connectivity Checks: "g24_7_segment_decoder:dec1"
- 12. Port Connectivity Checks: "g24_7_segment_decoder:dec0"
- 13. Elapsed Time Per Partition
- 14. Analysis & Synthesis Messages
+  8. Analysis & Synthesis RAM Summary
+  9. User-Specified and Inferred Latches
+ 10. Registers Removed During Synthesis
+ 11. Removed Registers Triggering Further Register Optimizations
+ 12. General Register Statistics
+ 13. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 14. Source assignments for datapath:main|g24_possibility_table:table|altsyncram:table_memory[0]__1|altsyncram_cug1:auto_generated
+ 15. Source assignments for random_generator:rando|g24_possibility_table:i1|altsyncram:table_memory[0]__1|altsyncram_cug1:auto_generated
+ 16. Parameter Settings for User Entity Instance: datapath:main|g24_mastermind_score:master_score|g24_color_matches:cm|lpm_decode:ld1
+ 17. Parameter Settings for User Entity Instance: datapath:main|g24_mastermind_score:master_score|g24_color_matches:cm|lpm_decode:ld2
+ 18. Parameter Settings for User Entity Instance: datapath:main|g24_mastermind_score:master_score|g24_color_matches:cm|lpm_decode:ld3
+ 19. Parameter Settings for User Entity Instance: datapath:main|g24_mastermind_score:master_score|g24_color_matches:cm|lpm_decode:ld4
+ 20. Parameter Settings for User Entity Instance: datapath:main|g24_mastermind_score:master_score|g24_color_matches:cm|lpm_decode:ld5
+ 21. Parameter Settings for User Entity Instance: datapath:main|g24_mastermind_score:master_score|g24_color_matches:cm|lpm_decode:ld6
+ 22. Parameter Settings for User Entity Instance: datapath:main|g24_mastermind_score:master_score|g24_color_matches:cm|lpm_decode:ld7
+ 23. Parameter Settings for User Entity Instance: datapath:main|g24_mastermind_score:master_score|g24_color_matches:cm|lpm_decode:ld8
+ 24. Parameter Settings for User Entity Instance: datapath:main|g24_possibility_table:table|altsyncram:table_memory[0]__1
+ 25. Parameter Settings for User Entity Instance: random_generator:rando|g24_possibility_table:i1|altsyncram:table_memory[0]__1
+ 26. altsyncram Parameter Settings by Entity Instance
+ 27. Port Connectivity Checks: "random_generator:rando|g24_possibility_table:i1"
+ 28. Port Connectivity Checks: "random_generator:rando"
+ 29. Port Connectivity Checks: "datapath:main|g24_comp6:comparison"
+ 30. Port Connectivity Checks: "datapath:main|g24_possibility_table:table|color_counter:color_counter3"
+ 31. Port Connectivity Checks: "datapath:main|g24_mastermind_score:master_score|g24_num_matches:nm|g24_comp6:comp4"
+ 32. Port Connectivity Checks: "datapath:main|g24_mastermind_score:master_score|g24_num_matches:nm|g24_comp6:comp3"
+ 33. Port Connectivity Checks: "datapath:main|g24_mastermind_score:master_score|g24_num_matches:nm|g24_comp6:comp2"
+ 34. Port Connectivity Checks: "datapath:main|g24_mastermind_score:master_score|g24_num_matches:nm|g24_comp6:comp1"
+ 35. Port Connectivity Checks: "datapath:main"
+ 36. Port Connectivity Checks: "g24_mastermind_controller:controller"
+ 37. Port Connectivity Checks: "g24_7_segment_decoder:dec3"
+ 38. Port Connectivity Checks: "g24_7_segment_decoder:dec2"
+ 39. Port Connectivity Checks: "g24_7_segment_decoder:dec1"
+ 40. Port Connectivity Checks: "g24_7_segment_decoder:dec0"
+ 41. Elapsed Time Per Partition
+ 42. Analysis & Synthesis Messages
 
 
 
@@ -45,18 +73,18 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                          ;
 +------------------------------------+--------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Dec 03 13:52:48 2015            ;
+; Analysis & Synthesis Status        ; Successful - Thu Dec 03 20:33:35 2015            ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Full Version ;
 ; Revision Name                      ; user_pins                                        ;
 ; Top-level Entity Name              ; user_pins                                        ;
 ; Family                             ; Cyclone II                                       ;
-; Total logic elements               ; 47                                               ;
-;     Total combinational functions  ; 35                                               ;
-;     Dedicated logic registers      ; 15                                               ;
-; Total registers                    ; 15                                               ;
-; Total pins                         ; 33                                               ;
+; Total logic elements               ; 358                                              ;
+;     Total combinational functions  ; 346                                              ;
+;     Dedicated logic registers      ; 60                                               ;
+; Total registers                    ; 60                                               ;
+; Total pins                         ; 44                                               ;
 ; Total virtual pins                 ; 0                                                ;
-; Total memory bits                  ; 0                                                ;
+; Total memory bits                  ; 4,096                                            ;
 ; Embedded Multiplier 9-bit elements ; 0                                                ;
 ; Total PLLs                         ; 0                                                ;
 +------------------------------------+--------------------------------------------------+
@@ -164,15 +192,43 @@ applicable agreement for further details.
 +----------------------------+-------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                     ;
-+--------------------------------------+-----------------+-----------------+---------------------------------------+---------+
-; File Name with User-Entered Path     ; Used in Netlist ; File Type       ; File Name with Absolute Path          ; Library ;
-+--------------------------------------+-----------------+-----------------+---------------------------------------+---------+
-; ../user_input/user_input.vhd         ; yes             ; User VHDL File  ; P:/323/lab5/user_input/user_input.vhd ;         ;
-; ../user_input/user_pins.vhd          ; yes             ; User VHDL File  ; P:/323/lab5/user_input/user_pins.vhd  ;         ;
-; ../../lab3/g24_7_segment_decoder.vhd ; yes             ; User VHDL File  ; P:/323/lab3/g24_7_segment_decoder.vhd ;         ;
-+--------------------------------------+-----------------+-----------------+---------------------------------------+---------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                        ;
++------------------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path         ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                            ; Library ;
++------------------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------+---------+
+; ../user_input/user_input.vhd             ; yes             ; User VHDL File               ; P:/323/lab5/user_input/user_input.vhd                                   ;         ;
+; ../user_input/user_pins.vhd              ; yes             ; User VHDL File               ; P:/323/lab5/user_input/user_pins.vhd                                    ;         ;
+; ../g24_score_encoder.vhd                 ; yes             ; User VHDL File               ; P:/323/lab5/g24_score_encoder.vhd                                       ;         ;
+; ../color_counter.vhd                     ; yes             ; User VHDL File               ; P:/323/lab5/color_counter.vhd                                           ;         ;
+; ../datapath.vhd                          ; yes             ; User VHDL File               ; P:/323/lab5/datapath.vhd                                                ;         ;
+; ../g24_7_segment_decoder.vhd             ; yes             ; User VHDL File               ; P:/323/lab5/g24_7_segment_decoder.vhd                                   ;         ;
+; ../g24_color_matches.vhd                 ; yes             ; User VHDL File               ; P:/323/lab5/g24_color_matches.vhd                                       ;         ;
+; ../g24_comp6.vhd                         ; yes             ; User VHDL File               ; P:/323/lab5/g24_comp6.vhd                                               ;         ;
+; ../g24_mastermind_controller.vhd         ; yes             ; User VHDL File               ; P:/323/lab5/g24_mastermind_controller.vhd                               ;         ;
+; ../g24_mastermind_score.vhd              ; yes             ; User VHDL File               ; P:/323/lab5/g24_mastermind_score.vhd                                    ;         ;
+; ../g24_minimum3.vhd                      ; yes             ; User VHDL File               ; P:/323/lab5/g24_minimum3.vhd                                            ;         ;
+; ../g24_num_matches.vhd                   ; yes             ; User VHDL File               ; P:/323/lab5/g24_num_matches.vhd                                         ;         ;
+; ../g24_num1s.vhd                         ; yes             ; User VHDL File               ; P:/323/lab5/g24_num1s.vhd                                               ;         ;
+; ../g24_possibility_table.vhd             ; yes             ; User VHDL File               ; P:/323/lab5/g24_possibility_table.vhd                                   ;         ;
+; ../random_generator/random_generator.vhd ; yes             ; User VHDL File               ; P:/323/lab5/random_generator/random_generator.vhd                       ;         ;
+; lpm_decode.tdf                           ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_decode.tdf        ;         ;
+; declut.inc                               ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/declut.inc            ;         ;
+; altshift.inc                             ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altshift.inc          ;         ;
+; lpm_compare.inc                          ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_compare.inc       ;         ;
+; lpm_constant.inc                         ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_constant.inc      ;         ;
+; aglobal130.inc                           ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/aglobal130.inc        ;         ;
+; db/decode_s6f.tdf                        ; yes             ; Auto-Generated Megafunction  ; P:/323/lab5/user_pins/db/decode_s6f.tdf                                 ;         ;
+; altsyncram.tdf                           ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altsyncram.tdf        ;         ;
+; stratix_ram_block.inc                    ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/stratix_ram_block.inc ;         ;
+; lpm_mux.inc                              ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_mux.inc           ;         ;
+; lpm_decode.inc                           ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_decode.inc        ;         ;
+; a_rdenreg.inc                            ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/a_rdenreg.inc         ;         ;
+; altrom.inc                               ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altrom.inc            ;         ;
+; altram.inc                               ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altram.inc            ;         ;
+; altdpram.inc                             ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altdpram.inc          ;         ;
+; db/altsyncram_cug1.tdf                   ; yes             ; Auto-Generated Megafunction  ; P:/323/lab5/user_pins/db/altsyncram_cug1.tdf                            ;         ;
++------------------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------+---------+
 
 
 +-----------------------------------------------------+
@@ -180,44 +236,145 @@ applicable agreement for further details.
 +---------------------------------------------+-------+
 ; Resource                                    ; Usage ;
 +---------------------------------------------+-------+
-; Estimated Total logic elements              ; 47    ;
+; Estimated Total logic elements              ; 358   ;
 ;                                             ;       ;
-; Total combinational functions               ; 35    ;
+; Total combinational functions               ; 346   ;
 ; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 0     ;
-;     -- 3 input functions                    ; 21    ;
-;     -- <=2 input functions                  ; 14    ;
+;     -- 4 input functions                    ; 181   ;
+;     -- 3 input functions                    ; 127   ;
+;     -- <=2 input functions                  ; 38    ;
 ;                                             ;       ;
 ; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 35    ;
+;     -- normal mode                          ; 346   ;
 ;     -- arithmetic mode                      ; 0     ;
 ;                                             ;       ;
-; Total registers                             ; 15    ;
-;     -- Dedicated logic registers            ; 15    ;
+; Total registers                             ; 60    ;
+;     -- Dedicated logic registers            ; 60    ;
 ;     -- I/O registers                        ; 0     ;
 ;                                             ;       ;
-; I/O pins                                    ; 33    ;
+; I/O pins                                    ; 44    ;
+; Total memory bits                           ; 4096  ;
 ; Embedded Multiplier 9-bit elements          ; 0     ;
-; Maximum fan-out node                        ; shift ;
-; Maximum fan-out                             ; 15    ;
-; Total fan-out                               ; 161   ;
-; Average fan-out                             ; 1.94  ;
+; Maximum fan-out node                        ; clk   ;
+; Maximum fan-out                             ; 46    ;
+; Total fan-out                               ; 1431  ;
+; Average fan-out                             ; 3.17  ;
 +---------------------------------------------+-------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                ;
-+---------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------+--------------+
-; Compilation Hierarchy Node      ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                   ; Library Name ;
-+---------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------+--------------+
-; |user_pins                      ; 35 (0)            ; 15 (0)       ; 0           ; 0            ; 0       ; 0         ; 33   ; 0            ; |user_pins                            ; work         ;
-;    |g24_7_segment_decoder:dec0| ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |user_pins|g24_7_segment_decoder:dec0 ; work         ;
-;    |g24_7_segment_decoder:dec1| ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |user_pins|g24_7_segment_decoder:dec1 ; work         ;
-;    |g24_7_segment_decoder:dec2| ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |user_pins|g24_7_segment_decoder:dec2 ; work         ;
-;    |g24_7_segment_decoder:dec3| ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |user_pins|g24_7_segment_decoder:dec3 ; work         ;
-;    |user_input:rando|           ; 7 (7)             ; 15 (15)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |user_pins|user_input:rando           ; work         ;
-+---------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------+--------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                ;
++----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node                   ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                      ; Library Name ;
++----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------------+--------------+
+; |user_pins                                   ; 346 (8)           ; 60 (0)       ; 4096        ; 0            ; 0       ; 0         ; 44   ; 0            ; |user_pins                                                                                                               ; work         ;
+;    |datapath:main|                           ; 214 (14)          ; 28 (16)      ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |user_pins|datapath:main                                                                                                 ; work         ;
+;       |g24_comp6:comparison|                 ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |user_pins|datapath:main|g24_comp6:comparison                                                                            ; work         ;
+;       |g24_mastermind_score:master_score|    ; 170 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |user_pins|datapath:main|g24_mastermind_score:master_score                                                               ; work         ;
+;          |g24_color_matches:cm|              ; 145 (27)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |user_pins|datapath:main|g24_mastermind_score:master_score|g24_color_matches:cm                                          ; work         ;
+;             |g24_minimum3:min1|              ; 9 (9)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |user_pins|datapath:main|g24_mastermind_score:master_score|g24_color_matches:cm|g24_minimum3:min1                        ; work         ;
+;             |g24_minimum3:min2|              ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |user_pins|datapath:main|g24_mastermind_score:master_score|g24_color_matches:cm|g24_minimum3:min2                        ; work         ;
+;             |g24_minimum3:min3|              ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |user_pins|datapath:main|g24_mastermind_score:master_score|g24_color_matches:cm|g24_minimum3:min3                        ; work         ;
+;             |g24_minimum3:min4|              ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |user_pins|datapath:main|g24_mastermind_score:master_score|g24_color_matches:cm|g24_minimum3:min4                        ; work         ;
+;             |g24_minimum3:min5|              ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |user_pins|datapath:main|g24_mastermind_score:master_score|g24_color_matches:cm|g24_minimum3:min5                        ; work         ;
+;             |g24_minimum3:min6|              ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |user_pins|datapath:main|g24_mastermind_score:master_score|g24_color_matches:cm|g24_minimum3:min6                        ; work         ;
+;             |g24_num1s:num10|                ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |user_pins|datapath:main|g24_mastermind_score:master_score|g24_color_matches:cm|g24_num1s:num10                          ; work         ;
+;             |g24_num1s:num11|                ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |user_pins|datapath:main|g24_mastermind_score:master_score|g24_color_matches:cm|g24_num1s:num11                          ; work         ;
+;             |g24_num1s:num12|                ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |user_pins|datapath:main|g24_mastermind_score:master_score|g24_color_matches:cm|g24_num1s:num12                          ; work         ;
+;             |g24_num1s:num1|                 ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |user_pins|datapath:main|g24_mastermind_score:master_score|g24_color_matches:cm|g24_num1s:num1                           ; work         ;
+;             |g24_num1s:num2|                 ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |user_pins|datapath:main|g24_mastermind_score:master_score|g24_color_matches:cm|g24_num1s:num2                           ; work         ;
+;             |g24_num1s:num3|                 ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |user_pins|datapath:main|g24_mastermind_score:master_score|g24_color_matches:cm|g24_num1s:num3                           ; work         ;
+;             |g24_num1s:num4|                 ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |user_pins|datapath:main|g24_mastermind_score:master_score|g24_color_matches:cm|g24_num1s:num4                           ; work         ;
+;             |g24_num1s:num5|                 ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |user_pins|datapath:main|g24_mastermind_score:master_score|g24_color_matches:cm|g24_num1s:num5                           ; work         ;
+;             |g24_num1s:num6|                 ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |user_pins|datapath:main|g24_mastermind_score:master_score|g24_color_matches:cm|g24_num1s:num6                           ; work         ;
+;             |g24_num1s:num7|                 ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |user_pins|datapath:main|g24_mastermind_score:master_score|g24_color_matches:cm|g24_num1s:num7                           ; work         ;
+;             |g24_num1s:num8|                 ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |user_pins|datapath:main|g24_mastermind_score:master_score|g24_color_matches:cm|g24_num1s:num8                           ; work         ;
+;             |g24_num1s:num9|                 ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |user_pins|datapath:main|g24_mastermind_score:master_score|g24_color_matches:cm|g24_num1s:num9                           ; work         ;
+;             |lpm_decode:ld1|                 ; 6 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |user_pins|datapath:main|g24_mastermind_score:master_score|g24_color_matches:cm|lpm_decode:ld1                           ; work         ;
+;                |decode_s6f:auto_generated|   ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |user_pins|datapath:main|g24_mastermind_score:master_score|g24_color_matches:cm|lpm_decode:ld1|decode_s6f:auto_generated ; work         ;
+;             |lpm_decode:ld2|                 ; 6 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |user_pins|datapath:main|g24_mastermind_score:master_score|g24_color_matches:cm|lpm_decode:ld2                           ; work         ;
+;                |decode_s6f:auto_generated|   ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |user_pins|datapath:main|g24_mastermind_score:master_score|g24_color_matches:cm|lpm_decode:ld2|decode_s6f:auto_generated ; work         ;
+;             |lpm_decode:ld3|                 ; 6 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |user_pins|datapath:main|g24_mastermind_score:master_score|g24_color_matches:cm|lpm_decode:ld3                           ; work         ;
+;                |decode_s6f:auto_generated|   ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |user_pins|datapath:main|g24_mastermind_score:master_score|g24_color_matches:cm|lpm_decode:ld3|decode_s6f:auto_generated ; work         ;
+;             |lpm_decode:ld4|                 ; 6 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |user_pins|datapath:main|g24_mastermind_score:master_score|g24_color_matches:cm|lpm_decode:ld4                           ; work         ;
+;                |decode_s6f:auto_generated|   ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |user_pins|datapath:main|g24_mastermind_score:master_score|g24_color_matches:cm|lpm_decode:ld4|decode_s6f:auto_generated ; work         ;
+;             |lpm_decode:ld5|                 ; 6 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |user_pins|datapath:main|g24_mastermind_score:master_score|g24_color_matches:cm|lpm_decode:ld5                           ; work         ;
+;                |decode_s6f:auto_generated|   ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |user_pins|datapath:main|g24_mastermind_score:master_score|g24_color_matches:cm|lpm_decode:ld5|decode_s6f:auto_generated ; work         ;
+;             |lpm_decode:ld6|                 ; 6 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |user_pins|datapath:main|g24_mastermind_score:master_score|g24_color_matches:cm|lpm_decode:ld6                           ; work         ;
+;                |decode_s6f:auto_generated|   ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |user_pins|datapath:main|g24_mastermind_score:master_score|g24_color_matches:cm|lpm_decode:ld6|decode_s6f:auto_generated ; work         ;
+;             |lpm_decode:ld7|                 ; 6 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |user_pins|datapath:main|g24_mastermind_score:master_score|g24_color_matches:cm|lpm_decode:ld7                           ; work         ;
+;                |decode_s6f:auto_generated|   ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |user_pins|datapath:main|g24_mastermind_score:master_score|g24_color_matches:cm|lpm_decode:ld7|decode_s6f:auto_generated ; work         ;
+;             |lpm_decode:ld8|                 ; 6 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |user_pins|datapath:main|g24_mastermind_score:master_score|g24_color_matches:cm|lpm_decode:ld8                           ; work         ;
+;                |decode_s6f:auto_generated|   ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |user_pins|datapath:main|g24_mastermind_score:master_score|g24_color_matches:cm|lpm_decode:ld8|decode_s6f:auto_generated ; work         ;
+;          |g24_num_matches:nm|                ; 15 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |user_pins|datapath:main|g24_mastermind_score:master_score|g24_num_matches:nm                                            ; work         ;
+;             |g24_comp6:comp1|                ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |user_pins|datapath:main|g24_mastermind_score:master_score|g24_num_matches:nm|g24_comp6:comp1                            ; work         ;
+;             |g24_comp6:comp2|                ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |user_pins|datapath:main|g24_mastermind_score:master_score|g24_num_matches:nm|g24_comp6:comp2                            ; work         ;
+;             |g24_comp6:comp3|                ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |user_pins|datapath:main|g24_mastermind_score:master_score|g24_num_matches:nm|g24_comp6:comp3                            ; work         ;
+;             |g24_comp6:comp4|                ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |user_pins|datapath:main|g24_mastermind_score:master_score|g24_num_matches:nm|g24_comp6:comp4                            ; work         ;
+;             |g24_num1s:comp|                 ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |user_pins|datapath:main|g24_mastermind_score:master_score|g24_num_matches:nm|g24_num1s:comp                             ; work         ;
+;          |g24_score_encoder:se|              ; 10 (10)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |user_pins|datapath:main|g24_mastermind_score:master_score|g24_score_encoder:se                                          ; work         ;
+;       |g24_possibility_table:table|          ; 22 (6)            ; 12 (0)       ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |user_pins|datapath:main|g24_possibility_table:table                                                                     ; work         ;
+;          |altsyncram:table_memory[0]__1|     ; 0 (0)             ; 0 (0)        ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |user_pins|datapath:main|g24_possibility_table:table|altsyncram:table_memory[0]__1                                       ; work         ;
+;             |altsyncram_cug1:auto_generated| ; 0 (0)             ; 0 (0)        ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |user_pins|datapath:main|g24_possibility_table:table|altsyncram:table_memory[0]__1|altsyncram_cug1:auto_generated        ; work         ;
+;          |color_counter:color_counter0|      ; 4 (4)             ; 3 (3)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |user_pins|datapath:main|g24_possibility_table:table|color_counter:color_counter0                                        ; work         ;
+;          |color_counter:color_counter1|      ; 4 (4)             ; 3 (3)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |user_pins|datapath:main|g24_possibility_table:table|color_counter:color_counter1                                        ; work         ;
+;          |color_counter:color_counter2|      ; 4 (4)             ; 3 (3)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |user_pins|datapath:main|g24_possibility_table:table|color_counter:color_counter2                                        ; work         ;
+;          |color_counter:color_counter3|      ; 4 (4)             ; 3 (3)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |user_pins|datapath:main|g24_possibility_table:table|color_counter:color_counter3                                        ; work         ;
+;    |g24_7_segment_decoder:dec0|              ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |user_pins|g24_7_segment_decoder:dec0                                                                                    ; work         ;
+;    |g24_7_segment_decoder:dec1|              ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |user_pins|g24_7_segment_decoder:dec1                                                                                    ; work         ;
+;    |g24_7_segment_decoder:dec2|              ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |user_pins|g24_7_segment_decoder:dec2                                                                                    ; work         ;
+;    |g24_7_segment_decoder:dec3|              ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |user_pins|g24_7_segment_decoder:dec3                                                                                    ; work         ;
+;    |g24_mastermind_controller:controller|    ; 89 (89)           ; 17 (17)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |user_pins|g24_mastermind_controller:controller                                                                          ; work         ;
+;    |user_input:input_receiver|               ; 7 (7)             ; 15 (15)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |user_pins|user_input:input_receiver                                                                                     ; work         ;
++----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                                                                      ;
++-------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+------+
+; Name                                                                                                              ; Type ; Mode             ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size ; MIF  ;
++-------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+------+
+; datapath:main|g24_possibility_table:table|altsyncram:table_memory[0]__1|altsyncram_cug1:auto_generated|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 4096         ; 1            ; 4096         ; 1            ; 4096 ; None ;
++-------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+------+
+
+
++-------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                   ;
++--------------------------------------------------------+---------------------+------------------------+
+; Latch Name                                             ; Latch Enable Signal ; Free of Timing Hazards ;
++--------------------------------------------------------+---------------------+------------------------+
+; datapath:main|g24_possibility_table:table|last_reached ; GND                 ; yes                    ;
+; Number of user-specified and inferred latches = 1      ;                     ;                        ;
++--------------------------------------------------------+---------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                                                          ;
++------------------------------------------------------------------------------------------+------------------------------------------------------------------+
+; Register name                                                                            ; Reason for Removal                                               ;
++------------------------------------------------------------------------------------------+------------------------------------------------------------------+
+; random_generator:rando|reset                                                             ; Lost fanout                                                      ;
+; random_generator:rando|g24_possibility_table:i1|color_counter:color_counter3|color[0..2] ; Lost fanout                                                      ;
+; random_generator:rando|g24_possibility_table:i1|color_counter:color_counter2|color[0..2] ; Lost fanout                                                      ;
+; random_generator:rando|g24_possibility_table:i1|color_counter:color_counter1|color[0..2] ; Lost fanout                                                      ;
+; random_generator:rando|g24_possibility_table:i1|color_counter:color_counter0|color[0..2] ; Lost fanout                                                      ;
+; g24_mastermind_controller:controller|present_state.E                                     ; Merged with g24_mastermind_controller:controller|present_state.B ;
+; g24_mastermind_controller:controller|TM_IN                                               ; Stuck at GND due to stuck port data_in                           ;
+; g24_mastermind_controller:controller|present_input_state.DISPLAY                         ; Lost fanout                                                      ;
+; Total Number of Removed Registers = 16                                                   ;                                                                  ;
++------------------------------------------------------------------------------------------+------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                                ;
++------------------------------+--------------------+----------------------------------------------------------------------------------------+
+; Register name                ; Reason for Removal ; Registers Removed due to This Register                                                 ;
++------------------------------+--------------------+----------------------------------------------------------------------------------------+
+; random_generator:rando|reset ; Lost Fanouts       ; random_generator:rando|g24_possibility_table:i1|color_counter:color_counter3|color[1], ;
+;                              ;                    ; random_generator:rando|g24_possibility_table:i1|color_counter:color_counter2|color[1]  ;
++------------------------------+--------------------+----------------------------------------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -225,14 +382,451 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 15    ;
+; Total registers                              ; 60    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Clear ; 27    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 12    ;
+; Number of registers using Clock Enable       ; 54    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                            ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                  ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------+
+; 3:1                ; 2 bits    ; 4 LEs         ; 0 LEs                ; 4 LEs                  ; Yes        ; |user_pins|g24_mastermind_controller:controller|SR_LD                       ;
+; 5:1                ; 3 bits    ; 9 LEs         ; 3 LEs                ; 6 LEs                  ; Yes        ; |user_pins|g24_mastermind_controller:controller|present_input_state.DISPLAY ;
+; 10:1               ; 4 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |user_pins|g24_mastermind_controller:controller|present_state.A             ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for datapath:main|g24_possibility_table:table|altsyncram:table_memory[0]__1|altsyncram_cug1:auto_generated ;
++---------------------------------+--------------------+------+-----------------------------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                                              ;
++---------------------------------+--------------------+------+-----------------------------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                               ;
++---------------------------------+--------------------+------+-----------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for random_generator:rando|g24_possibility_table:i1|altsyncram:table_memory[0]__1|altsyncram_cug1:auto_generated ;
++---------------------------------+--------------------+------+-----------------------------------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                                                    ;
++---------------------------------+--------------------+------+-----------------------------------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                                     ;
++---------------------------------+--------------------+------+-----------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:main|g24_mastermind_score:master_score|g24_color_matches:cm|lpm_decode:ld1 ;
++------------------------+------------+--------------------------------------------------------------------------------------------+
+; Parameter Name         ; Value      ; Type                                                                                       ;
++------------------------+------------+--------------------------------------------------------------------------------------------+
+; LPM_WIDTH              ; 3          ; Signed Integer                                                                             ;
+; LPM_DECODES            ; 8          ; Signed Integer                                                                             ;
+; LPM_PIPELINE           ; 0          ; Untyped                                                                                    ;
+; CASCADE_CHAIN          ; MANUAL     ; Untyped                                                                                    ;
+; DEVICE_FAMILY          ; Cyclone II ; Untyped                                                                                    ;
+; CBXI_PARAMETER         ; decode_s6f ; Untyped                                                                                    ;
+; AUTO_CARRY_CHAINS      ; ON         ; AUTO_CARRY                                                                                 ;
+; IGNORE_CARRY_BUFFERS   ; OFF        ; IGNORE_CARRY                                                                               ;
+; AUTO_CASCADE_CHAINS    ; ON         ; AUTO_CASCADE                                                                               ;
+; IGNORE_CASCADE_BUFFERS ; OFF        ; IGNORE_CASCADE                                                                             ;
++------------------------+------------+--------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:main|g24_mastermind_score:master_score|g24_color_matches:cm|lpm_decode:ld2 ;
++------------------------+------------+--------------------------------------------------------------------------------------------+
+; Parameter Name         ; Value      ; Type                                                                                       ;
++------------------------+------------+--------------------------------------------------------------------------------------------+
+; LPM_WIDTH              ; 3          ; Signed Integer                                                                             ;
+; LPM_DECODES            ; 8          ; Signed Integer                                                                             ;
+; LPM_PIPELINE           ; 0          ; Untyped                                                                                    ;
+; CASCADE_CHAIN          ; MANUAL     ; Untyped                                                                                    ;
+; DEVICE_FAMILY          ; Cyclone II ; Untyped                                                                                    ;
+; CBXI_PARAMETER         ; decode_s6f ; Untyped                                                                                    ;
+; AUTO_CARRY_CHAINS      ; ON         ; AUTO_CARRY                                                                                 ;
+; IGNORE_CARRY_BUFFERS   ; OFF        ; IGNORE_CARRY                                                                               ;
+; AUTO_CASCADE_CHAINS    ; ON         ; AUTO_CASCADE                                                                               ;
+; IGNORE_CASCADE_BUFFERS ; OFF        ; IGNORE_CASCADE                                                                             ;
++------------------------+------------+--------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:main|g24_mastermind_score:master_score|g24_color_matches:cm|lpm_decode:ld3 ;
++------------------------+------------+--------------------------------------------------------------------------------------------+
+; Parameter Name         ; Value      ; Type                                                                                       ;
++------------------------+------------+--------------------------------------------------------------------------------------------+
+; LPM_WIDTH              ; 3          ; Signed Integer                                                                             ;
+; LPM_DECODES            ; 8          ; Signed Integer                                                                             ;
+; LPM_PIPELINE           ; 0          ; Untyped                                                                                    ;
+; CASCADE_CHAIN          ; MANUAL     ; Untyped                                                                                    ;
+; DEVICE_FAMILY          ; Cyclone II ; Untyped                                                                                    ;
+; CBXI_PARAMETER         ; decode_s6f ; Untyped                                                                                    ;
+; AUTO_CARRY_CHAINS      ; ON         ; AUTO_CARRY                                                                                 ;
+; IGNORE_CARRY_BUFFERS   ; OFF        ; IGNORE_CARRY                                                                               ;
+; AUTO_CASCADE_CHAINS    ; ON         ; AUTO_CASCADE                                                                               ;
+; IGNORE_CASCADE_BUFFERS ; OFF        ; IGNORE_CASCADE                                                                             ;
++------------------------+------------+--------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:main|g24_mastermind_score:master_score|g24_color_matches:cm|lpm_decode:ld4 ;
++------------------------+------------+--------------------------------------------------------------------------------------------+
+; Parameter Name         ; Value      ; Type                                                                                       ;
++------------------------+------------+--------------------------------------------------------------------------------------------+
+; LPM_WIDTH              ; 3          ; Signed Integer                                                                             ;
+; LPM_DECODES            ; 8          ; Signed Integer                                                                             ;
+; LPM_PIPELINE           ; 0          ; Untyped                                                                                    ;
+; CASCADE_CHAIN          ; MANUAL     ; Untyped                                                                                    ;
+; DEVICE_FAMILY          ; Cyclone II ; Untyped                                                                                    ;
+; CBXI_PARAMETER         ; decode_s6f ; Untyped                                                                                    ;
+; AUTO_CARRY_CHAINS      ; ON         ; AUTO_CARRY                                                                                 ;
+; IGNORE_CARRY_BUFFERS   ; OFF        ; IGNORE_CARRY                                                                               ;
+; AUTO_CASCADE_CHAINS    ; ON         ; AUTO_CASCADE                                                                               ;
+; IGNORE_CASCADE_BUFFERS ; OFF        ; IGNORE_CASCADE                                                                             ;
++------------------------+------------+--------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:main|g24_mastermind_score:master_score|g24_color_matches:cm|lpm_decode:ld5 ;
++------------------------+------------+--------------------------------------------------------------------------------------------+
+; Parameter Name         ; Value      ; Type                                                                                       ;
++------------------------+------------+--------------------------------------------------------------------------------------------+
+; LPM_WIDTH              ; 3          ; Signed Integer                                                                             ;
+; LPM_DECODES            ; 8          ; Signed Integer                                                                             ;
+; LPM_PIPELINE           ; 0          ; Untyped                                                                                    ;
+; CASCADE_CHAIN          ; MANUAL     ; Untyped                                                                                    ;
+; DEVICE_FAMILY          ; Cyclone II ; Untyped                                                                                    ;
+; CBXI_PARAMETER         ; decode_s6f ; Untyped                                                                                    ;
+; AUTO_CARRY_CHAINS      ; ON         ; AUTO_CARRY                                                                                 ;
+; IGNORE_CARRY_BUFFERS   ; OFF        ; IGNORE_CARRY                                                                               ;
+; AUTO_CASCADE_CHAINS    ; ON         ; AUTO_CASCADE                                                                               ;
+; IGNORE_CASCADE_BUFFERS ; OFF        ; IGNORE_CASCADE                                                                             ;
++------------------------+------------+--------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:main|g24_mastermind_score:master_score|g24_color_matches:cm|lpm_decode:ld6 ;
++------------------------+------------+--------------------------------------------------------------------------------------------+
+; Parameter Name         ; Value      ; Type                                                                                       ;
++------------------------+------------+--------------------------------------------------------------------------------------------+
+; LPM_WIDTH              ; 3          ; Signed Integer                                                                             ;
+; LPM_DECODES            ; 8          ; Signed Integer                                                                             ;
+; LPM_PIPELINE           ; 0          ; Untyped                                                                                    ;
+; CASCADE_CHAIN          ; MANUAL     ; Untyped                                                                                    ;
+; DEVICE_FAMILY          ; Cyclone II ; Untyped                                                                                    ;
+; CBXI_PARAMETER         ; decode_s6f ; Untyped                                                                                    ;
+; AUTO_CARRY_CHAINS      ; ON         ; AUTO_CARRY                                                                                 ;
+; IGNORE_CARRY_BUFFERS   ; OFF        ; IGNORE_CARRY                                                                               ;
+; AUTO_CASCADE_CHAINS    ; ON         ; AUTO_CASCADE                                                                               ;
+; IGNORE_CASCADE_BUFFERS ; OFF        ; IGNORE_CASCADE                                                                             ;
++------------------------+------------+--------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:main|g24_mastermind_score:master_score|g24_color_matches:cm|lpm_decode:ld7 ;
++------------------------+------------+--------------------------------------------------------------------------------------------+
+; Parameter Name         ; Value      ; Type                                                                                       ;
++------------------------+------------+--------------------------------------------------------------------------------------------+
+; LPM_WIDTH              ; 3          ; Signed Integer                                                                             ;
+; LPM_DECODES            ; 8          ; Signed Integer                                                                             ;
+; LPM_PIPELINE           ; 0          ; Untyped                                                                                    ;
+; CASCADE_CHAIN          ; MANUAL     ; Untyped                                                                                    ;
+; DEVICE_FAMILY          ; Cyclone II ; Untyped                                                                                    ;
+; CBXI_PARAMETER         ; decode_s6f ; Untyped                                                                                    ;
+; AUTO_CARRY_CHAINS      ; ON         ; AUTO_CARRY                                                                                 ;
+; IGNORE_CARRY_BUFFERS   ; OFF        ; IGNORE_CARRY                                                                               ;
+; AUTO_CASCADE_CHAINS    ; ON         ; AUTO_CASCADE                                                                               ;
+; IGNORE_CASCADE_BUFFERS ; OFF        ; IGNORE_CASCADE                                                                             ;
++------------------------+------------+--------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:main|g24_mastermind_score:master_score|g24_color_matches:cm|lpm_decode:ld8 ;
++------------------------+------------+--------------------------------------------------------------------------------------------+
+; Parameter Name         ; Value      ; Type                                                                                       ;
++------------------------+------------+--------------------------------------------------------------------------------------------+
+; LPM_WIDTH              ; 3          ; Signed Integer                                                                             ;
+; LPM_DECODES            ; 8          ; Signed Integer                                                                             ;
+; LPM_PIPELINE           ; 0          ; Untyped                                                                                    ;
+; CASCADE_CHAIN          ; MANUAL     ; Untyped                                                                                    ;
+; DEVICE_FAMILY          ; Cyclone II ; Untyped                                                                                    ;
+; CBXI_PARAMETER         ; decode_s6f ; Untyped                                                                                    ;
+; AUTO_CARRY_CHAINS      ; ON         ; AUTO_CARRY                                                                                 ;
+; IGNORE_CARRY_BUFFERS   ; OFF        ; IGNORE_CARRY                                                                               ;
+; AUTO_CASCADE_CHAINS    ; ON         ; AUTO_CASCADE                                                                               ;
+; IGNORE_CASCADE_BUFFERS ; OFF        ; IGNORE_CASCADE                                                                             ;
++------------------------+------------+--------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:main|g24_possibility_table:table|altsyncram:table_memory[0]__1 ;
++------------------------------------+----------------------+----------------------------------------------------------+
+; Parameter Name                     ; Value                ; Type                                                     ;
++------------------------------------+----------------------+----------------------------------------------------------+
+; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped                                                  ;
+; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY                                               ;
+; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY                                             ;
+; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE                                             ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE                                           ;
+; WIDTH_BYTEENA                      ; 1                    ; Untyped                                                  ;
+; OPERATION_MODE                     ; DUAL_PORT            ; Untyped                                                  ;
+; WIDTH_A                            ; 1                    ; Untyped                                                  ;
+; WIDTHAD_A                          ; 12                   ; Untyped                                                  ;
+; NUMWORDS_A                         ; 4096                 ; Untyped                                                  ;
+; OUTDATA_REG_A                      ; UNREGISTERED         ; Untyped                                                  ;
+; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                                                  ;
+; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                                                  ;
+; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                                                  ;
+; INDATA_ACLR_A                      ; NONE                 ; Untyped                                                  ;
+; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                                                  ;
+; WIDTH_B                            ; 1                    ; Untyped                                                  ;
+; WIDTHAD_B                          ; 12                   ; Untyped                                                  ;
+; NUMWORDS_B                         ; 4096                 ; Untyped                                                  ;
+; INDATA_REG_B                       ; CLOCK1               ; Untyped                                                  ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                                                  ;
+; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                                                  ;
+; ADDRESS_REG_B                      ; CLOCK0               ; Untyped                                                  ;
+; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped                                                  ;
+; BYTEENA_REG_B                      ; CLOCK1               ; Untyped                                                  ;
+; INDATA_ACLR_B                      ; NONE                 ; Untyped                                                  ;
+; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped                                                  ;
+; ADDRESS_ACLR_B                     ; NONE                 ; Untyped                                                  ;
+; OUTDATA_ACLR_B                     ; NONE                 ; Untyped                                                  ;
+; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped                                                  ;
+; BYTEENA_ACLR_B                     ; NONE                 ; Untyped                                                  ;
+; WIDTH_BYTEENA_A                    ; 1                    ; Untyped                                                  ;
+; WIDTH_BYTEENA_B                    ; 1                    ; Untyped                                                  ;
+; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped                                                  ;
+; BYTE_SIZE                          ; 8                    ; Untyped                                                  ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; OLD_DATA             ; Untyped                                                  ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                                                  ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                                                  ;
+; INIT_FILE                          ; UNUSED               ; Untyped                                                  ;
+; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                                                  ;
+; MAXIMUM_DEPTH                      ; 0                    ; Untyped                                                  ;
+; CLOCK_ENABLE_INPUT_A               ; NORMAL               ; Untyped                                                  ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL               ; Untyped                                                  ;
+; CLOCK_ENABLE_OUTPUT_A              ; NORMAL               ; Untyped                                                  ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL               ; Untyped                                                  ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped                                                  ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped                                                  ;
+; ENABLE_ECC                         ; FALSE                ; Untyped                                                  ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                                                  ;
+; WIDTH_ECCSTATUS                    ; 3                    ; Untyped                                                  ;
+; DEVICE_FAMILY                      ; Cyclone II           ; Untyped                                                  ;
+; CBXI_PARAMETER                     ; altsyncram_cug1      ; Untyped                                                  ;
++------------------------------------+----------------------+----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: random_generator:rando|g24_possibility_table:i1|altsyncram:table_memory[0]__1 ;
++------------------------------------+----------------------+----------------------------------------------------------------+
+; Parameter Name                     ; Value                ; Type                                                           ;
++------------------------------------+----------------------+----------------------------------------------------------------+
+; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped                                                        ;
+; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY                                                     ;
+; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY                                                   ;
+; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE                                                   ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE                                                 ;
+; WIDTH_BYTEENA                      ; 1                    ; Untyped                                                        ;
+; OPERATION_MODE                     ; DUAL_PORT            ; Untyped                                                        ;
+; WIDTH_A                            ; 1                    ; Untyped                                                        ;
+; WIDTHAD_A                          ; 12                   ; Untyped                                                        ;
+; NUMWORDS_A                         ; 4096                 ; Untyped                                                        ;
+; OUTDATA_REG_A                      ; UNREGISTERED         ; Untyped                                                        ;
+; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                                                        ;
+; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                                                        ;
+; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                                                        ;
+; INDATA_ACLR_A                      ; NONE                 ; Untyped                                                        ;
+; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                                                        ;
+; WIDTH_B                            ; 1                    ; Untyped                                                        ;
+; WIDTHAD_B                          ; 12                   ; Untyped                                                        ;
+; NUMWORDS_B                         ; 4096                 ; Untyped                                                        ;
+; INDATA_REG_B                       ; CLOCK1               ; Untyped                                                        ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                                                        ;
+; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                                                        ;
+; ADDRESS_REG_B                      ; CLOCK0               ; Untyped                                                        ;
+; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped                                                        ;
+; BYTEENA_REG_B                      ; CLOCK1               ; Untyped                                                        ;
+; INDATA_ACLR_B                      ; NONE                 ; Untyped                                                        ;
+; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped                                                        ;
+; ADDRESS_ACLR_B                     ; NONE                 ; Untyped                                                        ;
+; OUTDATA_ACLR_B                     ; NONE                 ; Untyped                                                        ;
+; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped                                                        ;
+; BYTEENA_ACLR_B                     ; NONE                 ; Untyped                                                        ;
+; WIDTH_BYTEENA_A                    ; 1                    ; Untyped                                                        ;
+; WIDTH_BYTEENA_B                    ; 1                    ; Untyped                                                        ;
+; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped                                                        ;
+; BYTE_SIZE                          ; 8                    ; Untyped                                                        ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; OLD_DATA             ; Untyped                                                        ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                                                        ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                                                        ;
+; INIT_FILE                          ; UNUSED               ; Untyped                                                        ;
+; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                                                        ;
+; MAXIMUM_DEPTH                      ; 0                    ; Untyped                                                        ;
+; CLOCK_ENABLE_INPUT_A               ; NORMAL               ; Untyped                                                        ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL               ; Untyped                                                        ;
+; CLOCK_ENABLE_OUTPUT_A              ; NORMAL               ; Untyped                                                        ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL               ; Untyped                                                        ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped                                                        ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped                                                        ;
+; ENABLE_ECC                         ; FALSE                ; Untyped                                                        ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                                                        ;
+; WIDTH_ECCSTATUS                    ; 3                    ; Untyped                                                        ;
+; DEVICE_FAMILY                      ; Cyclone II           ; Untyped                                                        ;
+; CBXI_PARAMETER                     ; altsyncram_cug1      ; Untyped                                                        ;
++------------------------------------+----------------------+----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; altsyncram Parameter Settings by Entity Instance                                                                          ;
++-------------------------------------------+-------------------------------------------------------------------------------+
+; Name                                      ; Value                                                                         ;
++-------------------------------------------+-------------------------------------------------------------------------------+
+; Number of entity instances                ; 2                                                                             ;
+; Entity Instance                           ; datapath:main|g24_possibility_table:table|altsyncram:table_memory[0]__1       ;
+;     -- OPERATION_MODE                     ; DUAL_PORT                                                                     ;
+;     -- WIDTH_A                            ; 1                                                                             ;
+;     -- NUMWORDS_A                         ; 4096                                                                          ;
+;     -- OUTDATA_REG_A                      ; UNREGISTERED                                                                  ;
+;     -- WIDTH_B                            ; 1                                                                             ;
+;     -- NUMWORDS_B                         ; 4096                                                                          ;
+;     -- ADDRESS_REG_B                      ; CLOCK0                                                                        ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                                                                  ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                                                          ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; OLD_DATA                                                                      ;
+; Entity Instance                           ; random_generator:rando|g24_possibility_table:i1|altsyncram:table_memory[0]__1 ;
+;     -- OPERATION_MODE                     ; DUAL_PORT                                                                     ;
+;     -- WIDTH_A                            ; 1                                                                             ;
+;     -- NUMWORDS_A                         ; 4096                                                                          ;
+;     -- OUTDATA_REG_A                      ; UNREGISTERED                                                                  ;
+;     -- WIDTH_B                            ; 1                                                                             ;
+;     -- NUMWORDS_B                         ; 4096                                                                          ;
+;     -- ADDRESS_REG_B                      ; CLOCK0                                                                        ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                                                                  ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                                                          ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; OLD_DATA                                                                      ;
++-------------------------------------------+-------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "random_generator:rando|g24_possibility_table:i1"                                      ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                             ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; tc_en  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; tm_in  ; Input  ; Info     ; Stuck at GND                                                                        ;
+; tm_en  ; Input  ; Info     ; Stuck at GND                                                                        ;
+; tm_out ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "random_generator:rando"                                                                ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                             ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+; pattern ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------+
+; Port Connectivity Checks: "datapath:main|g24_comp6:comparison" ;
++---------+-------+----------+-----------------------------------+
+; Port    ; Type  ; Severity ; Details                           ;
++---------+-------+----------+-----------------------------------+
+; a[5..4] ; Input ; Info     ; Stuck at GND                      ;
+; b[5..4] ; Input ; Info     ; Stuck at GND                      ;
++---------+-------+----------+-----------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "datapath:main|g24_possibility_table:table|color_counter:color_counter3"                     ;
++--------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port         ; Type   ; Severity ; Details                                                                             ;
++--------------+--------+----------+-------------------------------------------------------------------------------------+
+; last_reached ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "datapath:main|g24_mastermind_score:master_score|g24_num_matches:nm|g24_comp6:comp4" ;
++---------+-------+----------+-----------------------------------------------------------------------------------+
+; Port    ; Type  ; Severity ; Details                                                                           ;
++---------+-------+----------+-----------------------------------------------------------------------------------+
+; a[5..3] ; Input ; Info     ; Stuck at GND                                                                      ;
+; b[5..3] ; Input ; Info     ; Stuck at GND                                                                      ;
++---------+-------+----------+-----------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "datapath:main|g24_mastermind_score:master_score|g24_num_matches:nm|g24_comp6:comp3" ;
++---------+-------+----------+-----------------------------------------------------------------------------------+
+; Port    ; Type  ; Severity ; Details                                                                           ;
++---------+-------+----------+-----------------------------------------------------------------------------------+
+; a[5..3] ; Input ; Info     ; Stuck at GND                                                                      ;
+; b[5..3] ; Input ; Info     ; Stuck at GND                                                                      ;
++---------+-------+----------+-----------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "datapath:main|g24_mastermind_score:master_score|g24_num_matches:nm|g24_comp6:comp2" ;
++---------+-------+----------+-----------------------------------------------------------------------------------+
+; Port    ; Type  ; Severity ; Details                                                                           ;
++---------+-------+----------+-----------------------------------------------------------------------------------+
+; a[5..3] ; Input ; Info     ; Stuck at GND                                                                      ;
+; b[5..3] ; Input ; Info     ; Stuck at GND                                                                      ;
++---------+-------+----------+-----------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "datapath:main|g24_mastermind_score:master_score|g24_num_matches:nm|g24_comp6:comp1" ;
++---------+-------+----------+-----------------------------------------------------------------------------------+
+; Port    ; Type  ; Severity ; Details                                                                           ;
++---------+-------+----------+-----------------------------------------------------------------------------------+
+; a[5..3] ; Input ; Info     ; Stuck at GND                                                                      ;
+; b[5..3] ; Input ; Info     ; Stuck at GND                                                                      ;
++---------+-------+----------+-----------------------------------------------------------------------------------+
+
+
++------------------------------------------------------+
+; Port Connectivity Checks: "datapath:main"            ;
++--------------------+-------+----------+--------------+
+; Port               ; Type  ; Severity ; Details      ;
++--------------------+-------+----------+--------------+
+; ext_pattern[11..4] ; Input ; Info     ; Stuck at GND ;
+; ext_pattern[2..1]  ; Input ; Info     ; Stuck at GND ;
+; ext_pattern[3]     ; Input ; Info     ; Stuck at VCC ;
+; ext_pattern[0]     ; Input ; Info     ; Stuck at VCC ;
++--------------------+-------+----------+--------------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "g24_mastermind_controller:controller"                                                 ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                             ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; start  ; Input  ; Info     ; Stuck at GND                                                                        ;
+; ready  ; Input  ; Info     ; Stuck at GND                                                                        ;
+; solved ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------+
@@ -290,7 +884,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
-    Info: Processing started: Thu Dec 03 13:52:38 2015
+    Info: Processing started: Thu Dec 03 20:33:24 2015
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off user_pins -c user_pins
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file /323/lab5/user_input/user_input.vhd
@@ -299,25 +893,129 @@ Info (12021): Found 2 design units, including 1 entities, in source file /323/la
 Info (12021): Found 2 design units, including 1 entities, in source file /323/lab5/user_input/user_pins.vhd
     Info (12022): Found design unit 1: user_pins-arch
     Info (12023): Found entity 1: user_pins
-Info (12021): Found 2 design units, including 1 entities, in source file /323/lab3/g24_7_segment_decoder.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file /323/lab5/g24_score_encoder.vhd
+    Info (12022): Found design unit 1: g24_score_encoder-arch
+    Info (12023): Found entity 1: g24_score_encoder
+Info (12021): Found 2 design units, including 1 entities, in source file /323/lab5/color_counter.vhd
+    Info (12022): Found design unit 1: color_counter-behavior
+    Info (12023): Found entity 1: color_counter
+Info (12021): Found 2 design units, including 1 entities, in source file /323/lab5/datapath.vhd
+    Info (12022): Found design unit 1: datapath-bdf_type
+    Info (12023): Found entity 1: datapath
+Info (12021): Found 2 design units, including 1 entities, in source file /323/lab5/g24_7_segment_decoder.vhd
     Info (12022): Found design unit 1: g24_7_segment_decoder-arch
     Info (12023): Found entity 1: g24_7_segment_decoder
-Info (12021): Found 2 design units, including 1 entities, in source file g24_mastermind_controller.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file /323/lab5/g24_color_matches.vhd
+    Info (12022): Found design unit 1: g24_color_matches-arch
+    Info (12023): Found entity 1: g24_color_matches
+Info (12021): Found 2 design units, including 1 entities, in source file /323/lab5/g24_comp6.vhd
+    Info (12022): Found design unit 1: g24_comp6-bdf_type
+    Info (12023): Found entity 1: g24_comp6
+Info (12021): Found 2 design units, including 1 entities, in source file /323/lab5/g24_mastermind_controller.vhd
     Info (12022): Found design unit 1: g24_mastermind_controller-arch
     Info (12023): Found entity 1: g24_mastermind_controller
+Info (12021): Found 2 design units, including 1 entities, in source file /323/lab5/g24_mastermind_score.vhd
+    Info (12022): Found design unit 1: g24_mastermind_score-arch
+    Info (12023): Found entity 1: g24_mastermind_score
+Info (12021): Found 2 design units, including 1 entities, in source file /323/lab5/g24_minimum3.vhd
+    Info (12022): Found design unit 1: g24_minimum3-arch
+    Info (12023): Found entity 1: g24_minimum3
+Info (12021): Found 2 design units, including 1 entities, in source file /323/lab5/g24_num_matches.vhd
+    Info (12022): Found design unit 1: g24_num_matches-a
+    Info (12023): Found entity 1: g24_num_matches
+Info (12021): Found 2 design units, including 1 entities, in source file /323/lab5/g24_num1s.vhd
+    Info (12022): Found design unit 1: g24_num1s-bdf_type
+    Info (12023): Found entity 1: g24_num1s
+Info (12021): Found 2 design units, including 1 entities, in source file /323/lab5/g24_possibility_table.vhd
+    Info (12022): Found design unit 1: g24_possibility_table-behavior
+    Info (12023): Found entity 1: g24_possibility_table
+Info (12021): Found 2 design units, including 1 entities, in source file /323/lab5/random_generator/random_generator.vhd
+    Info (12022): Found design unit 1: random_generator-behavior
+    Info (12023): Found entity 1: random_generator
 Info (12127): Elaborating entity "user_pins" for the top level hierarchy
+Warning (10541): VHDL Signal Declaration warning at user_pins.vhd(80): used implicit default value for signal "generate_now" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
 Info (12128): Elaborating entity "g24_7_segment_decoder" for hierarchy "g24_7_segment_decoder:dec0"
-Info (12128): Elaborating entity "user_input" for hierarchy "user_input:rando"
+Info (12128): Elaborating entity "g24_mastermind_controller" for hierarchy "g24_mastermind_controller:controller"
+Warning (10036): Verilog HDL or VHDL warning at g24_mastermind_controller.vhd(24): object "reset" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at g24_mastermind_controller.vhd(25): object "state_reset" assigned a value but never read
+Warning (10492): VHDL Process Statement warning at g24_mastermind_controller.vhd(32): signal "switch_input" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Info (10018): Can't recognize finite state machine "present_input_state" because it has a complex reset state
+Info (10018): Can't recognize finite state machine "present_state" because it has a complex reset state
+Info (12128): Elaborating entity "datapath" for hierarchy "datapath:main"
+Info (12128): Elaborating entity "g24_mastermind_score" for hierarchy "datapath:main|g24_mastermind_score:master_score"
+Info (12128): Elaborating entity "g24_num_matches" for hierarchy "datapath:main|g24_mastermind_score:master_score|g24_num_matches:nm"
+Info (12128): Elaborating entity "g24_comp6" for hierarchy "datapath:main|g24_mastermind_score:master_score|g24_num_matches:nm|g24_comp6:comp1"
+Info (12128): Elaborating entity "g24_num1s" for hierarchy "datapath:main|g24_mastermind_score:master_score|g24_num_matches:nm|g24_num1s:comp"
+Info (12128): Elaborating entity "g24_color_matches" for hierarchy "datapath:main|g24_mastermind_score:master_score|g24_color_matches:cm"
+Info (12128): Elaborating entity "lpm_decode" for hierarchy "datapath:main|g24_mastermind_score:master_score|g24_color_matches:cm|lpm_decode:ld1"
+Info (12130): Elaborated megafunction instantiation "datapath:main|g24_mastermind_score:master_score|g24_color_matches:cm|lpm_decode:ld1"
+Info (12133): Instantiated megafunction "datapath:main|g24_mastermind_score:master_score|g24_color_matches:cm|lpm_decode:ld1" with the following parameter:
+    Info (12134): Parameter "lpm_decodes" = "8"
+    Info (12134): Parameter "lpm_type" = "LPM_DECODE"
+    Info (12134): Parameter "lpm_width" = "3"
+Info (12021): Found 1 design units, including 1 entities, in source file db/decode_s6f.tdf
+    Info (12023): Found entity 1: decode_s6f
+Info (12128): Elaborating entity "decode_s6f" for hierarchy "datapath:main|g24_mastermind_score:master_score|g24_color_matches:cm|lpm_decode:ld1|decode_s6f:auto_generated"
+Info (12128): Elaborating entity "g24_minimum3" for hierarchy "datapath:main|g24_mastermind_score:master_score|g24_color_matches:cm|g24_minimum3:min1"
+Info (12128): Elaborating entity "g24_score_encoder" for hierarchy "datapath:main|g24_mastermind_score:master_score|g24_score_encoder:se"
+Info (12128): Elaborating entity "g24_possibility_table" for hierarchy "datapath:main|g24_possibility_table:table"
+Warning (10631): VHDL Process Statement warning at g24_possibility_table.vhd(106): inferring latch(es) for signal or variable "last_reached", which holds its previous value in one or more paths through the process
+Info (10041): Inferred latch for "last_reached" at g24_possibility_table.vhd(106)
+Info (12128): Elaborating entity "color_counter" for hierarchy "datapath:main|g24_possibility_table:table|color_counter:color_counter0"
+Info (12128): Elaborating entity "altsyncram" for hierarchy "datapath:main|g24_possibility_table:table|altsyncram:table_memory[0]__1"
+Info (12130): Elaborated megafunction instantiation "datapath:main|g24_possibility_table:table|altsyncram:table_memory[0]__1"
+Info (12133): Instantiated megafunction "datapath:main|g24_possibility_table:table|altsyncram:table_memory[0]__1" with the following parameter:
+    Info (12134): Parameter "OPERATION_MODE" = "DUAL_PORT"
+    Info (12134): Parameter "WIDTH_A" = "1"
+    Info (12134): Parameter "WIDTHAD_A" = "12"
+    Info (12134): Parameter "NUMWORDS_A" = "4096"
+    Info (12134): Parameter "WIDTH_B" = "1"
+    Info (12134): Parameter "WIDTHAD_B" = "12"
+    Info (12134): Parameter "NUMWORDS_B" = "4096"
+    Info (12134): Parameter "ADDRESS_ACLR_A" = "NONE"
+    Info (12134): Parameter "OUTDATA_REG_B" = "UNREGISTERED"
+    Info (12134): Parameter "ADDRESS_ACLR_B" = "NONE"
+    Info (12134): Parameter "OUTDATA_ACLR_B" = "NONE"
+    Info (12134): Parameter "ADDRESS_REG_B" = "CLOCK0"
+    Info (12134): Parameter "INDATA_ACLR_A" = "NONE"
+    Info (12134): Parameter "WRCONTROL_ACLR_A" = "NONE"
+    Info (12134): Parameter "READ_DURING_WRITE_MODE_MIXED_PORTS" = "OLD_DATA"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_cug1.tdf
+    Info (12023): Found entity 1: altsyncram_cug1
+Info (12128): Elaborating entity "altsyncram_cug1" for hierarchy "datapath:main|g24_possibility_table:table|altsyncram:table_memory[0]__1|altsyncram_cug1:auto_generated"
+Info (12128): Elaborating entity "user_input" for hierarchy "user_input:input_receiver"
+Info (12128): Elaborating entity "random_generator" for hierarchy "random_generator:rando"
+Warning (14284): Synthesized away the following node(s):
+    Warning (14285): Synthesized away the following RAM node(s):
+        Warning (14320): Synthesized away node "random_generator:rando|g24_possibility_table:i1|altsyncram:table_memory[0]__1|altsyncram_cug1:auto_generated|q_b[0]"
+Warning (13004): Presettable and clearable registers converted to equivalent circuits with latches. Registers power-up to an undefined state, and DEVCLRn places the registers in an undefined state.
+    Warning (13310): Register "g24_mastermind_controller:controller|P_SEL" is converted into an equivalent circuit using register "g24_mastermind_controller:controller|P_SEL~_emulated" and latch "g24_mastermind_controller:controller|P_SEL~1"
+    Warning (13310): Register "g24_mastermind_controller:controller|GR_SEL" is converted into an equivalent circuit using register "g24_mastermind_controller:controller|GR_SEL~_emulated" and latch "g24_mastermind_controller:controller|GR_SEL~1"
+    Warning (13310): Register "g24_mastermind_controller:controller|GR_LD" is converted into an equivalent circuit using register "g24_mastermind_controller:controller|GR_LD~_emulated" and latch "g24_mastermind_controller:controller|GR_LD~1"
+    Warning (13310): Register "g24_mastermind_controller:controller|present_state.H" is converted into an equivalent circuit using register "g24_mastermind_controller:controller|present_state.H~_emulated" and latch "g24_mastermind_controller:controller|present_state.H~1"
+    Warning (13310): Register "g24_mastermind_controller:controller|present_state.B" is converted into an equivalent circuit using register "g24_mastermind_controller:controller|present_state.B~_emulated" and latch "g24_mastermind_controller:controller|present_state.B~1"
+    Warning (13310): Register "g24_mastermind_controller:controller|SR_SEL" is converted into an equivalent circuit using register "g24_mastermind_controller:controller|SR_SEL~_emulated" and latch "g24_mastermind_controller:controller|SR_SEL~1"
+    Warning (13310): Register "g24_mastermind_controller:controller|present_state.A" is converted into an equivalent circuit using register "g24_mastermind_controller:controller|present_state.A~_emulated" and latch "g24_mastermind_controller:controller|present_state.A~1"
+    Warning (13310): Register "g24_mastermind_controller:controller|present_state.D" is converted into an equivalent circuit using register "g24_mastermind_controller:controller|present_state.D~_emulated" and latch "g24_mastermind_controller:controller|present_state.D~1"
+    Warning (13310): Register "g24_mastermind_controller:controller|present_state.F" is converted into an equivalent circuit using register "g24_mastermind_controller:controller|present_state.F~_emulated" and latch "g24_mastermind_controller:controller|present_state.F~1"
+    Warning (13310): Register "g24_mastermind_controller:controller|present_state.G" is converted into an equivalent circuit using register "g24_mastermind_controller:controller|present_state.G~_emulated" and latch "g24_mastermind_controller:controller|present_state.G~1"
+    Warning (13310): Register "g24_mastermind_controller:controller|TC_RST" is converted into an equivalent circuit using register "g24_mastermind_controller:controller|TC_RST~_emulated" and latch "g24_mastermind_controller:controller|TC_RST~1"
+    Warning (13310): Register "g24_mastermind_controller:controller|present_input_state.INIT" is converted into an equivalent circuit using register "g24_mastermind_controller:controller|present_input_state.INIT~_emulated" and latch "g24_mastermind_controller:controller|present_input_state.INIT~1"
+    Warning (13310): Register "g24_mastermind_controller:controller|present_input_state.HOLD" is converted into an equivalent circuit using register "g24_mastermind_controller:controller|present_input_state.HOLD~_emulated" and latch "g24_mastermind_controller:controller|present_input_state.HOLD~1"
+    Warning (13310): Register "g24_mastermind_controller:controller|SR_LD" is converted into an equivalent circuit using register "g24_mastermind_controller:controller|SR_LD~_emulated" and latch "g24_mastermind_controller:controller|SR_LD~1"
+    Warning (13310): Register "g24_mastermind_controller:controller|present_state.C" is converted into an equivalent circuit using register "g24_mastermind_controller:controller|present_state.C~_emulated" and latch "g24_mastermind_controller:controller|present_state.C~1"
+Info (17049): 14 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 80 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 4 input pins
-    Info (21059): Implemented 29 output pins
-    Info (21061): Implemented 47 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 490 megabytes
-    Info: Processing ended: Thu Dec 03 13:52:48 2015
-    Info: Elapsed time: 00:00:10
-    Info: Total CPU time (on all processors): 00:00:02
+Info (21057): Implemented 409 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 7 input pins
+    Info (21059): Implemented 37 output pins
+    Info (21061): Implemented 364 logic cells
+    Info (21064): Implemented 1 RAM segments
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 24 warnings
+    Info: Peak virtual memory: 527 megabytes
+    Info: Processing ended: Thu Dec 03 20:33:35 2015
+    Info: Elapsed time: 00:00:11
+    Info: Total CPU time (on all processors): 00:00:04
 
 

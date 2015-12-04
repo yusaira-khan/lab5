@@ -1,6 +1,6 @@
 library ieee; -- allows use of the std_logic_vector type 
 use ieee.std_logic_1164.all; 
-entity g24_7_segment_decoder is
+entity g24_7_segment_decoder is 
 port( code : in std_logic_vector(3 downto 0);
 RippleBlank_In:in std_logic;
 RippleBlank_Out:out std_logic;

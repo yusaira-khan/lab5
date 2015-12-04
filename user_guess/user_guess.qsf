@@ -48,3 +48,15 @@ set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
 set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 1
 set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (VHDL)"
 set_global_assignment -name EDA_OUTPUT_DATA_FORMAT VHDL -section_id eda_simulation
+set_global_assignment -name VHDL_FILE ../g24_score_encoder.vhd
+set_global_assignment -name VHDL_FILE ../g24_mastermind_controller.vhd
+set_global_assignment -name VHDL_FILE ../g24_mastermind_score.vhd
+set_global_assignment -name VHDL_FILE ../g24_minimum3.vhd
+set_global_assignment -name VHDL_FILE ../g24_num_matches.vhd
+set_global_assignment -name VHDL_FILE ../g24_num1s.vhd
+set_global_assignment -name VHDL_FILE ../g24_possibility_table.vhd
+set_global_assignment -name VHDL_FILE ../g24_comp6.vhd
+set_global_assignment -name VHDL_FILE ../g24_color_matches.vhd
+set_global_assignment -name VHDL_FILE ../g24_7_segment_decoder.vhd
+set_global_assignment -name VHDL_FILE ../datapath.vhd
+set_global_assignment -name VHDL_FILE user_guess.vhd

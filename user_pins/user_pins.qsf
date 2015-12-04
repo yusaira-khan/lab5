@@ -53,7 +53,6 @@ set_global_assignment -name VHDL_FILE ../user_input/user_pins.vhd
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
-set_global_assignment -name VHDL_FILE ../../lab3/g24_7_segment_decoder.vhd
 set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "3.3-V LVTTL"
 set_location_assignment PIN_R22 -to shift
 set_location_assignment PIN_M22 -to color[2]
@@ -89,4 +88,28 @@ set_location_assignment PIN_F3 -to segments3[1]
 set_location_assignment PIN_D4 -to segments3[0]
 set_location_assignment PIN_R20 -to last
 set_global_assignment -name VHDL_TEST_BENCH_FILE user_pins.vht
+set_global_assignment -name VHDL_FILE ../g24_score_encoder.vhd
+set_global_assignment -name VHDL_FILE ../color_counter.vhd
+set_global_assignment -name VHDL_FILE ../datapath.vhd
+set_global_assignment -name VHDL_FILE ../g24_7_segment_decoder.vhd
+set_global_assignment -name VHDL_FILE ../g24_color_matches.vhd
+set_global_assignment -name VHDL_FILE ../g24_comp6.vhd
+set_global_assignment -name VHDL_FILE ../g24_mastermind_controller.vhd
+set_global_assignment -name VHDL_FILE ../g24_mastermind_score.vhd
+set_global_assignment -name VHDL_FILE ../g24_minimum3.vhd
+set_global_assignment -name VHDL_FILE ../g24_num_matches.vhd
+set_global_assignment -name VHDL_FILE ../g24_num1s.vhd
+set_global_assignment -name VHDL_FILE ../g24_possibility_table.vhd
+set_global_assignment -name VHDL_FILE ../random_generator/random_generator.vhd
+set_location_assignment PIN_R17 -to color_score_pins[3]
+set_location_assignment PIN_R18 -to color_score_pins[2]
+set_location_assignment PIN_U18 -to color_score_pins[1]
+set_location_assignment PIN_Y18 -to color_score_pins[0]
+set_location_assignment PIN_U22 -to exact_score_pins[3]
+set_location_assignment PIN_U21 -to exact_score_pins[2]
+set_location_assignment PIN_V22 -to exact_score_pins[1]
+set_location_assignment PIN_V21 -to exact_score_pins[0]
+set_location_assignment PIN_L1 -to clk
+set_location_assignment PIN_T21 -to reset
+set_location_assignment PIN_L2 -to switch_input
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

@@ -39,8 +39,8 @@ ENTITY datapath IS
 		SC_CMP :  OUT  STD_LOGIC;
 		TC_LAST :  OUT  STD_LOGIC;
 		TM_OUT :  OUT  STD_LOGIC;
-		NUM_EXACT: OUT  STD_LOGIC;
-		NUM_Color: OUT  STD_LOGIC
+		NUM_EXACT: OUT  std_logic_vector(2 downto 0);
+		NUM_Color: OUT  std_logic_vector(2 downto 0)
 	);
 END datapath;
 

@@ -17,7 +17,7 @@
 -- suit user's needs .Comments are provided in each section to help the user  
 -- fill out necessary details.                                                
 -- ***************************************************************************
--- Generated on "12/03/2015 13:32:44"
+-- Generated on "12/03/2015 17:16:14"
                                                             
 -- Vhdl Test Bench template for design  :  user_pins
 -- 
@@ -32,35 +32,44 @@ END user_pins_vhd_tst;
 ARCHITECTURE user_pins_arch OF user_pins_vhd_tst IS
 -- constants                                                 
 -- signals                                                   
+SIGNAL clk : STD_LOGIC;
 SIGNAL color : STD_LOGIC_VECTOR(2 DOWNTO 0);
-SIGNAL last : STD_LOGIC;
+SIGNAL color_score_pins : STD_LOGIC_VECTOR(3 DOWNTO 0);
+SIGNAL exact_score_pins : STD_LOGIC_VECTOR(3 DOWNTO 0);
 SIGNAL segments0 : STD_LOGIC_VECTOR(6 DOWNTO 0);
 SIGNAL segments1 : STD_LOGIC_VECTOR(6 DOWNTO 0);
 SIGNAL segments2 : STD_LOGIC_VECTOR(6 DOWNTO 0);
 SIGNAL segments3 : STD_LOGIC_VECTOR(6 DOWNTO 0);
 SIGNAL shift : STD_LOGIC;
+SIGNAL switch_input : STD_LOGIC;
 COMPONENT user_pins
 	PORT (
+	clk : IN STD_LOGIC;
 	color : IN STD_LOGIC_VECTOR(2 DOWNTO 0);
-	last : OUT STD_LOGIC;
+	color_score_pins : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
+	exact_score_pins : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
 	segments0 : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
 	segments1 : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
 	segments2 : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
 	segments3 : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
-	shift : IN STD_LOGIC
+	shift : IN STD_LOGIC;
+	switch_input : IN STD_LOGIC
 	);
 END COMPONENT;
 BEGIN
 	i1 : user_pins
 	PORT MAP (
 -- list connections between master ports and signals
+	clk => clk,
 	color => color,
-	last => last,
+	color_score_pins => color_score_pins,
+	exact_score_pins => exact_score_pins,
 	segments0 => segments0,
 	segments1 => segments1,
 	segments2 => segments2,
 	segments3 => segments3,
-	shift => shift
+	shift => shift,
+	switch_input => switch_input
 	);
 init : PROCESS                                               
 -- variable declarations                                     

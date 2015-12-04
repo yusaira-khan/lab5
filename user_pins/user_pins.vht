@@ -32,51 +32,93 @@ END user_pins_vhd_tst;
 ARCHITECTURE user_pins_arch OF user_pins_vhd_tst IS
 -- constants                                                 
 -- signals                                                   
+                                              
+SIGNAL clk : STD_LOGIC:='0';
 SIGNAL color : STD_LOGIC_VECTOR(2 DOWNTO 0);
-SIGNAL last : STD_LOGIC;
+SIGNAL color_score_pins : STD_LOGIC_VECTOR(3 DOWNTO 0);
+SIGNAL exact_score_pins : STD_LOGIC_VECTOR(3 DOWNTO 0);
 SIGNAL segments0 : STD_LOGIC_VECTOR(6 DOWNTO 0);
 SIGNAL segments1 : STD_LOGIC_VECTOR(6 DOWNTO 0);
 SIGNAL segments2 : STD_LOGIC_VECTOR(6 DOWNTO 0);
 SIGNAL segments3 : STD_LOGIC_VECTOR(6 DOWNTO 0);
-SIGNAL shift : STD_LOGIC:='0';
+SIGNAL shift : STD_LOGIC;
+SIGNAL switch_input : STD_LOGIC;
+SIGNAL reset:  std_logic;
+	SIGNAL			last: std_logic;
+
 COMPONENT user_pins
 	PORT (
+	clk : IN STD_LOGIC;
 	color : IN STD_LOGIC_VECTOR(2 DOWNTO 0);
-	last : OUT STD_LOGIC;
+	color_score_pins : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
+	exact_score_pins : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
 	segments0 : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
 	segments1 : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
 	segments2 : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
 	segments3 : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
-	shift : IN STD_LOGIC
+	shift : IN STD_LOGIC;
+	switch_input : IN STD_LOGIC;
+	reset: in std_logic;
+				last: out std_logic
+
 	);
 END COMPONENT;
 BEGIN
 	i1 : user_pins
 	PORT MAP (
 -- list connections between master ports and signals
+	clk => clk,
 	color => color,
-	last => last,
+	color_score_pins => color_score_pins,
+	exact_score_pins => exact_score_pins,
 	segments0 => segments0,
 	segments1 => segments1,
 	segments2 => segments2,
 	segments3 => segments3,
-	shift => shift
-	);
-	shift <= not shift after 10 ns;
+	shift => shift,
+	switch_input => switch_input,
+	reset => reset,
+	 last => last
+	); 
+	clk <= not clk after 10 ns;
 init : PROCESS                                               
 -- variable declarations                                     
-BEGIN    
-
-color<= "000";  
-wait for 30 ns;                                                  
+BEGIN
+    reset <= '0';
+	 wait for 5 ns;
+	 reset <= '1';
+shift<='1';
+wait for 5 ns;
+color<= "000";
+shift <= '0';  
+wait for 30 ns;
+  
+shift<='1';
+wait for 5 ns;                                                
 color<= "001";
-wait for 30 ns;  
+shift <= '0';  
+wait for 30 ns; 
+ 
+shift<='1';
+wait for 5 ns;   
 color<= "010";
-wait for 30 ns;  
+shift <= '0';  
+wait for 30 ns; 
+ 
+shift<='1';
+wait for 5 ns;   
 color<= "011";
-wait for 30 ns;  
+shift <= '0';  
+wait for 30 ns; 
+ 
+shift<='1';
+wait for 5 ns;   
 color<= "100";
+shift <= '0';  
 wait for 30 ns;  
+
+shift<='1';
+wait for 5 ns;    
 color<= "101";
 wait;
 END PROCESS;                                          
