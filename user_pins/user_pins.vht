@@ -117,15 +117,6 @@ wait;
 --color<= "101";
 
 END PROCESS;   
-cl : PROCESS  begin  
-                                         
-		if waiting_for_ready = '1' then
-			wait for 30 ns;
-			ready <= '1';
-			wait for 30 ns;
-			ready <= '0';
 
-		end if;
-end process;
                                        
 END user_pins_arch;

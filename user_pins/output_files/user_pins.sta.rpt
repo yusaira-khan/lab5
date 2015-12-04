@@ -1,5 +1,5 @@
 TimeQuest Timing Analyzer report for user_pins
-Fri Dec 04 12:29:04 2015
+Fri Dec 04 13:09:22 2015
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
 
 
@@ -116,7 +116,7 @@ applicable agreement for further details.
 +---------------+--------+--------------------------+
 ; SDC File Path ; Status ; Read at                  ;
 +---------------+--------+--------------------------+
-; ../time.sdc   ; OK     ; Fri Dec 04 12:29:03 2015 ;
+; ../time.sdc   ; OK     ; Fri Dec 04 13:09:21 2015 ;
 +---------------+--------+--------------------------+
 
 
@@ -1419,7 +1419,7 @@ No dedicated SERDES Receiver circuitry present in device or used in design
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
-    Info: Processing started: Fri Dec 04 12:28:59 2015
+    Info: Processing started: Fri Dec 04 13:09:18 2015
 Info: Command: quartus_sta user_pins -c user_pins
 Info: qsta_default_script.tcl version: #1
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -1556,8 +1556,8 @@ Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 81 warnings
     Info: Peak virtual memory: 436 megabytes
-    Info: Processing ended: Fri Dec 04 12:29:04 2015
-    Info: Elapsed time: 00:00:05
+    Info: Processing ended: Fri Dec 04 13:09:22 2015
+    Info: Elapsed time: 00:00:04
     Info: Total CPU time (on all processors): 00:00:01
 
 
