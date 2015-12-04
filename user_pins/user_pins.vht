@@ -84,12 +84,22 @@ BEGIN
 init : PROCESS                                               
 -- variable declarations                                     
 BEGIN
+
+    reset <= '0';
+	 color<= "000";
+	 wait for 5 ns;
+	 
+	 reset <= '1';
+	 
+
+wait for 5 ns;
     reset <= '0';
 	 wait for 5 ns;
+	 
 	 reset <= '1';
+	 
 shift<='1';
 wait for 5 ns;
-color<= "000";
 shift <= '0';  
 wait for 30 ns;
   
@@ -105,21 +115,21 @@ color<= "010";
 shift <= '0';  
 wait for 30 ns; 
  
-shift<='1';
-wait for 5 ns;   
-color<= "011";
-shift <= '0';  
-wait for 30 ns; 
- 
-shift<='1';
-wait for 5 ns;   
-color<= "100";
-shift <= '0';  
-wait for 30 ns;  
-
-shift<='1';
-wait for 5 ns;    
-color<= "101";
+--shift<='1';
+--wait for 5 ns;   
+--color<= "011";
+--shift <= '0';  
+--wait for 30 ns; 
+-- 
+--shift<='1';
+--wait for 5 ns;   
+--color<= "100";
+--shift <= '0';  
+--wait for 30 ns;  
+--
+--shift<='1';
+--wait for 5 ns;    
+--color<= "101";
 wait;
 END PROCESS;                                          
 END user_pins_arch;

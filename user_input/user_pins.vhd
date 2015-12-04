@@ -15,24 +15,28 @@ color_score_pins : out std_logic_vector(3 downto 0);
 				switch_input: in std_logic;
 				reset: in std_logic;
 				last: out std_logic
-
-				
+	
 				--Color : out std_logic_vector(11 downto 0)
 				);
 end user_pins;
 
 architecture arch of user_pins is 
+
 component user_input is
 	port (	color 	: in std_logic_vector(2 downto 0); -- table counter enable
 				shift 	: in std_logic;
 				last 	: out std_logic;
+				reset: in std_logic;
 				PATTERN : out std_logic_vector(11 downto 0));
 end component;
+
 component random_generator is
 	port (	Get_Output 	: in std_logic; -- table counter enable
 				CLK 	: in std_logic;
+
 				PATTERN : out std_logic_vector(11 downto 0));
 end component;
+
  component datapath IS PORT(
 		P_SEL :  IN  STD_LOGIC;
 		GR_SEL :  IN  STD_LOGIC;
@@ -60,6 +64,7 @@ component g24_mastermind_controller	 is port(
 	
 	TM_IN,TM_EN,TC_EN,TC_RST :out std_logic
 );end component;
+
 component g24_7_segment_decoder is
 port( code : in std_logic_vector(3 downto 0);
 RippleBlank_In:in std_logic;
@@ -71,26 +76,30 @@ signal code0 :  std_logic_vector(3 downto 0);
 signal code1 :  std_logic_vector(3 downto 0);
 signal code2 : std_logic_vector(3 downto 0);
 signal code3 :  std_logic_vector(3 downto 0);
+signal padder :  std_logic_vector(3 downto 0);
 signal input_received : std_LOGIC;
 
-signal saved : STD_LOGIC_VECTOR(11 DOWNTO 0);
 signal SR_SEL,SR_LD,P_SEL,SOLVED,
 	GR_SEL,GR_LD,
 	TM_IN,TM_EN,TC_EN,TC_RST : std_LOGIC;
 	signal generate_now : std_LOGIC;
-signal SC_CMP,TC_LAST,START,READY,TM_OUT : std_LOGIC;
-signal 		EXT_PATTERN :  STD_LOGIC_VECTOR(11 DOWNTO 0);
-signal		Initial_guess :  STD_LOGIC_VECTOR(11 DOWNTO 0);
+signal SC_CMP,TC_LAST,START,READY,TM_OUT,display_switch : std_LOGIC;
+signal rando_pattern,EXT_PATTERN, user_pattern , current_guess,
+initial_guess,direct_guess,display_pattern :  STD_LOGIC_VECTOR(11 DOWNTO 0);
 		signal NUM_EXACT: std_logic_vector(2 downto 0);
 		signal NUM_Color: std_logic_vector(2 downto 0);
 begin
 
 last <= input_received;
---saved<="00000000000";
-code0<=("0"&saved(2 downTO 0))+"1010";
-code1<=("0"&saved(5 downTO 3)) +"1010";
-code2<=("0"&saved(8 downTO 6)) +"1010";
-code3<=("0"&saved(11 downto 9)) +"1010";
+
+
+display_switch <= switch_input;
+
+
+code0<=("0"&display_pattern(2 downTO 0))+padder;
+code1<=("0"&display_pattern(5 downTO 3)) +padder;
+code2<=("0"&display_pattern(8 downTO 6)) +padder;
+code3<=("0"&display_pattern(11 downto 9)) +padder;
 
 dec0:g24_7_segment_decoder port map(segments=>segments0,code=>code0,RippleBlank_In=>'0');
 dec1:g24_7_segment_decoder port map(segments=>segments1,code=>code1,RippleBlank_In=>'0');
@@ -98,7 +107,10 @@ dec2:g24_7_segment_decoder port map(segments=>segments2,code=>code2,RippleBlank_
 dec3:g24_7_segment_decoder port map(segments=>segments3,code=>code3,RippleBlank_In=>'0'); 
 
 controller: g24_mastermind_controller	  port map( 
-	START=>'0',READY=>'0',CLK=>CLK, input_received=>input_received,
+	START=>'0',
+	READY=>'0',
+	CLK=>CLK, 
+	input_received=>input_received,
 	switch_input=> switch_input,
 	P_SEL => P_SEL,
 		GR_SEL => GR_SEL,
@@ -112,6 +124,7 @@ controller: g24_mastermind_controller	  port map(
 		TM_IN =>TM_IN,SC_CMP =>SC_CMP,
 		TC_LAST =>TC_LAST,
 		TM_OUT =>TM_OUT);
+		
 main: datapath  PORT map(
 		P_SEL => P_SEL,
 		GR_SEL => GR_SEL,
@@ -124,24 +137,33 @@ main: datapath  PORT map(
 		TM_EN =>TM_EN,
 		TM_IN =>TM_IN,
 		EXT_PATTERN => EXT_PATTERN,
-		Initial_guess => initial_guess,
+		Initial_guess => direct_guess,
 		SC_CMP =>SC_CMP,
 		TC_LAST =>TC_LAST,
 		TM_OUT =>TM_OUT,
 		NUM_EXACT=>NUM_EXACT,
 		NUM_Color=>NUM_Color
 	);
-EXT_PATTERN<="000000001001";
+
+with display_switch select padder <= "1010" when others;
+with display_switch select EXT_PATTERN <= rando_pattern when others;
+with  display_switch select direct_guess<= user_pattern when others;
+with display_switch select display_pattern<=USer_pattern when others;
 
 input_receiver: user_input port  map(	color =>color,
 				shift 	=> shift,
 				last 	 => input_received,
-				PATTERN => saved);
-rando: random_generator  port map(get_Output=>generate_now,clk=>clk
---,PATTERN=>EXT_PATTERN
+				reset =>reset,
+		PATTERN => user_pattern
+				);
+				
+rando: random_generator  port map(
+get_Output=>reset,
+clk=>clk,
+PATTERN=>rando_pattern
 );
 
-initial_guess <= saved;
+initial_guess <= "000000001001";
 with num_Color select color_score_pins <= "0001" when "001",  "0011" when "010", "0111" when "011", "1111" when "100", "0000" when others;
 with num_EXACT select exact_score_pins <= "0001" when "001",  "0011" when "010", "0111" when "011", "1111" when "100", "0000" when others;
 

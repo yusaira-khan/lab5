@@ -4,6 +4,7 @@ use ieee.std_logic_1164.all;
 entity random_generator is
 	port (	Get_Output 	: in std_logic; -- table counter enable
 				CLK 	: in std_logic;
+				
 				PATTERN : out std_logic_vector(11 downto 0));
 end random_generator;
 
@@ -43,7 +44,7 @@ end process;
 
 set_color: process(get_Output)
 begin
-	if falling_edge(get_Output) then
+if falling_edge(get_Output) then
 			PATTERN <=counter_Color;
 	end if;
 end process;
