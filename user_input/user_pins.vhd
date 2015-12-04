@@ -4,7 +4,7 @@ use ieee.std_logic_signed.all;
 
 entity user_pins is
 	port (	color : in std_logic_vector(2 downto 0);
-	shift 	: in std_logic; -- table counter enable
+	ready,shift 	: in std_logic; -- table counter enable
 segments0 : out std_logic_vector(6 downto 0);
 segments1 : out std_logic_vector(6 downto 0);
 segments2 : out std_logic_vector(6 downto 0);
@@ -14,7 +14,7 @@ color_score_pins : out std_logic_vector(3 downto 0);
 				clk 	: in std_logic;
 				switch_input: in std_logic;
 				reset: in std_logic;
-				last: out std_logic
+				Waiting_for_ready,last: out std_logic
 	
 				--Color : out std_logic_vector(11 downto 0)
 				);
@@ -61,7 +61,7 @@ end component;
 component g24_mastermind_controller	 is port( 
 	SC_CMP ,TC_LAST,START,READY,CLK,TM_OUT, switch_input,input_received,reset_not_pushed: in std_logic;
 	SR_SEL,SR_LD,P_SEL,SOLVED,
-	GR_SEL,GR_LD,
+	GR_SEL,GR_LD,Waiting_for_ready,
 	
 	TM_IN,TM_EN,TC_EN,TC_RST :out std_logic
 );end component;
@@ -81,14 +81,15 @@ signal padder :  std_logic_vector(3 downto 0);
 signal input_received : std_LOGIC;
 
 signal SR_SEL,SR_LD,P_SEL,SOLVED,
-	GR_SEL,GR_LD,
+	waiti,GR_SEL,GR_LD,
 	TM_IN,TM_EN,TC_EN,TC_RST : std_LOGIC;
 	signal generate_now : std_LOGIC;
-signal SC_CMP,TC_LAST,START,READY,TM_OUT,display_switch : std_LOGIC;
+signal SC_CMP,TC_LAST,START,READY1,TM_OUT,display_switch : std_LOGIC;
 signal rando_pattern,EXT_PATTERN, user_pattern , current_guess,
 initial_guess,direct_guess,display_pattern :  STD_LOGIC_VECTOR(11 DOWNTO 0);
 		signal NUM_EXACT: std_logic_vector(2 downto 0);
 		signal NUM_Color: std_logic_vector(2 downto 0);
+		signal score_light_switch : std_logic_vector(1 downto 0);
 begin
 
 last <= input_received;
@@ -109,7 +110,7 @@ dec3:g24_7_segment_decoder port map(segments=>segments3,code=>code3,RippleBlank_
 
 controller: g24_mastermind_controller	  port map( 
 	START=>'1',
-	READY=>'1',
+	READY=>reaDY,
 	CLK=>CLK, 
 	input_received=>input_received,
 	switch_input=> switch_input,
@@ -117,6 +118,7 @@ controller: g24_mastermind_controller	  port map(
 		GR_SEL => GR_SEL,
 		reset_not_pushed=>reset,
 	GR_LD =>GR_LD,
+	Waiting_for_ready=>waiting_for_ready,
 		SR_LD =>SR_LD,
 		SR_SEL =>SR_SEL,
 		TC_EN =>TC_EN,
@@ -146,13 +148,13 @@ main: datapath  PORT map(
 		NUM_EXACT=>NUM_EXACT,
 		NUM_Color=>NUM_Color
 	);
-
+score_light_switch<=display_switch& waiti;
 with display_switch select padder <= "1010" when others;
 with display_switch select EXT_PATTERN <= "001000000001" when '1',  rando_pattern when others;
 with  display_switch select direct_guess<=initial_guess  when  '1',user_pattern when others;
-with display_switch select display_pattern<=USer_pattern when others;
-with display_switch select color_score_pins<="0000" when '1', color_mux when  others;
-with display_switch select exact_score_pins<="0000" when '1', exact_mux when others;
+with score_light_switch select display_pattern<=current_guess when "11", USer_pattern when others;
+with score_light_switch select color_score_pins<="0000" when "10", color_mux when  others;
+with score_light_switch select exact_score_pins<="0000" when "10", exact_mux when others;
 
 
 input_receiver: user_input port  map(	color =>color,

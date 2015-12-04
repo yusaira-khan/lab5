@@ -96,7 +96,7 @@ GND*                         : AA3       :        :                   :         
 GND*                         : AA4       :        :                   :         : 8         :                
 GND*                         : AA5       :        :                   :         : 8         :                
 GND*                         : AA6       :        :                   :         : 8         :                
-GND*                         : AA7       :        :                   :         : 8         :                
+Waiting_for_ready            : AA7       : output : 3.3-V LVTTL       :         : 8         : N              
 GND*                         : AA8       :        :                   :         : 8         :                
 GND*                         : AA9       :        :                   :         : 8         :                
 GND*                         : AA10      :        :                   :         : 8         :                
@@ -377,7 +377,7 @@ VCCIO6                       : M20       : power  :                   : 3.3V    
 GND+                         : M21       :        :                   :         : 6         :                
 color[2]                     : M22       : input  : 3.3-V LVTTL       :         : 6         : Y              
 GND*                         : N1        :        :                   :         : 1         :                
-GND*                         : N2        :        :                   :         : 1         :                
+ready                        : N2        : input  : 3.3-V LVTTL       :         : 1         : N              
 GND*                         : N3        :        :                   :         : 1         :                
 GND*                         : N4        :        :                   :         : 1         :                
 NC                           : N5        :        :                   :         :           :                

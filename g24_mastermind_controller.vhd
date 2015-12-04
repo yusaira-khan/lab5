@@ -8,7 +8,7 @@ INPUT_RECEIVED,
 switch_input,
 CLK,TM_OUT,
 reset_not_pushed : in std_logic;
-SR_SEL,SR_LD,P_SEL,SOLVED,
+SR_SEL,SR_LD,P_SEL,SOLVED,Waiting_for_ready ,
 GR_SEL,GR_LD,
 TM_IN,TM_EN,TC_EN,TC_RST :out std_logic
 );
@@ -16,7 +16,7 @@ end g24_mastermind_controller;
 
 architecture arch of g24_mastermind_controller is
 	type algorithm_state is (A,B,C,D,E,F,G,H); 
-	type user_input_state is (INIT, HOLD, DISPLAY);
+	type user_input_state is (INIT, HOLD);
 	signal present_state: algorithm_state;
 	signal present_input_state: user_input_state;
 	type interface_type is (User,system); 
@@ -70,6 +70,7 @@ begin
 						GR_SEL <='1';--0011
 						GR_LD <='1';--load 0011 into Guess register
 						P_SEL <='0';--using hidden pattern provided by user
+						Waiting_for_ready <='1';
 						
 				when D => --main logic
 					if READY = '1' then --USer confirmed score
@@ -77,6 +78,7 @@ begin
 						--P_SEL<='0';
 						SR_SEL <='1';--compare with 4,0
 						SR_LD <='1';--save score
+						Waiting_for_ready <='1';
 					end if;
 
 				when E => --wait for a clock cycle to check score against hidden pattern
@@ -135,20 +137,11 @@ begin
 							present_input_state <= HOLD;
 						end if;
 					when HOLD=>
-					if INPUT_RECEIVED = '0' then
-					GR_LD <='0'; --don't save table guess
-						present_input_state <= INIT;
-					end if;
-					when DISPLAY=>
-					
-					-- if start = '1' then
-					-- 	GR_LD <='1'; --save table guess
-					-- 	P_Sel <='0'; --use hidden pattern
-					-- 	GR_SEL <='1';--use user guess stored in initial guess
-					-- 	SR_LD <='0';--don't save scores
-					-- 	SR_SEL<='1';--don't use system score
-					-- end if;
-				
+						if INPUT_RECEIVED = '0' then
+						GR_LD <='0'; --don't save table guess
+							present_input_state <= INIT;
+						end if;
+
 				end case;
 			end if;
 		end if;

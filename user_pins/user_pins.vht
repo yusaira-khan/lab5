@@ -41,7 +41,9 @@ SIGNAL segments0 : STD_LOGIC_VECTOR(6 DOWNTO 0);
 SIGNAL segments1 : STD_LOGIC_VECTOR(6 DOWNTO 0);
 SIGNAL segments2 : STD_LOGIC_VECTOR(6 DOWNTO 0);
 SIGNAL segments3 : STD_LOGIC_VECTOR(6 DOWNTO 0);
-SIGNAL shift : STD_LOGIC;
+SIGNAL Waiting_for_ready,shift : STD_LOGIC;
+SIGNAL ready : STD_LOGIC:='0';
+
 SIGNAL switch_input : STD_LOGIC;
 SIGNAL reset:  std_logic;
 	SIGNAL			last: std_logic;
@@ -56,10 +58,10 @@ COMPONENT user_pins
 	segments1 : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
 	segments2 : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
 	segments3 : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
-	shift : IN STD_LOGIC;
+	ready,shift : IN STD_LOGIC;
 	switch_input : IN STD_LOGIC;
 	reset: in std_logic;
-				last: out std_logic
+	Waiting_for_ready,last: out std_logic
 
 	);
 END COMPONENT;
@@ -78,12 +80,16 @@ BEGIN
 	shift => shift,
 	switch_input => switch_input,
 	reset => reset,
-	 last => last
+	 last => last,
+	 Waiting_for_ready=>Waiting_for_ready,
+	 ready=>ready
 	); 
 	clk <= not clk after 10 ns;
+	ready<= not ready after 3 us;
 init : PROCESS                                               
 -- variable declarations                                     
 BEGIN
+
 		switch_input<= '1';
     reset <= '0';
 	 
@@ -109,6 +115,17 @@ wait;
 --shift<='1';
 --wait for 5 ns;    
 --color<= "101";
-wait;
-END PROCESS;                                          
+
+END PROCESS;   
+cl : PROCESS  begin  
+                                         
+		if waiting_for_ready = '1' then
+			wait for 30 ns;
+			ready <= '1';
+			wait for 30 ns;
+			ready <= '0';
+
+		end if;
+end process;
+                                       
 END user_pins_arch;
