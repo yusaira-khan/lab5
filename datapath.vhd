@@ -39,6 +39,7 @@ ENTITY datapath IS
 		SC_CMP :  OUT  STD_LOGIC;
 		TC_LAST :  OUT  STD_LOGIC;
 		TM_OUT :  OUT  STD_LOGIC;
+		working_guess : out std_logic_vector(11 downto 0);
 		NUM_EXACT: OUT  std_logic_vector(2 downto 0);
 		NUM_Color: OUT  std_logic_vector(2 downto 0)
 	);
@@ -85,7 +86,7 @@ signal solved_score: std_LOGIC_VECTOR(3 DOWNTO 0);
 
 BEGIN 
 	solved_score<="0001";
-	
+	working_guess <= register_guess;
 	with P_SEL select  
 		mux_output_pattern <= TM_ADDR when  '1', 
 							EXT_PATTERN when others;

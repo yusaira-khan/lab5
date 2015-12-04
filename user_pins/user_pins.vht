@@ -84,36 +84,15 @@ BEGIN
 init : PROCESS                                               
 -- variable declarations                                     
 BEGIN
-
+		switch_input<= '1';
     reset <= '0';
-	 color<= "000";
+	 
 	 wait for 5 ns;
 	 
 	 reset <= '1';
 	 
-
-wait for 5 ns;
-    reset <= '0';
-	 wait for 5 ns;
 	 
-	 reset <= '1';
-	 
-shift<='1';
-wait for 5 ns;
-shift <= '0';  
-wait for 30 ns;
-  
-shift<='1';
-wait for 5 ns;                                                
-color<= "001";
-shift <= '0';  
-wait for 30 ns; 
- 
-shift<='1';
-wait for 5 ns;   
-color<= "010";
-shift <= '0';  
-wait for 30 ns; 
+wait;
  
 --shift<='1';
 --wait for 5 ns;   

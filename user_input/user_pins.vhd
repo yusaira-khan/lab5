@@ -48,6 +48,7 @@ end component;
 		TC_RST :  IN  STD_LOGIC;
 		TM_EN :  IN  STD_LOGIC;
 		TM_IN :  IN  STD_LOGIC;
+		working_guess : out std_logic_vector(11 downto 0);
 		EXT_PATTERN :  IN  STD_LOGIC_VECTOR(11 DOWNTO 0);
 		Initial_guess :  IN  STD_LOGIC_VECTOR(11 DOWNTO 0);
 		SC_CMP :  OUT  STD_LOGIC;
@@ -72,7 +73,7 @@ RippleBlank_Out:out std_logic;
 segments : out std_logic_vector(6 downto 0));
 end component;
 
-signal code0 :  std_logic_vector(3 downto 0);
+signal code0,color_mux, exact_mux :  std_logic_vector(3 downto 0);
 signal code1 :  std_logic_vector(3 downto 0);
 signal code2 : std_logic_vector(3 downto 0);
 signal code3 :  std_logic_vector(3 downto 0);
@@ -107,8 +108,8 @@ dec2:g24_7_segment_decoder port map(segments=>segments2,code=>code2,RippleBlank_
 dec3:g24_7_segment_decoder port map(segments=>segments3,code=>code3,RippleBlank_In=>'0'); 
 
 controller: g24_mastermind_controller	  port map( 
-	START=>'0',
-	READY=>'0',
+	START=>'1',
+	READY=>'1',
 	CLK=>CLK, 
 	input_received=>input_received,
 	switch_input=> switch_input,
@@ -138,6 +139,7 @@ main: datapath  PORT map(
 		TM_IN =>TM_IN,
 		EXT_PATTERN => EXT_PATTERN,
 		Initial_guess => direct_guess,
+		working_guess=>current_guess,
 		SC_CMP =>SC_CMP,
 		TC_LAST =>TC_LAST,
 		TM_OUT =>TM_OUT,
@@ -146,9 +148,12 @@ main: datapath  PORT map(
 	);
 
 with display_switch select padder <= "1010" when others;
-with display_switch select EXT_PATTERN <= rando_pattern when others;
-with  display_switch select direct_guess<= user_pattern when others;
+with display_switch select EXT_PATTERN <= "001000000001" when '1',  rando_pattern when others;
+with  display_switch select direct_guess<=initial_guess  when  '1',user_pattern when others;
 with display_switch select display_pattern<=USer_pattern when others;
+with display_switch select color_score_pins<="0000" when '1', color_mux when  others;
+with display_switch select exact_score_pins<="0000" when '1', exact_mux when others;
+
 
 input_receiver: user_input port  map(	color =>color,
 				shift 	=> shift,
@@ -164,7 +169,7 @@ PATTERN=>rando_pattern
 );
 
 initial_guess <= "000000001001";
-with num_Color select color_score_pins <= "0001" when "001",  "0011" when "010", "0111" when "011", "1111" when "100", "0000" when others;
-with num_EXACT select exact_score_pins <= "0001" when "001",  "0011" when "010", "0111" when "011", "1111" when "100", "0000" when others;
+with num_Color select color_mux <= "0001" when "001",  "0011" when "010", "0111" when "011", "1111" when "100", "0000" when others;
+with num_EXACT select exact_mux <= "0001" when "001",  "0011" when "010", "0111" when "011", "1111" when "100", "0000" when others;
 
 end;

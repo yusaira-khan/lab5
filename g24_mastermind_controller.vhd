@@ -33,6 +33,7 @@ begin
 					SOlVED <= '0';
 					present_state <= A;
 					TC_RST <='1';
+					current_interface<=system;
 			else 
 			state_reset <= '1';
 			present_input_state<=init;
@@ -41,6 +42,7 @@ begin
 					GR_SEL <='1';--use user guess stored in initial guess
 					SR_LD <='0';--don't save scores
 					SR_SEL<='1';--don't use system score
+				current_interface <= user;
 			end if;
 		elsif  rising_edge(clk) then 
 			if switch_input = '1' then 
