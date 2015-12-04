@@ -154,7 +154,7 @@ main: datapath  PORT map(
 	);
 score_light_switch<=display_switch& waiti;
 with display_switch select padder <= "1010" when others;
-with display_switch select EXT_PATTERN <= "001000000001" when '1',  rando_pattern when others;
+with display_switch select EXT_PATTERN <= "101100011010" when '1',  rando_pattern when others;
 with  display_switch select direct_guess<=initial_guess  when  '1',user_pattern when others;
 with score_light_switch select display_pattern<=current_guess when "11", USer_pattern when others;
 with score_light_switch select color_score_pins<="0000" when "10", color_mux when  others;

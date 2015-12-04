@@ -15,7 +15,7 @@ TM_IN,TM_EN,TC_EN,TC_RST :out std_logic
 end g24_mastermind_controller;
 
 architecture arch of g24_mastermind_controller is
-	type algorithm_state is (A,B,C,D,E,F,G,H,F1); 
+	type algorithm_state is (A,B,C,D,E,F,G,H,F1,G0, H0,H1); 
 	type user_input_state is (INIT, HOLD);
 	signal present_state: algorithm_state;
 	signal present_input_state: user_input_state;
@@ -75,6 +75,7 @@ begin
 				when D => --main logic
 					if READY = '1' then --USer confirmed score
 						present_state <= E;
+						TC_EN<='0';
 						--P_SEL<='0';
 						SR_SEL <='1';--compare with 4,0
 						SR_LD <='1';--save score
@@ -98,34 +99,68 @@ begin
 					
 				
 				when F => --wait for a clock cycle to check saved score against table pattern
+						--if SC_CMP = '0' or PG_EQ = '1' then --entry in the table does not give the same score as hidden pattern's or is the same as previous guess
+							
+							if TC_LAST = '1' then 
+							TC_RST<='1';
+							 present_state<= H0;
+							 
+							else present_state <= F1;
+							TC_EN<='0';
+							end if;
+							--wait another clock cylce to ensure score
+--							TC_EN <= '0';--don't iterate table in next clock cycle
+--							TM_EN<='1';--write invalid score to table memory
+--							TM_IN<='0';	--pattern not possible	
+						--end if;
+				when F1 => --wait for a clock cycle to check saved score against table pattern
 						if SC_CMP = '0' or PG_EQ = '1' then --entry in the table does not give the same score as hidden pattern's or is the same as previous guess
-							present_state <= F;
-							TC_EN <= '0';--don't iterate table in next clock cycle
+							present_state <= G0;
+							TC_EN<='0';
 							TM_EN<='1';--write invalid score to table memory
 							TM_IN<='0';	--pattern not possible	
+						else  
+						present_state <= F;
+						TC_EN <= '1';
 						end if;
-						
+								
+				when G0 => --wait for a clock cycle to finish table write
+				present_state <= G;
+				TC_EN<='0';
+						TM_EN <='0'; --don't write to table in next clock cycle
+						TC_EN <='1';--resume iterating through table
 				when G => --wait for a clock cycle to finish table write
 					if TC_LAST = '0' then --do same as state F for rest of the table
 						present_state <= F;
-						TC_EN <='1';--resume iterating through table
-						TM_EN <='0'; --don't write to table in next clock cycle
+						TC_EN <= '0';--don't iterate table in next clock cycle
 					
 					elsif TC_LAST = '1' then
-						present_state <= H;
+						present_state <= H0;
 						TC_RST <='1';--reset table memory counter
 						TC_EN <='1';--resume iterating through table
-						TM_EN <='0'; --don't write to table
 					end if;
-				when H=> 
+				when H0=> 
 					TC_RST <='0';
+					present_state <= H;
+					TC_EN <='0'; --don't increment table guess
+						--GR_SEL=0;--use guess given in 
+
+				when H=> 
 					if TM_OUT = '1' then
 						present_state <= D;
+						TC_EN<='0';
 						GR_LD <='1'; --save table guess
 						P_Sel <='0'; --use hidden pattern
-						TC_EN <='0'; --don't increment table guess
+						--TC_EN <='0'; --don't increment table guess
 						--GR_SEL=0;--use guess given in 
+					else present_state <= H1;
+					--TC_EN <='0';
+					TC_EN <='1'; 
 					end if;
+			when H1=> 
+					present_state <= H0;
+					TC_EN <='0';
+
 				end case;
 			else
 				case present_input_state is
