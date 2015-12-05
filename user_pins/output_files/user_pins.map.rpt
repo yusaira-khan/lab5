@@ -1,5 +1,5 @@
 Analysis & Synthesis report for user_pins
-Fri Dec 04 19:16:25 2015
+Fri Dec 04 19:49:48 2015
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
 
 
@@ -15,35 +15,37 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Ver
   7. Analysis & Synthesis Resource Utilization by Entity
   8. Analysis & Synthesis RAM Summary
   9. User-Specified and Inferred Latches
- 10. General Register Statistics
- 11. Multiplexer Restructuring Statistics (Restructuring Performed)
- 12. Source assignments for datapath:main|g24_possibility_table:table|altsyncram:table_memory[0]__1|altsyncram_cug1:auto_generated
- 13. Source assignments for random_generator:rando|g24_possibility_table:i1|altsyncram:table_memory[0]__1|altsyncram_cug1:auto_generated
- 14. Parameter Settings for User Entity Instance: datapath:main|g24_mastermind_score:master_score|g24_color_matches:cm|lpm_decode:ld1
- 15. Parameter Settings for User Entity Instance: datapath:main|g24_mastermind_score:master_score|g24_color_matches:cm|lpm_decode:ld2
- 16. Parameter Settings for User Entity Instance: datapath:main|g24_mastermind_score:master_score|g24_color_matches:cm|lpm_decode:ld3
- 17. Parameter Settings for User Entity Instance: datapath:main|g24_mastermind_score:master_score|g24_color_matches:cm|lpm_decode:ld4
- 18. Parameter Settings for User Entity Instance: datapath:main|g24_mastermind_score:master_score|g24_color_matches:cm|lpm_decode:ld5
- 19. Parameter Settings for User Entity Instance: datapath:main|g24_mastermind_score:master_score|g24_color_matches:cm|lpm_decode:ld6
- 20. Parameter Settings for User Entity Instance: datapath:main|g24_mastermind_score:master_score|g24_color_matches:cm|lpm_decode:ld7
- 21. Parameter Settings for User Entity Instance: datapath:main|g24_mastermind_score:master_score|g24_color_matches:cm|lpm_decode:ld8
- 22. Parameter Settings for User Entity Instance: datapath:main|g24_possibility_table:table|altsyncram:table_memory[0]__1
- 23. Parameter Settings for User Entity Instance: random_generator:rando|g24_possibility_table:i1|altsyncram:table_memory[0]__1
- 24. altsyncram Parameter Settings by Entity Instance
- 25. Port Connectivity Checks: "random_generator:rando|g24_possibility_table:i1"
- 26. Port Connectivity Checks: "datapath:main|g24_comp6:comparison"
- 27. Port Connectivity Checks: "datapath:main|g24_possibility_table:table|color_counter:color_counter3"
- 28. Port Connectivity Checks: "datapath:main|g24_mastermind_score:master_score|g24_num_matches:nm|g24_comp6:comp4"
- 29. Port Connectivity Checks: "datapath:main|g24_mastermind_score:master_score|g24_num_matches:nm|g24_comp6:comp3"
- 30. Port Connectivity Checks: "datapath:main|g24_mastermind_score:master_score|g24_num_matches:nm|g24_comp6:comp2"
- 31. Port Connectivity Checks: "datapath:main|g24_mastermind_score:master_score|g24_num_matches:nm|g24_comp6:comp1"
- 32. Port Connectivity Checks: "g24_mastermind_controller:controller"
- 33. Port Connectivity Checks: "g24_7_segment_decoder:dec3"
- 34. Port Connectivity Checks: "g24_7_segment_decoder:dec2"
- 35. Port Connectivity Checks: "g24_7_segment_decoder:dec1"
- 36. Port Connectivity Checks: "g24_7_segment_decoder:dec0"
- 37. Elapsed Time Per Partition
- 38. Analysis & Synthesis Messages
+ 10. Registers Removed During Synthesis
+ 11. Removed Registers Triggering Further Register Optimizations
+ 12. General Register Statistics
+ 13. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 14. Source assignments for datapath:main|g24_possibility_table:table|altsyncram:table_memory[0]__1|altsyncram_cug1:auto_generated
+ 15. Source assignments for random_generator:rando|g24_possibility_table:i1|altsyncram:table_memory[0]__1|altsyncram_cug1:auto_generated
+ 16. Parameter Settings for User Entity Instance: datapath:main|g24_mastermind_score:master_score|g24_color_matches:cm|lpm_decode:ld1
+ 17. Parameter Settings for User Entity Instance: datapath:main|g24_mastermind_score:master_score|g24_color_matches:cm|lpm_decode:ld2
+ 18. Parameter Settings for User Entity Instance: datapath:main|g24_mastermind_score:master_score|g24_color_matches:cm|lpm_decode:ld3
+ 19. Parameter Settings for User Entity Instance: datapath:main|g24_mastermind_score:master_score|g24_color_matches:cm|lpm_decode:ld4
+ 20. Parameter Settings for User Entity Instance: datapath:main|g24_mastermind_score:master_score|g24_color_matches:cm|lpm_decode:ld5
+ 21. Parameter Settings for User Entity Instance: datapath:main|g24_mastermind_score:master_score|g24_color_matches:cm|lpm_decode:ld6
+ 22. Parameter Settings for User Entity Instance: datapath:main|g24_mastermind_score:master_score|g24_color_matches:cm|lpm_decode:ld7
+ 23. Parameter Settings for User Entity Instance: datapath:main|g24_mastermind_score:master_score|g24_color_matches:cm|lpm_decode:ld8
+ 24. Parameter Settings for User Entity Instance: datapath:main|g24_possibility_table:table|altsyncram:table_memory[0]__1
+ 25. Parameter Settings for User Entity Instance: random_generator:rando|g24_possibility_table:i1|altsyncram:table_memory[0]__1
+ 26. altsyncram Parameter Settings by Entity Instance
+ 27. Port Connectivity Checks: "random_generator:rando|g24_possibility_table:i1"
+ 28. Port Connectivity Checks: "datapath:main|g24_comp6:comparison"
+ 29. Port Connectivity Checks: "datapath:main|g24_possibility_table:table|color_counter:color_counter3"
+ 30. Port Connectivity Checks: "datapath:main|g24_mastermind_score:master_score|g24_num_matches:nm|g24_comp6:comp4"
+ 31. Port Connectivity Checks: "datapath:main|g24_mastermind_score:master_score|g24_num_matches:nm|g24_comp6:comp3"
+ 32. Port Connectivity Checks: "datapath:main|g24_mastermind_score:master_score|g24_num_matches:nm|g24_comp6:comp2"
+ 33. Port Connectivity Checks: "datapath:main|g24_mastermind_score:master_score|g24_num_matches:nm|g24_comp6:comp1"
+ 34. Port Connectivity Checks: "g24_mastermind_controller:controller"
+ 35. Port Connectivity Checks: "g24_7_segment_decoder:dec3"
+ 36. Port Connectivity Checks: "g24_7_segment_decoder:dec2"
+ 37. Port Connectivity Checks: "g24_7_segment_decoder:dec1"
+ 38. Port Connectivity Checks: "g24_7_segment_decoder:dec0"
+ 39. Elapsed Time Per Partition
+ 40. Analysis & Synthesis Messages
 
 
 
@@ -69,15 +71,15 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                          ;
 +------------------------------------+--------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Dec 04 19:16:25 2015            ;
+; Analysis & Synthesis Status        ; Successful - Fri Dec 04 19:49:48 2015            ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Full Version ;
 ; Revision Name                      ; user_pins                                        ;
 ; Top-level Entity Name              ; user_pins                                        ;
 ; Family                             ; Cyclone II                                       ;
-; Total logic elements               ; 451                                              ;
-;     Total combinational functions  ; 427                                              ;
-;     Dedicated logic registers      ; 91                                               ;
-; Total registers                    ; 91                                               ;
+; Total logic elements               ; 437                                              ;
+;     Total combinational functions  ; 419                                              ;
+;     Dedicated logic registers      ; 84                                               ;
+; Total registers                    ; 84                                               ;
 ; Total pins                         ; 46                                               ;
 ; Total virtual pins                 ; 0                                                ;
 ; Total memory bits                  ; 4,096                                            ;
@@ -227,35 +229,35 @@ applicable agreement for further details.
 +------------------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------+---------+
 
 
-+------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                ;
-+---------------------------------------------+--------------+
-; Resource                                    ; Usage        ;
-+---------------------------------------------+--------------+
-; Estimated Total logic elements              ; 451          ;
-;                                             ;              ;
-; Total combinational functions               ; 427          ;
-; Logic element usage by number of LUT inputs ;              ;
-;     -- 4 input functions                    ; 214          ;
-;     -- 3 input functions                    ; 161          ;
-;     -- <=2 input functions                  ; 52           ;
-;                                             ;              ;
-; Logic elements by mode                      ;              ;
-;     -- normal mode                          ; 427          ;
-;     -- arithmetic mode                      ; 0            ;
-;                                             ;              ;
-; Total registers                             ; 91           ;
-;     -- Dedicated logic registers            ; 91           ;
-;     -- I/O registers                        ; 0            ;
-;                                             ;              ;
-; I/O pins                                    ; 46           ;
-; Total memory bits                           ; 4096         ;
-; Embedded Multiplier 9-bit elements          ; 0            ;
-; Maximum fan-out node                        ; switch_input ;
-; Maximum fan-out                             ; 77           ;
-; Total fan-out                               ; 1802         ;
-; Average fan-out                             ; 3.19         ;
-+---------------------------------------------+--------------+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+; Estimated Total logic elements              ; 437   ;
+;                                             ;       ;
+; Total combinational functions               ; 419   ;
+; Logic element usage by number of LUT inputs ;       ;
+;     -- 4 input functions                    ; 222   ;
+;     -- 3 input functions                    ; 148   ;
+;     -- <=2 input functions                  ; 49    ;
+;                                             ;       ;
+; Logic elements by mode                      ;       ;
+;     -- normal mode                          ; 419   ;
+;     -- arithmetic mode                      ; 0     ;
+;                                             ;       ;
+; Total registers                             ; 84    ;
+;     -- Dedicated logic registers            ; 84    ;
+;     -- I/O registers                        ; 0     ;
+;                                             ;       ;
+; I/O pins                                    ; 46    ;
+; Total memory bits                           ; 4096  ;
+; Embedded Multiplier 9-bit elements          ; 0     ;
+; Maximum fan-out node                        ; reset ;
+; Maximum fan-out                             ; 73    ;
+; Total fan-out                               ; 1757  ;
+; Average fan-out                             ; 3.19  ;
++---------------------------------------------+-------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -263,7 +265,7 @@ applicable agreement for further details.
 +----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                   ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                      ; Library Name ;
 +----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------------+--------------+
-; |user_pins                                   ; 427 (21)          ; 91 (0)       ; 4096        ; 0            ; 0       ; 0         ; 46   ; 0            ; |user_pins                                                                                                               ; work         ;
+; |user_pins                                   ; 419 (16)          ; 84 (0)       ; 4096        ; 0            ; 0       ; 0         ; 46   ; 0            ; |user_pins                                                                                                               ; work         ;
 ;    |datapath:main|                           ; 209 (34)          ; 28 (16)      ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |user_pins|datapath:main                                                                                                 ; work         ;
 ;       |g24_comp6:comparison|                 ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |user_pins|datapath:main|g24_comp6:comparison                                                                            ; work         ;
 ;       |g24_mastermind_score:master_score|    ; 149 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |user_pins|datapath:main|g24_mastermind_score:master_score                                                               ; work         ;
@@ -323,7 +325,7 @@ applicable agreement for further details.
 ;          |color_counter:color_counter1|      ; 4 (4)             ; 3 (3)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |user_pins|random_generator:rando|g24_possibility_table:i1|color_counter:color_counter1                                  ; work         ;
 ;          |color_counter:color_counter2|      ; 5 (5)             ; 3 (3)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |user_pins|random_generator:rando|g24_possibility_table:i1|color_counter:color_counter2                                  ; work         ;
 ;          |color_counter:color_counter3|      ; 4 (4)             ; 3 (3)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |user_pins|random_generator:rando|g24_possibility_table:i1|color_counter:color_counter3                                  ; work         ;
-;    |user_input:input_receiver|               ; 7 (7)             ; 15 (15)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |user_pins|user_input:input_receiver                                                                                     ; work         ;
+;    |user_input:input_receiver|               ; 4 (4)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |user_pins|user_input:input_receiver                                                                                     ; work         ;
 +----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -349,17 +351,39 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
++----------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                     ;
++------------------------------------------+---------------------------------------------+
+; Register name                            ; Reason for Removal                          ;
++------------------------------------------+---------------------------------------------+
+; user_input:input_receiver|current_pin[1] ; Stuck at VCC due to stuck port data_in      ;
+; user_input:input_receiver|PATTERN[0..5]  ; Stuck at GND due to stuck port clock_enable ;
+; Total Number of Removed Registers = 7    ;                                             ;
++------------------------------------------+---------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                                        ;
++------------------------------------------+---------------------------+-----------------------------------------------------------------------------+
+; Register name                            ; Reason for Removal        ; Registers Removed due to This Register                                      ;
++------------------------------------------+---------------------------+-----------------------------------------------------------------------------+
+; user_input:input_receiver|current_pin[1] ; Stuck at VCC              ; user_input:input_receiver|PATTERN[2], user_input:input_receiver|PATTERN[1], ;
+;                                          ; due to stuck port data_in ; user_input:input_receiver|PATTERN[0], user_input:input_receiver|PATTERN[5], ;
+;                                          ;                           ; user_input:input_receiver|PATTERN[4], user_input:input_receiver|PATTERN[3]  ;
++------------------------------------------+---------------------------+-----------------------------------------------------------------------------+
+
+
 +------------------------------------------------------+
 ; General Register Statistics                          ;
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 91    ;
+; Total registers                              ; 84    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 12    ;
+; Number of registers using Synchronous Load   ; 6     ;
 ; Number of registers using Asynchronous Clear ; 44    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 57    ;
+; Number of registers using Clock Enable       ; 51    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -369,10 +393,10 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                      ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------+
-; 3:1                ; 12 bits   ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; Yes        ; |user_pins|datapath:main|register_guess[8]                      ;
+; 3:1                ; 12 bits   ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; Yes        ; |user_pins|datapath:main|register_guess[11]                     ;
 ; 4:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |user_pins|g24_mastermind_controller:controller|SR_LD           ;
-; 8:1                ; 4 bits    ; 20 LEs        ; 16 LEs               ; 4 LEs                  ; Yes        ; |user_pins|g24_mastermind_controller:controller|present_state.C ;
-; 3:1                ; 12 bits   ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; No         ; |user_pins|datapath:main|mux_output_pattern[4]                  ;
+; 8:1                ; 4 bits    ; 20 LEs        ; 16 LEs               ; 4 LEs                  ; Yes        ; |user_pins|g24_mastermind_controller:controller|present_state.A ;
+; 3:1                ; 12 bits   ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; No         ; |user_pins|datapath:main|mux_output_pattern[6]                  ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------+
 
 
@@ -825,7 +849,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:01     ;
+; Top            ; 00:00:02     ;
 +----------------+--------------+
 
 
@@ -835,7 +859,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
-    Info: Processing started: Fri Dec 04 19:16:16 2015
+    Info: Processing started: Fri Dec 04 19:49:33 2015
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off user_pins -c user_pins
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file /323/lab5/user_input/user_input.vhd
@@ -959,15 +983,15 @@ Warning (13004): Presettable and clearable registers converted to equivalent cir
     Warning (13310): Register "g24_mastermind_controller:controller|SR_LD" is converted into an equivalent circuit using register "g24_mastermind_controller:controller|SR_LD~_emulated" and latch "g24_mastermind_controller:controller|SR_LD~1"
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 501 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 487 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 8 input pins
     Info (21059): Implemented 38 output pins
-    Info (21061): Implemented 454 logic cells
+    Info (21061): Implemented 440 logic cells
     Info (21064): Implemented 1 RAM segments
 Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 27 warnings
-    Info: Peak virtual memory: 524 megabytes
-    Info: Processing ended: Fri Dec 04 19:16:25 2015
-    Info: Elapsed time: 00:00:09
+    Info: Peak virtual memory: 529 megabytes
+    Info: Processing ended: Fri Dec 04 19:49:48 2015
+    Info: Elapsed time: 00:00:15
     Info: Total CPU time (on all processors): 00:00:04
 
 

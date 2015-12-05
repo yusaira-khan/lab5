@@ -1,5 +1,5 @@
 Fitter report for user_pins
-Fri Dec 04 19:16:36 2015
+Fri Dec 04 19:50:05 2015
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
 
 
@@ -63,17 +63,17 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------------+
 ; Fitter Summary                                                                        ;
 +------------------------------------+--------------------------------------------------+
-; Fitter Status                      ; Successful - Fri Dec 04 19:16:36 2015            ;
+; Fitter Status                      ; Successful - Fri Dec 04 19:50:05 2015            ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Full Version ;
 ; Revision Name                      ; user_pins                                        ;
 ; Top-level Entity Name              ; user_pins                                        ;
 ; Family                             ; Cyclone II                                       ;
 ; Device                             ; EP2C20F484C7                                     ;
 ; Timing Models                      ; Final                                            ;
-; Total logic elements               ; 443 / 18,752 ( 2 % )                             ;
-;     Total combinational functions  ; 427 / 18,752 ( 2 % )                             ;
-;     Dedicated logic registers      ; 91 / 18,752 ( < 1 % )                            ;
-; Total registers                    ; 91                                               ;
+; Total logic elements               ; 429 / 18,752 ( 2 % )                             ;
+;     Total combinational functions  ; 419 / 18,752 ( 2 % )                             ;
+;     Dedicated logic registers      ; 84 / 18,752 ( < 1 % )                            ;
+; Total registers                    ; 84                                               ;
 ; Total pins                         ; 46 / 315 ( 15 % )                                ;
 ; Total virtual pins                 ; 0                                                ;
 ; Total memory bits                  ; 4,096 / 239,616 ( 2 % )                          ;
@@ -141,12 +141,12 @@ applicable agreement for further details.
 ; Number detected on machine ; 4           ;
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
-; Average used               ; 2.20        ;
+; Average used               ; 1.00        ;
 ; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-4         ;  40.0%      ;
+;     Processors 2-4         ; < 0.1%      ;
 +----------------------------+-------------+
 
 
@@ -156,8 +156,8 @@ applicable agreement for further details.
 ; Type                ; Value                  ;
 +---------------------+------------------------+
 ; Placement (by node) ;                        ;
-;     -- Requested    ; 0 / 570 ( 0.00 % )     ;
-;     -- Achieved     ; 0 / 570 ( 0.00 % )     ;
+;     -- Requested    ; 0 / 555 ( 0.00 % )     ;
+;     -- Achieved     ; 0 / 555 ( 0.00 % )     ;
 ;                     ;                        ;
 ; Routing (by net)    ;                        ;
 ;     -- Requested    ; 0 / 0 ( 0.00 % )       ;
@@ -180,7 +180,7 @@ applicable agreement for further details.
 +--------------------------------+---------+-------------------+-------------------------+-------------------+
 ; Partition Name                 ; # Nodes ; # Preserved Nodes ; Preservation Level Used ; Netlist Type Used ;
 +--------------------------------+---------+-------------------+-------------------------+-------------------+
-; Top                            ; 567     ; 0                 ; N/A                     ; Source File       ;
+; Top                            ; 552     ; 0                 ; N/A                     ; Source File       ;
 ; hard_block:auto_generated_inst ; 3       ; 0                 ; N/A                     ; Source File       ;
 +--------------------------------+---------+-------------------+-------------------------+-------------------+
 
@@ -196,26 +196,26 @@ The pin-out file can be found in P:/323/lab5/user_pins/output_files/user_pins.pi
 +---------------------------------------------+-------------------------+
 ; Resource                                    ; Usage                   ;
 +---------------------------------------------+-------------------------+
-; Total logic elements                        ; 443 / 18,752 ( 2 % )    ;
-;     -- Combinational with no register       ; 352                     ;
-;     -- Register only                        ; 16                      ;
-;     -- Combinational with a register        ; 75                      ;
+; Total logic elements                        ; 429 / 18,752 ( 2 % )    ;
+;     -- Combinational with no register       ; 345                     ;
+;     -- Register only                        ; 10                      ;
+;     -- Combinational with a register        ; 74                      ;
 ;                                             ;                         ;
 ; Logic element usage by number of LUT inputs ;                         ;
-;     -- 4 input functions                    ; 214                     ;
-;     -- 3 input functions                    ; 161                     ;
-;     -- <=2 input functions                  ; 52                      ;
-;     -- Register only                        ; 16                      ;
+;     -- 4 input functions                    ; 222                     ;
+;     -- 3 input functions                    ; 148                     ;
+;     -- <=2 input functions                  ; 49                      ;
+;     -- Register only                        ; 10                      ;
 ;                                             ;                         ;
 ; Logic elements by mode                      ;                         ;
-;     -- normal mode                          ; 427                     ;
+;     -- normal mode                          ; 419                     ;
 ;     -- arithmetic mode                      ; 0                       ;
 ;                                             ;                         ;
-; Total registers*                            ; 91 / 19,649 ( < 1 % )   ;
-;     -- Dedicated logic registers            ; 91 / 18,752 ( < 1 % )   ;
+; Total registers*                            ; 84 / 19,649 ( < 1 % )   ;
+;     -- Dedicated logic registers            ; 84 / 18,752 ( < 1 % )   ;
 ;     -- I/O registers                        ; 0 / 897 ( 0 % )         ;
 ;                                             ;                         ;
-; Total LABs:  partially or completely used   ; 34 / 1,172 ( 3 % )      ;
+; Total LABs:  partially or completely used   ; 33 / 1,172 ( 3 % )      ;
 ; Virtual pins                                ; 0                       ;
 ; I/O pins                                    ; 46 / 315 ( 15 % )       ;
 ;     -- Clock pins                           ; 3 / 8 ( 38 % )          ;
@@ -231,11 +231,11 @@ The pin-out file can be found in P:/323/lab5/user_pins/output_files/user_pins.pi
 ; ASMI blocks                                 ; 0 / 1 ( 0 % )           ;
 ; CRC blocks                                  ; 0 / 1 ( 0 % )           ;
 ; Average interconnect usage (total/H/V)      ; 0% / 0% / 0%            ;
-; Peak interconnect usage (total/H/V)         ; 3% / 2% / 4%            ;
-; Maximum fan-out                             ; 77                      ;
-; Highest non-global fan-out                  ; 77                      ;
-; Total fan-out                               ; 1814                    ;
-; Average fan-out                             ; 3.13                    ;
+; Peak interconnect usage (total/H/V)         ; 3% / 3% / 2%            ;
+; Maximum fan-out                             ; 73                      ;
+; Highest non-global fan-out                  ; 73                      ;
+; Total fan-out                               ; 1764                    ;
+; Average fan-out                             ; 3.15                    ;
 +---------------------------------------------+-------------------------+
 *  Register count does not include registers inside RAM blocks or DSP blocks.
 
@@ -248,25 +248,25 @@ The pin-out file can be found in P:/323/lab5/user_pins/output_files/user_pins.pi
 +---------------------------------------------+----------------------+--------------------------------+
 ; Difficulty Clustering Region                ; Low                  ; Low                            ;
 ;                                             ;                      ;                                ;
-; Total logic elements                        ; 443 / 18752 ( 2 % )  ; 0 / 18752 ( 0 % )              ;
-;     -- Combinational with no register       ; 352                  ; 0                              ;
-;     -- Register only                        ; 16                   ; 0                              ;
-;     -- Combinational with a register        ; 75                   ; 0                              ;
+; Total logic elements                        ; 429 / 18752 ( 2 % )  ; 0 / 18752 ( 0 % )              ;
+;     -- Combinational with no register       ; 345                  ; 0                              ;
+;     -- Register only                        ; 10                   ; 0                              ;
+;     -- Combinational with a register        ; 74                   ; 0                              ;
 ;                                             ;                      ;                                ;
 ; Logic element usage by number of LUT inputs ;                      ;                                ;
-;     -- 4 input functions                    ; 214                  ; 0                              ;
-;     -- 3 input functions                    ; 161                  ; 0                              ;
-;     -- <=2 input functions                  ; 52                   ; 0                              ;
-;     -- Register only                        ; 16                   ; 0                              ;
+;     -- 4 input functions                    ; 222                  ; 0                              ;
+;     -- 3 input functions                    ; 148                  ; 0                              ;
+;     -- <=2 input functions                  ; 49                   ; 0                              ;
+;     -- Register only                        ; 10                   ; 0                              ;
 ;                                             ;                      ;                                ;
 ; Logic elements by mode                      ;                      ;                                ;
-;     -- normal mode                          ; 427                  ; 0                              ;
+;     -- normal mode                          ; 419                  ; 0                              ;
 ;     -- arithmetic mode                      ; 0                    ; 0                              ;
 ;                                             ;                      ;                                ;
-; Total registers                             ; 91                   ; 0                              ;
-;     -- Dedicated logic registers            ; 91 / 18752 ( < 1 % ) ; 0 / 18752 ( 0 % )              ;
+; Total registers                             ; 84                   ; 0                              ;
+;     -- Dedicated logic registers            ; 84 / 18752 ( < 1 % ) ; 0 / 18752 ( 0 % )              ;
 ;                                             ;                      ;                                ;
-; Total LABs:  partially or completely used   ; 34 / 1172 ( 3 % )    ; 0 / 1172 ( 0 % )               ;
+; Total LABs:  partially or completely used   ; 33 / 1172 ( 3 % )    ; 0 / 1172 ( 0 % )               ;
 ;                                             ;                      ;                                ;
 ; Virtual pins                                ; 0                    ; 0                              ;
 ; I/O pins                                    ; 46                   ; 0                              ;
@@ -283,8 +283,8 @@ The pin-out file can be found in P:/323/lab5/user_pins/output_files/user_pins.pi
 ;     -- Registered Output Connections        ; 0                    ; 0                              ;
 ;                                             ;                      ;                                ;
 ; Internal Connections                        ;                      ;                                ;
-;     -- Total Connections                    ; 1826                 ; 0                              ;
-;     -- Registered Connections               ; 385                  ; 0                              ;
+;     -- Total Connections                    ; 1776                 ; 0                              ;
+;     -- Registered Connections               ; 395                  ; 0                              ;
 ;                                             ;                      ;                                ;
 ; External Connections                        ;                      ;                                ;
 ;     -- Top                                  ; 0                    ; 0                              ;
@@ -317,13 +317,13 @@ The pin-out file can be found in P:/323/lab5/user_pins/output_files/user_pins.pi
 ; Name         ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Cell number ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; Power Up High ; PCI I/O Enabled ; Bus Hold ; Weak Pull Up ; I/O Standard ; Termination ; Location assigned by ;
 +--------------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+-------------+----------------------+
 ; clk          ; L1    ; 2        ; 0            ; 13           ; 0           ; 1                     ; 0                  ; yes    ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
-; color[0]     ; L22   ; 5        ; 50           ; 14           ; 0           ; 4                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
-; color[1]     ; L21   ; 5        ; 50           ; 14           ; 1           ; 4                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
-; color[2]     ; M22   ; 6        ; 50           ; 14           ; 2           ; 4                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
+; color[0]     ; L22   ; 5        ; 50           ; 14           ; 0           ; 2                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
+; color[1]     ; L21   ; 5        ; 50           ; 14           ; 1           ; 2                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
+; color[2]     ; M22   ; 6        ; 50           ; 14           ; 2           ; 2                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
 ; ready        ; T22   ; 6        ; 50           ; 9            ; 0           ; 5                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
-; reset        ; T21   ; 6        ; 50           ; 9            ; 1           ; 75                    ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
-; shift        ; R22   ; 6        ; 50           ; 10           ; 1           ; 15                    ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
-; switch_input ; L2    ; 2        ; 0            ; 13           ; 1           ; 77                    ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
+; reset        ; T21   ; 6        ; 50           ; 9            ; 1           ; 73                    ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
+; shift        ; R22   ; 6        ; 50           ; 10           ; 1           ; 8                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
+; switch_input ; L2    ; 2        ; 0            ; 13           ; 1           ; 72                    ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
 +--------------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+-------------+----------------------+
 
 
@@ -924,11 +924,11 @@ Note: User assignments will override these defaults. The user specified values a
 +----------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+--------------------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                   ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M4Ks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Full Hierarchy Name                                                                                                      ; Library Name ;
 +----------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+--------------------------------------------------------------------------------------------------------------------------+--------------+
-; |user_pins                                   ; 443 (12)    ; 91 (0)                    ; 0 (0)         ; 4096        ; 1    ; 0            ; 0       ; 0         ; 46   ; 0            ; 352 (12)     ; 16 (0)            ; 75 (9)           ; |user_pins                                                                                                               ; work         ;
-;    |datapath:main|                           ; 209 (37)    ; 28 (16)                   ; 0 (0)         ; 4096        ; 1    ; 0            ; 0       ; 0         ; 0    ; 0            ; 181 (22)     ; 0 (0)             ; 28 (12)          ; |user_pins|datapath:main                                                                                                 ; work         ;
+; |user_pins                                   ; 429 (13)    ; 84 (0)                    ; 0 (0)         ; 4096        ; 1    ; 0            ; 0       ; 0         ; 46   ; 0            ; 345 (12)     ; 10 (0)            ; 74 (4)           ; |user_pins                                                                                                               ; work         ;
+;    |datapath:main|                           ; 211 (36)    ; 28 (16)                   ; 0 (0)         ; 4096        ; 1    ; 0            ; 0       ; 0         ; 0    ; 0            ; 180 (20)     ; 0 (0)             ; 31 (16)          ; |user_pins|datapath:main                                                                                                 ; work         ;
 ;       |g24_comp6:comparison|                 ; 5 (5)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 5 (5)        ; 0 (0)             ; 0 (0)            ; |user_pins|datapath:main|g24_comp6:comparison                                                                            ; work         ;
-;       |g24_mastermind_score:master_score|    ; 149 (0)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 145 (0)      ; 0 (0)             ; 4 (0)            ; |user_pins|datapath:main|g24_mastermind_score:master_score                                                               ; work         ;
-;          |g24_color_matches:cm|              ; 137 (27)    ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 137 (27)     ; 0 (0)             ; 0 (0)            ; |user_pins|datapath:main|g24_mastermind_score:master_score|g24_color_matches:cm                                          ; work         ;
+;       |g24_mastermind_score:master_score|    ; 149 (0)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 142 (0)      ; 0 (0)             ; 7 (0)            ; |user_pins|datapath:main|g24_mastermind_score:master_score                                                               ; work         ;
+;          |g24_color_matches:cm|              ; 137 (27)    ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 134 (27)     ; 0 (0)             ; 3 (0)            ; |user_pins|datapath:main|g24_mastermind_score:master_score|g24_color_matches:cm                                          ; work         ;
 ;             |g24_minimum3:min1|              ; 5 (5)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 5 (5)        ; 0 (0)             ; 0 (0)            ; |user_pins|datapath:main|g24_mastermind_score:master_score|g24_color_matches:cm|g24_minimum3:min1                        ; work         ;
 ;             |g24_minimum3:min2|              ; 5 (5)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 5 (5)        ; 0 (0)             ; 0 (0)            ; |user_pins|datapath:main|g24_mastermind_score:master_score|g24_color_matches:cm|g24_minimum3:min2                        ; work         ;
 ;             |g24_minimum3:min3|              ; 5 (5)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 5 (5)        ; 0 (0)             ; 0 (0)            ; |user_pins|datapath:main|g24_mastermind_score:master_score|g24_color_matches:cm|g24_minimum3:min3                        ; work         ;
@@ -953,8 +953,8 @@ Note: User assignments will override these defaults. The user specified values a
 ;                |decode_s6f:auto_generated|   ; 6 (6)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 6 (6)        ; 0 (0)             ; 0 (0)            ; |user_pins|datapath:main|g24_mastermind_score:master_score|g24_color_matches:cm|lpm_decode:ld2|decode_s6f:auto_generated ; work         ;
 ;             |lpm_decode:ld3|                 ; 6 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 6 (0)        ; 0 (0)             ; 0 (0)            ; |user_pins|datapath:main|g24_mastermind_score:master_score|g24_color_matches:cm|lpm_decode:ld3                           ; work         ;
 ;                |decode_s6f:auto_generated|   ; 6 (6)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 6 (6)        ; 0 (0)             ; 0 (0)            ; |user_pins|datapath:main|g24_mastermind_score:master_score|g24_color_matches:cm|lpm_decode:ld3|decode_s6f:auto_generated ; work         ;
-;             |lpm_decode:ld4|                 ; 6 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 6 (0)        ; 0 (0)             ; 0 (0)            ; |user_pins|datapath:main|g24_mastermind_score:master_score|g24_color_matches:cm|lpm_decode:ld4                           ; work         ;
-;                |decode_s6f:auto_generated|   ; 6 (6)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 6 (6)        ; 0 (0)             ; 0 (0)            ; |user_pins|datapath:main|g24_mastermind_score:master_score|g24_color_matches:cm|lpm_decode:ld4|decode_s6f:auto_generated ; work         ;
+;             |lpm_decode:ld4|                 ; 6 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 3 (0)        ; 0 (0)             ; 3 (0)            ; |user_pins|datapath:main|g24_mastermind_score:master_score|g24_color_matches:cm|lpm_decode:ld4                           ; work         ;
+;                |decode_s6f:auto_generated|   ; 6 (6)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 3 (3)            ; |user_pins|datapath:main|g24_mastermind_score:master_score|g24_color_matches:cm|lpm_decode:ld4|decode_s6f:auto_generated ; work         ;
 ;             |lpm_decode:ld5|                 ; 6 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 6 (0)        ; 0 (0)             ; 0 (0)            ; |user_pins|datapath:main|g24_mastermind_score:master_score|g24_color_matches:cm|lpm_decode:ld5                           ; work         ;
 ;                |decode_s6f:auto_generated|   ; 6 (6)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 6 (6)        ; 0 (0)             ; 0 (0)            ; |user_pins|datapath:main|g24_mastermind_score:master_score|g24_color_matches:cm|lpm_decode:ld5|decode_s6f:auto_generated ; work         ;
 ;             |lpm_decode:ld6|                 ; 6 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 6 (0)        ; 0 (0)             ; 0 (0)            ; |user_pins|datapath:main|g24_mastermind_score:master_score|g24_color_matches:cm|lpm_decode:ld6                           ; work         ;
@@ -966,25 +966,25 @@ Note: User assignments will override these defaults. The user specified values a
 ;          |g24_num_matches:nm|                ; 2 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 2 (0)        ; 0 (0)             ; 0 (0)            ; |user_pins|datapath:main|g24_mastermind_score:master_score|g24_num_matches:nm                                            ; work         ;
 ;             |g24_num1s:comp|                 ; 2 (2)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; |user_pins|datapath:main|g24_mastermind_score:master_score|g24_num_matches:nm|g24_num1s:comp                             ; work         ;
 ;          |g24_score_encoder:se|              ; 10 (10)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 6 (6)        ; 0 (0)             ; 4 (4)            ; |user_pins|datapath:main|g24_mastermind_score:master_score|g24_score_encoder:se                                          ; work         ;
-;       |g24_possibility_table:table|          ; 21 (5)      ; 12 (0)                    ; 0 (0)         ; 4096        ; 1    ; 0            ; 0       ; 0         ; 0    ; 0            ; 9 (5)        ; 0 (0)             ; 12 (0)           ; |user_pins|datapath:main|g24_possibility_table:table                                                                     ; work         ;
+;       |g24_possibility_table:table|          ; 25 (5)      ; 12 (0)                    ; 0 (0)         ; 4096        ; 1    ; 0            ; 0       ; 0         ; 0    ; 0            ; 13 (5)       ; 0 (0)             ; 12 (0)           ; |user_pins|datapath:main|g24_possibility_table:table                                                                     ; work         ;
 ;          |altsyncram:table_memory[0]__1|     ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 4096        ; 1    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |user_pins|datapath:main|g24_possibility_table:table|altsyncram:table_memory[0]__1                                       ; work         ;
 ;             |altsyncram_cug1:auto_generated| ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 4096        ; 1    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |user_pins|datapath:main|g24_possibility_table:table|altsyncram:table_memory[0]__1|altsyncram_cug1:auto_generated        ; work         ;
-;          |color_counter:color_counter0|      ; 5 (5)       ; 3 (3)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 4 (4)            ; |user_pins|datapath:main|g24_possibility_table:table|color_counter:color_counter0                                        ; work         ;
-;          |color_counter:color_counter1|      ; 4 (4)       ; 3 (3)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 3 (3)            ; |user_pins|datapath:main|g24_possibility_table:table|color_counter:color_counter1                                        ; work         ;
-;          |color_counter:color_counter2|      ; 4 (4)       ; 3 (3)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 3 (3)            ; |user_pins|datapath:main|g24_possibility_table:table|color_counter:color_counter2                                        ; work         ;
-;          |color_counter:color_counter3|      ; 5 (5)       ; 3 (3)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 4 (4)            ; |user_pins|datapath:main|g24_possibility_table:table|color_counter:color_counter3                                        ; work         ;
-;    |g24_7_segment_decoder:dec0|              ; 7 (7)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; |user_pins|g24_7_segment_decoder:dec0                                                                                    ; work         ;
+;          |color_counter:color_counter0|      ; 5 (5)       ; 3 (3)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 3 (3)            ; |user_pins|datapath:main|g24_possibility_table:table|color_counter:color_counter0                                        ; work         ;
+;          |color_counter:color_counter1|      ; 5 (5)       ; 3 (3)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 4 (4)            ; |user_pins|datapath:main|g24_possibility_table:table|color_counter:color_counter1                                        ; work         ;
+;          |color_counter:color_counter2|      ; 7 (7)       ; 3 (3)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 4 (4)        ; 0 (0)             ; 3 (3)            ; |user_pins|datapath:main|g24_possibility_table:table|color_counter:color_counter2                                        ; work         ;
+;          |color_counter:color_counter3|      ; 4 (4)       ; 3 (3)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 3 (3)            ; |user_pins|datapath:main|g24_possibility_table:table|color_counter:color_counter3                                        ; work         ;
+;    |g24_7_segment_decoder:dec0|              ; 7 (7)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 6 (6)        ; 0 (0)             ; 1 (1)            ; |user_pins|g24_7_segment_decoder:dec0                                                                                    ; work         ;
 ;    |g24_7_segment_decoder:dec1|              ; 7 (7)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; |user_pins|g24_7_segment_decoder:dec1                                                                                    ; work         ;
 ;    |g24_7_segment_decoder:dec2|              ; 7 (7)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; |user_pins|g24_7_segment_decoder:dec2                                                                                    ; work         ;
 ;    |g24_7_segment_decoder:dec3|              ; 7 (7)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; |user_pins|g24_7_segment_decoder:dec3                                                                                    ; work         ;
-;    |g24_mastermind_controller:controller|    ; 141 (141)   ; 23 (23)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 118 (118)    ; 0 (0)             ; 23 (23)          ; |user_pins|g24_mastermind_controller:controller                                                                          ; work         ;
-;    |random_generator:rando|                  ; 34 (13)     ; 25 (13)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 9 (0)        ; 13 (13)           ; 12 (0)           ; |user_pins|random_generator:rando                                                                                        ; work         ;
-;       |g24_possibility_table:i1|             ; 21 (5)      ; 12 (0)                    ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 9 (5)        ; 0 (0)             ; 12 (0)           ; |user_pins|random_generator:rando|g24_possibility_table:i1                                                               ; work         ;
+;    |g24_mastermind_controller:controller|    ; 141 (141)   ; 23 (23)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 116 (116)    ; 0 (0)             ; 25 (25)          ; |user_pins|g24_mastermind_controller:controller                                                                          ; work         ;
+;    |random_generator:rando|                  ; 33 (13)     ; 25 (13)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 8 (0)        ; 7 (7)             ; 18 (5)           ; |user_pins|random_generator:rando                                                                                        ; work         ;
+;       |g24_possibility_table:i1|             ; 21 (5)      ; 12 (0)                    ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 8 (4)        ; 0 (0)             ; 13 (1)           ; |user_pins|random_generator:rando|g24_possibility_table:i1                                                               ; work         ;
 ;          |color_counter:color_counter0|      ; 3 (3)       ; 3 (3)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 3 (3)            ; |user_pins|random_generator:rando|g24_possibility_table:i1|color_counter:color_counter0                                  ; work         ;
 ;          |color_counter:color_counter1|      ; 4 (4)       ; 3 (3)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 3 (3)            ; |user_pins|random_generator:rando|g24_possibility_table:i1|color_counter:color_counter1                                  ; work         ;
 ;          |color_counter:color_counter2|      ; 5 (5)       ; 3 (3)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 3 (3)            ; |user_pins|random_generator:rando|g24_possibility_table:i1|color_counter:color_counter2                                  ; work         ;
 ;          |color_counter:color_counter3|      ; 4 (4)       ; 3 (3)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 3 (3)            ; |user_pins|random_generator:rando|g24_possibility_table:i1|color_counter:color_counter3                                  ; work         ;
-;    |user_input:input_receiver|               ; 19 (19)     ; 15 (15)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 4 (4)        ; 3 (3)             ; 12 (12)          ; |user_pins|user_input:input_receiver                                                                                     ; work         ;
+;    |user_input:input_receiver|               ; 10 (10)     ; 8 (8)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 2 (2)        ; 3 (3)             ; 5 (5)            ; |user_pins|user_input:input_receiver                                                                                     ; work         ;
 +----------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+--------------------------------------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -1033,11 +1033,11 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Waiting_for_ready   ; Output   ; --            ; --            ; --                    ; --  ;
 ; last                ; Output   ; --            ; --            ; --                    ; --  ;
 ; switch_input        ; Input    ; (0) 171 ps    ; (0) 171 ps    ; --                    ; --  ;
+; ready               ; Input    ; (6) 2523 ps   ; (6) 2523 ps   ; --                    ; --  ;
+; reset               ; Input    ; (6) 2523 ps   ; (0) 171 ps    ; --                    ; --  ;
 ; clk                 ; Input    ; (0) 171 ps    ; (0) 171 ps    ; --                    ; --  ;
 ; color[1]            ; Input    ; (0) 171 ps    ; (0) 171 ps    ; --                    ; --  ;
 ; shift               ; Input    ; (0) 171 ps    ; (0) 171 ps    ; --                    ; --  ;
-; reset               ; Input    ; (0) 171 ps    ; (6) 2523 ps   ; --                    ; --  ;
-; ready               ; Input    ; (6) 2523 ps   ; (6) 2523 ps   ; --                    ; --  ;
 ; color[2]            ; Input    ; (0) 171 ps    ; (0) 171 ps    ; --                    ; --  ;
 ; color[0]            ; Input    ; (0) 171 ps    ; (0) 171 ps    ; --                    ; --  ;
 +---------------------+----------+---------------+---------------+-----------------------+-----+
@@ -1049,15 +1049,89 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Source Pin / Fanout                                                       ; Pad To Core Index ; Setting ;
 +---------------------------------------------------------------------------+-------------------+---------+
 ; switch_input                                                              ;                   ;         ;
+; ready                                                                     ;                   ;         ;
+;      - g24_mastermind_controller:controller|prev_ready~0                  ; 0                 ; 6       ;
+;      - g24_mastermind_controller:controller|Selector13~2                  ; 0                 ; 6       ;
+;      - g24_mastermind_controller:controller|clock~0                       ; 0                 ; 6       ;
+;      - g24_mastermind_controller:controller|Selector3~3                   ; 0                 ; 6       ;
+;      - g24_mastermind_controller:controller|present_state.E~11            ; 0                 ; 6       ;
+; reset                                                                     ;                   ;         ;
+;      - user_input:input_receiver|last                                     ; 0                 ; 6       ;
+;      - random_generator:rando|PATTERN[0]                                  ; 1                 ; 0       ;
+;      - random_generator:rando|PATTERN[1]                                  ; 1                 ; 0       ;
+;      - random_generator:rando|PATTERN[2]                                  ; 1                 ; 0       ;
+;      - random_generator:rando|PATTERN[3]                                  ; 1                 ; 0       ;
+;      - random_generator:rando|PATTERN[4]                                  ; 1                 ; 0       ;
+;      - random_generator:rando|PATTERN[5]                                  ; 1                 ; 0       ;
+;      - random_generator:rando|PATTERN[6]                                  ; 1                 ; 0       ;
+;      - random_generator:rando|PATTERN[7]                                  ; 1                 ; 0       ;
+;      - random_generator:rando|PATTERN[8]                                  ; 1                 ; 0       ;
+;      - random_generator:rando|PATTERN[9]                                  ; 1                 ; 0       ;
+;      - random_generator:rando|PATTERN[10]                                 ; 1                 ; 0       ;
+;      - random_generator:rando|PATTERN[11]                                 ; 1                 ; 0       ;
+;      - g24_mastermind_controller:controller|TM_EN~0                       ; 0                 ; 6       ;
+;      - user_input:input_receiver|PATTERN[6]~0                             ; 0                 ; 6       ;
+;      - user_input:input_receiver|PATTERN[9]~1                             ; 0                 ; 6       ;
+;      - g24_mastermind_controller:controller|P_SEL~_emulated               ; 0                 ; 6       ;
+;      - g24_mastermind_controller:controller|P_SEL~2                       ; 0                 ; 6       ;
+;      - g24_mastermind_controller:controller|present_state.D~_emulated     ; 0                 ; 6       ;
+;      - g24_mastermind_controller:controller|present_state.D~2             ; 0                 ; 6       ;
+;      - g24_mastermind_controller:controller|GR_SEL~_emulated              ; 0                 ; 6       ;
+;      - g24_mastermind_controller:controller|GR_SEL~2                      ; 0                 ; 6       ;
+;      - g24_mastermind_controller:controller|GR_LD~_emulated               ; 0                 ; 6       ;
+;      - g24_mastermind_controller:controller|GR_LD~2                       ; 0                 ; 6       ;
+;      - g24_mastermind_controller:controller|TC_RST~_emulated              ; 0                 ; 6       ;
+;      - g24_mastermind_controller:controller|TC_RST~2                      ; 0                 ; 6       ;
+;      - g24_mastermind_controller:controller|SR_SEL~_emulated              ; 0                 ; 6       ;
+;      - g24_mastermind_controller:controller|SR_SEL~2                      ; 0                 ; 6       ;
+;      - g24_mastermind_controller:controller|present_state.F1~_emulated    ; 0                 ; 6       ;
+;      - g24_mastermind_controller:controller|present_state.F1~2            ; 0                 ; 6       ;
+;      - g24_mastermind_controller:controller|present_state.F~_emulated     ; 0                 ; 6       ;
+;      - g24_mastermind_controller:controller|present_state.F~2             ; 0                 ; 6       ;
+;      - g24_mastermind_controller:controller|present_state.B~_emulated     ; 0                 ; 6       ;
+;      - g24_mastermind_controller:controller|present_state.B~2             ; 0                 ; 6       ;
+;      - g24_mastermind_controller:controller|present_state.E~_emulated     ; 0                 ; 6       ;
+;      - g24_mastermind_controller:controller|present_state.E~2             ; 0                 ; 6       ;
+;      - g24_mastermind_controller:controller|present_state.C~_emulated     ; 0                 ; 6       ;
+;      - g24_mastermind_controller:controller|present_state.C~2             ; 0                 ; 6       ;
+;      - g24_mastermind_controller:controller|present_state.G~_emulated     ; 0                 ; 6       ;
+;      - g24_mastermind_controller:controller|present_state.G~2             ; 0                 ; 6       ;
+;      - g24_mastermind_controller:controller|present_state.H~_emulated     ; 0                 ; 6       ;
+;      - g24_mastermind_controller:controller|present_state.H~2             ; 0                 ; 6       ;
+;      - g24_mastermind_controller:controller|present_state.H0~_emulated    ; 0                 ; 6       ;
+;      - g24_mastermind_controller:controller|present_state.H0~2            ; 0                 ; 6       ;
+;      - g24_mastermind_controller:controller|present_state.H1~_emulated    ; 0                 ; 6       ;
+;      - g24_mastermind_controller:controller|present_state.H1~2            ; 0                 ; 6       ;
+;      - g24_mastermind_controller:controller|present_state.G0~_emulated    ; 0                 ; 6       ;
+;      - g24_mastermind_controller:controller|present_state.G0~2            ; 0                 ; 6       ;
+;      - g24_mastermind_controller:controller|present_state.A~_emulated     ; 0                 ; 6       ;
+;      - g24_mastermind_controller:controller|present_state.A~2             ; 0                 ; 6       ;
+;      - g24_mastermind_controller:controller|present_input_state~_emulated ; 0                 ; 6       ;
+;      - g24_mastermind_controller:controller|present_input_state~2         ; 0                 ; 6       ;
+;      - g24_mastermind_controller:controller|SR_LD~_emulated               ; 0                 ; 6       ;
+;      - g24_mastermind_controller:controller|SR_LD~2                       ; 0                 ; 6       ;
+;      - g24_mastermind_controller:controller|P_SEL~1                       ; 0                 ; 6       ;
+;      - g24_mastermind_controller:controller|present_state.D~1             ; 0                 ; 6       ;
+;      - g24_mastermind_controller:controller|GR_SEL~1                      ; 0                 ; 6       ;
+;      - g24_mastermind_controller:controller|GR_LD~1                       ; 0                 ; 6       ;
+;      - g24_mastermind_controller:controller|TC_RST~1                      ; 0                 ; 6       ;
+;      - g24_mastermind_controller:controller|SR_SEL~1                      ; 0                 ; 6       ;
+;      - g24_mastermind_controller:controller|present_state.F1~1            ; 0                 ; 6       ;
+;      - g24_mastermind_controller:controller|present_state.F~1             ; 0                 ; 6       ;
+;      - g24_mastermind_controller:controller|present_state.B~1             ; 0                 ; 6       ;
+;      - g24_mastermind_controller:controller|present_state.E~1             ; 0                 ; 6       ;
+;      - g24_mastermind_controller:controller|present_state.C~1             ; 0                 ; 6       ;
+;      - g24_mastermind_controller:controller|present_state.G~1             ; 0                 ; 6       ;
+;      - g24_mastermind_controller:controller|present_state.H~1             ; 0                 ; 6       ;
+;      - g24_mastermind_controller:controller|present_state.H0~1            ; 0                 ; 6       ;
+;      - g24_mastermind_controller:controller|present_state.H1~1            ; 0                 ; 6       ;
+;      - g24_mastermind_controller:controller|present_state.G0~1            ; 0                 ; 6       ;
+;      - g24_mastermind_controller:controller|present_state.A~1             ; 0                 ; 6       ;
+;      - g24_mastermind_controller:controller|present_input_state~1         ; 0                 ; 6       ;
+;      - g24_mastermind_controller:controller|SR_LD~1                       ; 0                 ; 6       ;
 ; clk                                                                       ;                   ;         ;
 ; color[1]                                                                  ;                   ;         ;
 ; shift                                                                     ;                   ;         ;
-;      - user_input:input_receiver|PATTERN[0]                               ; 0                 ; 0       ;
-;      - user_input:input_receiver|PATTERN[1]                               ; 0                 ; 0       ;
-;      - user_input:input_receiver|PATTERN[2]                               ; 0                 ; 0       ;
-;      - user_input:input_receiver|PATTERN[3]                               ; 0                 ; 0       ;
-;      - user_input:input_receiver|PATTERN[4]                               ; 0                 ; 0       ;
-;      - user_input:input_receiver|PATTERN[5]                               ; 0                 ; 0       ;
 ;      - user_input:input_receiver|PATTERN[6]                               ; 0                 ; 0       ;
 ;      - user_input:input_receiver|PATTERN[7]                               ; 0                 ; 0       ;
 ;      - user_input:input_receiver|PATTERN[8]                               ; 0                 ; 0       ;
@@ -1065,90 +1139,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - user_input:input_receiver|PATTERN[10]                              ; 0                 ; 0       ;
 ;      - user_input:input_receiver|PATTERN[11]                              ; 0                 ; 0       ;
 ;      - user_input:input_receiver|last                                     ; 0                 ; 0       ;
-;      - user_input:input_receiver|current_pin[1]                           ; 0                 ; 0       ;
 ;      - user_input:input_receiver|current_pin[0]                           ; 0                 ; 0       ;
-; reset                                                                     ;                   ;         ;
-;      - user_input:input_receiver|last                                     ; 1                 ; 6       ;
-;      - random_generator:rando|PATTERN[0]                                  ; 0                 ; 0       ;
-;      - random_generator:rando|PATTERN[1]                                  ; 0                 ; 0       ;
-;      - random_generator:rando|PATTERN[2]                                  ; 0                 ; 0       ;
-;      - random_generator:rando|PATTERN[3]                                  ; 0                 ; 0       ;
-;      - random_generator:rando|PATTERN[4]                                  ; 0                 ; 0       ;
-;      - random_generator:rando|PATTERN[5]                                  ; 0                 ; 0       ;
-;      - random_generator:rando|PATTERN[6]                                  ; 0                 ; 0       ;
-;      - random_generator:rando|PATTERN[7]                                  ; 0                 ; 0       ;
-;      - random_generator:rando|PATTERN[8]                                  ; 0                 ; 0       ;
-;      - random_generator:rando|PATTERN[9]                                  ; 0                 ; 0       ;
-;      - random_generator:rando|PATTERN[10]                                 ; 0                 ; 0       ;
-;      - random_generator:rando|PATTERN[11]                                 ; 0                 ; 0       ;
-;      - user_input:input_receiver|Mux1~0                                   ; 1                 ; 6       ;
-;      - g24_mastermind_controller:controller|TM_EN~0                       ; 1                 ; 6       ;
-;      - user_input:input_receiver|PATTERN[3]~0                             ; 1                 ; 6       ;
-;      - user_input:input_receiver|Mux1~1                                   ; 1                 ; 6       ;
-;      - user_input:input_receiver|Mux1~2                                   ; 1                 ; 6       ;
-;      - g24_mastermind_controller:controller|P_SEL~_emulated               ; 1                 ; 6       ;
-;      - g24_mastermind_controller:controller|P_SEL~2                       ; 1                 ; 6       ;
-;      - g24_mastermind_controller:controller|GR_SEL~_emulated              ; 1                 ; 6       ;
-;      - g24_mastermind_controller:controller|GR_SEL~2                      ; 1                 ; 6       ;
-;      - g24_mastermind_controller:controller|GR_LD~_emulated               ; 1                 ; 6       ;
-;      - g24_mastermind_controller:controller|GR_LD~2                       ; 1                 ; 6       ;
-;      - g24_mastermind_controller:controller|present_state.D~_emulated     ; 1                 ; 6       ;
-;      - g24_mastermind_controller:controller|present_state.D~2             ; 1                 ; 6       ;
-;      - g24_mastermind_controller:controller|TC_RST~_emulated              ; 1                 ; 6       ;
-;      - g24_mastermind_controller:controller|TC_RST~2                      ; 1                 ; 6       ;
-;      - g24_mastermind_controller:controller|SR_SEL~_emulated              ; 1                 ; 6       ;
-;      - g24_mastermind_controller:controller|SR_SEL~2                      ; 1                 ; 6       ;
-;      - g24_mastermind_controller:controller|present_state.F1~_emulated    ; 1                 ; 6       ;
-;      - g24_mastermind_controller:controller|present_state.F1~2            ; 1                 ; 6       ;
-;      - g24_mastermind_controller:controller|present_state.F~_emulated     ; 1                 ; 6       ;
-;      - g24_mastermind_controller:controller|present_state.F~2             ; 1                 ; 6       ;
-;      - g24_mastermind_controller:controller|present_state.B~_emulated     ; 1                 ; 6       ;
-;      - g24_mastermind_controller:controller|present_state.B~2             ; 1                 ; 6       ;
-;      - g24_mastermind_controller:controller|present_state.E~_emulated     ; 1                 ; 6       ;
-;      - g24_mastermind_controller:controller|present_state.E~2             ; 1                 ; 6       ;
-;      - g24_mastermind_controller:controller|present_state.C~_emulated     ; 1                 ; 6       ;
-;      - g24_mastermind_controller:controller|present_state.C~2             ; 1                 ; 6       ;
-;      - g24_mastermind_controller:controller|present_state.G~_emulated     ; 1                 ; 6       ;
-;      - g24_mastermind_controller:controller|present_state.G~2             ; 1                 ; 6       ;
-;      - g24_mastermind_controller:controller|present_state.H~_emulated     ; 1                 ; 6       ;
-;      - g24_mastermind_controller:controller|present_state.H~2             ; 1                 ; 6       ;
-;      - g24_mastermind_controller:controller|present_state.H0~_emulated    ; 1                 ; 6       ;
-;      - g24_mastermind_controller:controller|present_state.H0~2            ; 1                 ; 6       ;
-;      - g24_mastermind_controller:controller|present_state.H1~_emulated    ; 1                 ; 6       ;
-;      - g24_mastermind_controller:controller|present_state.H1~2            ; 1                 ; 6       ;
-;      - g24_mastermind_controller:controller|present_state.G0~_emulated    ; 1                 ; 6       ;
-;      - g24_mastermind_controller:controller|present_state.G0~2            ; 1                 ; 6       ;
-;      - g24_mastermind_controller:controller|present_state.A~_emulated     ; 1                 ; 6       ;
-;      - g24_mastermind_controller:controller|present_state.A~2             ; 1                 ; 6       ;
-;      - g24_mastermind_controller:controller|present_input_state~_emulated ; 1                 ; 6       ;
-;      - g24_mastermind_controller:controller|present_input_state~2         ; 1                 ; 6       ;
-;      - g24_mastermind_controller:controller|SR_LD~_emulated               ; 1                 ; 6       ;
-;      - g24_mastermind_controller:controller|SR_LD~2                       ; 1                 ; 6       ;
-;      - g24_mastermind_controller:controller|P_SEL~1                       ; 1                 ; 6       ;
-;      - g24_mastermind_controller:controller|GR_SEL~1                      ; 1                 ; 6       ;
-;      - g24_mastermind_controller:controller|GR_LD~1                       ; 1                 ; 6       ;
-;      - g24_mastermind_controller:controller|present_state.D~1             ; 1                 ; 6       ;
-;      - g24_mastermind_controller:controller|TC_RST~1                      ; 1                 ; 6       ;
-;      - g24_mastermind_controller:controller|SR_SEL~1                      ; 1                 ; 6       ;
-;      - g24_mastermind_controller:controller|present_state.F1~1            ; 1                 ; 6       ;
-;      - g24_mastermind_controller:controller|present_state.F~1             ; 1                 ; 6       ;
-;      - g24_mastermind_controller:controller|present_state.B~1             ; 1                 ; 6       ;
-;      - g24_mastermind_controller:controller|present_state.E~1             ; 1                 ; 6       ;
-;      - g24_mastermind_controller:controller|present_state.C~1             ; 1                 ; 6       ;
-;      - g24_mastermind_controller:controller|present_state.G~1             ; 1                 ; 6       ;
-;      - g24_mastermind_controller:controller|present_state.H~1             ; 1                 ; 6       ;
-;      - g24_mastermind_controller:controller|present_state.H0~1            ; 1                 ; 6       ;
-;      - g24_mastermind_controller:controller|present_state.H1~1            ; 1                 ; 6       ;
-;      - g24_mastermind_controller:controller|present_state.G0~1            ; 1                 ; 6       ;
-;      - g24_mastermind_controller:controller|present_state.A~1             ; 1                 ; 6       ;
-;      - g24_mastermind_controller:controller|present_input_state~1         ; 1                 ; 6       ;
-;      - g24_mastermind_controller:controller|SR_LD~1                       ; 1                 ; 6       ;
-; ready                                                                     ;                   ;         ;
-;      - g24_mastermind_controller:controller|prev_ready~0                  ; 0                 ; 6       ;
-;      - g24_mastermind_controller:controller|Selector13~2                  ; 0                 ; 6       ;
-;      - g24_mastermind_controller:controller|clock~0                       ; 0                 ; 6       ;
-;      - g24_mastermind_controller:controller|Selector3~3                   ; 0                 ; 6       ;
-;      - g24_mastermind_controller:controller|present_state.E~11            ; 0                 ; 6       ;
 ; color[2]                                                                  ;                   ;         ;
 ; color[0]                                                                  ;                   ;         ;
 +---------------------------------------------------------------------------+-------------------+---------+
@@ -1160,28 +1151,26 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Name                                                                                     ; Location           ; Fan-Out ; Usage                             ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +------------------------------------------------------------------------------------------+--------------------+---------+-----------------------------------+--------+----------------------+------------------+---------------------------+
 ; clk                                                                                      ; PIN_L1             ; 65      ; Clock                             ; yes    ; Global Clock         ; GCLK2            ; --                        ;
-; datapath:main|g24_possibility_table:table|color_counter:color_counter0|process_0~0       ; LCCOMB_X21_Y18_N26 ; 5       ; Clock enable                      ; no     ; --                   ; --               ; --                        ;
-; datapath:main|g24_possibility_table:table|color_counter:color_counter1|process_0~0       ; LCCOMB_X22_Y16_N22 ; 3       ; Clock enable                      ; no     ; --                   ; --               ; --                        ;
-; datapath:main|g24_possibility_table:table|color_counter:color_counter2|process_0~0       ; LCCOMB_X22_Y16_N14 ; 4       ; Clock enable                      ; no     ; --                   ; --               ; --                        ;
-; datapath:main|g24_possibility_table:table|color_counter:color_counter3|process_0~0       ; LCCOMB_X18_Y16_N16 ; 3       ; Clock enable                      ; no     ; --                   ; --               ; --                        ;
-; g24_mastermind_controller:controller|GR_LD~2                                             ; LCCOMB_X22_Y17_N30 ; 15      ; Clock enable                      ; no     ; --                   ; --               ; --                        ;
-; g24_mastermind_controller:controller|GR_SEL~2                                            ; LCCOMB_X23_Y17_N6  ; 16      ; Sync. load                        ; no     ; --                   ; --               ; --                        ;
-; g24_mastermind_controller:controller|SR_LD~2                                             ; LCCOMB_X22_Y19_N16 ; 6       ; Clock enable                      ; no     ; --                   ; --               ; --                        ;
-; g24_mastermind_controller:controller|SR_SEL~9                                            ; LCCOMB_X22_Y19_N22 ; 2       ; Clock enable                      ; no     ; --                   ; --               ; --                        ;
-; g24_mastermind_controller:controller|TC_RST~2                                            ; LCCOMB_X24_Y16_N30 ; 17      ; Async. clear                      ; no     ; --                   ; --               ; --                        ;
-; g24_mastermind_controller:controller|TM_EN                                               ; LCFF_X23_Y18_N23   ; 2       ; Write enable                      ; no     ; --                   ; --               ; --                        ;
-; g24_mastermind_controller:controller|TM_EN~0                                             ; LCCOMB_X23_Y18_N20 ; 4       ; Clock enable                      ; no     ; --                   ; --               ; --                        ;
-; random_generator:rando|g24_possibility_table:i1|color_counter:color_counter1|process_0~0 ; LCCOMB_X21_Y15_N10 ; 3       ; Clock enable                      ; no     ; --                   ; --               ; --                        ;
-; random_generator:rando|g24_possibility_table:i1|color_counter:color_counter2|process_0~0 ; LCCOMB_X22_Y15_N24 ; 5       ; Clock enable                      ; no     ; --                   ; --               ; --                        ;
-; random_generator:rando|g24_possibility_table:i1|color_counter:color_counter2|process_0~1 ; LCCOMB_X22_Y15_N20 ; 3       ; Clock enable                      ; no     ; --                   ; --               ; --                        ;
-; random_generator:rando|g24_possibility_table:i1|color_counter:color_counter3|process_0~2 ; LCCOMB_X23_Y15_N2  ; 3       ; Clock enable                      ; no     ; --                   ; --               ; --                        ;
-; random_generator:rando|reset                                                             ; LCFF_X23_Y15_N11   ; 15      ; Async. clear                      ; no     ; --                   ; --               ; --                        ;
-; reset                                                                                    ; PIN_T21            ; 75      ; Async. clear, Clock, Latch enable ; no     ; --                   ; --               ; --                        ;
-; shift                                                                                    ; PIN_R22            ; 15      ; Clock                             ; no     ; --                   ; --               ; --                        ;
-; user_input:input_receiver|Mux1~0                                                         ; LCCOMB_X18_Y18_N10 ; 3       ; Clock enable                      ; no     ; --                   ; --               ; --                        ;
-; user_input:input_receiver|Mux1~1                                                         ; LCCOMB_X18_Y15_N6  ; 3       ; Clock enable                      ; no     ; --                   ; --               ; --                        ;
-; user_input:input_receiver|Mux1~2                                                         ; LCCOMB_X18_Y18_N18 ; 3       ; Clock enable                      ; no     ; --                   ; --               ; --                        ;
-; user_input:input_receiver|PATTERN[3]~0                                                   ; LCCOMB_X18_Y18_N12 ; 3       ; Clock enable                      ; no     ; --                   ; --               ; --                        ;
+; datapath:main|g24_possibility_table:table|color_counter:color_counter0|process_0~0       ; LCCOMB_X20_Y14_N2  ; 5       ; Clock enable                      ; no     ; --                   ; --               ; --                        ;
+; datapath:main|g24_possibility_table:table|color_counter:color_counter1|process_0~0       ; LCCOMB_X25_Y16_N12 ; 3       ; Clock enable                      ; no     ; --                   ; --               ; --                        ;
+; datapath:main|g24_possibility_table:table|color_counter:color_counter2|process_0~0       ; LCCOMB_X20_Y16_N0  ; 4       ; Clock enable                      ; no     ; --                   ; --               ; --                        ;
+; datapath:main|g24_possibility_table:table|color_counter:color_counter3|process_0~0       ; LCCOMB_X20_Y16_N2  ; 3       ; Clock enable                      ; no     ; --                   ; --               ; --                        ;
+; g24_mastermind_controller:controller|GR_LD~2                                             ; LCCOMB_X25_Y14_N2  ; 15      ; Clock enable                      ; no     ; --                   ; --               ; --                        ;
+; g24_mastermind_controller:controller|GR_SEL~2                                            ; LCCOMB_X24_Y14_N2  ; 16      ; Sync. load                        ; no     ; --                   ; --               ; --                        ;
+; g24_mastermind_controller:controller|SR_LD~2                                             ; LCCOMB_X23_Y14_N0  ; 6       ; Clock enable                      ; no     ; --                   ; --               ; --                        ;
+; g24_mastermind_controller:controller|SR_SEL~9                                            ; LCCOMB_X22_Y14_N4  ; 2       ; Clock enable                      ; no     ; --                   ; --               ; --                        ;
+; g24_mastermind_controller:controller|TC_RST~2                                            ; LCCOMB_X22_Y14_N30 ; 17      ; Async. clear                      ; no     ; --                   ; --               ; --                        ;
+; g24_mastermind_controller:controller|TM_EN                                               ; LCFF_X20_Y14_N9    ; 2       ; Write enable                      ; no     ; --                   ; --               ; --                        ;
+; g24_mastermind_controller:controller|TM_EN~0                                             ; LCCOMB_X19_Y14_N14 ; 4       ; Clock enable                      ; no     ; --                   ; --               ; --                        ;
+; random_generator:rando|g24_possibility_table:i1|color_counter:color_counter1|process_0~0 ; LCCOMB_X26_Y16_N26 ; 3       ; Clock enable                      ; no     ; --                   ; --               ; --                        ;
+; random_generator:rando|g24_possibility_table:i1|color_counter:color_counter2|process_0~0 ; LCCOMB_X27_Y16_N16 ; 5       ; Clock enable                      ; no     ; --                   ; --               ; --                        ;
+; random_generator:rando|g24_possibility_table:i1|color_counter:color_counter2|process_0~1 ; LCCOMB_X27_Y16_N2  ; 3       ; Clock enable                      ; no     ; --                   ; --               ; --                        ;
+; random_generator:rando|g24_possibility_table:i1|color_counter:color_counter3|process_0~2 ; LCCOMB_X27_Y15_N2  ; 3       ; Clock enable                      ; no     ; --                   ; --               ; --                        ;
+; random_generator:rando|reset                                                             ; LCFF_X27_Y15_N23   ; 15      ; Async. clear                      ; no     ; --                   ; --               ; --                        ;
+; reset                                                                                    ; PIN_T21            ; 73      ; Async. clear, Clock, Latch enable ; no     ; --                   ; --               ; --                        ;
+; shift                                                                                    ; PIN_R22            ; 8       ; Clock                             ; no     ; --                   ; --               ; --                        ;
+; user_input:input_receiver|PATTERN[6]~0                                                   ; LCCOMB_X24_Y13_N20 ; 3       ; Clock enable                      ; no     ; --                   ; --               ; --                        ;
+; user_input:input_receiver|PATTERN[9]~1                                                   ; LCCOMB_X24_Y13_N10 ; 3       ; Clock enable                      ; no     ; --                   ; --               ; --                        ;
 +------------------------------------------------------------------------------------------+--------------------+---------+-----------------------------------+--------+----------------------+------------------+---------------------------+
 
 
@@ -1199,25 +1188,31 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-------------------------------------------------------------------------------------------------------------------------------+---------+
 ; Name                                                                                                                          ; Fan-Out ;
 +-------------------------------------------------------------------------------------------------------------------------------+---------+
-; switch_input                                                                                                                  ; 77      ;
-; reset                                                                                                                         ; 75      ;
-; g24_mastermind_controller:controller|prev_ready                                                                               ; 21      ;
+; reset                                                                                                                         ; 73      ;
+; switch_input                                                                                                                  ; 72      ;
+; g24_mastermind_controller:controller|prev_ready                                                                               ; 20      ;
 ; g24_mastermind_controller:controller|TC_RST~2                                                                                 ; 17      ;
 ; g24_mastermind_controller:controller|present_state.D~2                                                                        ; 17      ;
 ; g24_mastermind_controller:controller|GR_SEL~2                                                                                 ; 16      ;
-; shift                                                                                                                         ; 15      ;
 ; g24_mastermind_controller:controller|present_state.E~2                                                                        ; 15      ;
 ; random_generator:rando|reset                                                                                                  ; 15      ;
 ; g24_mastermind_controller:controller|GR_LD~2                                                                                  ; 15      ;
 ; g24_mastermind_controller:controller|P_SEL~2                                                                                  ; 15      ;
 ; g24_mastermind_controller:controller|present_state.B~2                                                                        ; 14      ;
+; datapath:main|register_guess[3]                                                                                               ; 14      ;
+; datapath:main|register_guess[4]                                                                                               ; 14      ;
+; datapath:main|register_guess[0]                                                                                               ; 14      ;
+; datapath:main|register_guess[1]                                                                                               ; 14      ;
 ; datapath:main|g24_possibility_table:table|last_reached                                                                        ; 13      ;
 ; g24_mastermind_controller:controller|present_state.H~2                                                                        ; 13      ;
 ; datapath:main|PG_EQ~8                                                                                                         ; 13      ;
+; datapath:main|register_guess[5]                                                                                               ; 12      ;
+; datapath:main|register_guess[2]                                                                                               ; 12      ;
 ; g24_mastermind_controller:controller|present_state.G~2                                                                        ; 10      ;
 ; g24_mastermind_controller:controller|present_state.F1~2                                                                       ; 10      ;
 ; g24_mastermind_controller:controller|SR_LD~4                                                                                  ; 10      ;
 ; datapath:main|g24_mastermind_score:master_score|g24_num_matches:nm|g24_num1s:comp|num1s[0]                                    ; 10      ;
+; Mux9~0                                                                                                                        ; 10      ;
 ; g24_mastermind_controller:controller|present_state.H0~2                                                                       ; 9       ;
 ; datapath:main|g24_mastermind_score:master_score|g24_color_matches:cm|Add5~10                                                  ; 9       ;
 ; datapath:main|g24_mastermind_score:master_score|g24_color_matches:cm|Add5~9                                                   ; 9       ;
@@ -1230,6 +1225,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; datapath:main|g24_possibility_table:table|color_counter:color_counter0|color[2]                                               ; 9       ;
 ; datapath:main|g24_possibility_table:table|color_counter:color_counter0|color[1]                                               ; 9       ;
 ; datapath:main|g24_possibility_table:table|color_counter:color_counter0|color[0]                                               ; 9       ;
+; shift                                                                                                                         ; 8       ;
 ; g24_mastermind_controller:controller|present_state.H1~2                                                                       ; 8       ;
 ; g24_mastermind_controller:controller|present_state.C~2                                                                        ; 8       ;
 ; g24_mastermind_controller:controller|present_state.F~2                                                                        ; 8       ;
@@ -1244,15 +1240,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; datapath:main|register_guess[6]                                                                                               ; 8       ;
 ; datapath:main|register_guess[8]                                                                                               ; 8       ;
 ; datapath:main|register_guess[7]                                                                                               ; 8       ;
-; datapath:main|register_guess[3]                                                                                               ; 8       ;
-; datapath:main|register_guess[5]                                                                                               ; 8       ;
-; datapath:main|register_guess[4]                                                                                               ; 8       ;
-; datapath:main|register_guess[0]                                                                                               ; 8       ;
-; datapath:main|register_guess[2]                                                                                               ; 8       ;
-; datapath:main|register_guess[1]                                                                                               ; 8       ;
 ; g24_mastermind_controller:controller|present_state.G0~2                                                                       ; 7       ;
 ; g24_mastermind_controller:controller|SR_SEL~2                                                                                 ; 7       ;
-; user_input:input_receiver|current_pin[0]                                                                                      ; 7       ;
 ; datapath:main|mux_output_pattern[11]~11                                                                                       ; 7       ;
 ; datapath:main|mux_output_pattern[10]~10                                                                                       ; 7       ;
 ; datapath:main|mux_output_pattern[9]~9                                                                                         ; 7       ;
@@ -1269,11 +1258,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Mux1~0                                                                                                                        ; 7       ;
 ; Mux5~0                                                                                                                        ; 7       ;
 ; Mux4~0                                                                                                                        ; 7       ;
-; Mux8~0                                                                                                                        ; 7       ;
-; Mux7~0                                                                                                                        ; 7       ;
-; Mux11~0                                                                                                                       ; 7       ;
-; Mux10~0                                                                                                                       ; 7       ;
-; g24_mastermind_controller:controller|present_state.C~6                                                                        ; 6       ;
+; g24_mastermind_controller:controller|present_state.A~6                                                                        ; 6       ;
 ; g24_mastermind_controller:controller|SR_LD~2                                                                                  ; 6       ;
 ; g24_mastermind_controller:controller|clock~0                                                                                  ; 6       ;
 ; random_generator:rando|g24_possibility_table:i1|color_counter:color_counter1|color[2]                                         ; 6       ;
@@ -1281,7 +1266,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; random_generator:rando|g24_possibility_table:i1|color_counter:color_counter0|color[2]                                         ; 6       ;
 ; random_generator:rando|g24_possibility_table:i1|color_counter:color_counter0|color[1]                                         ; 6       ;
 ; random_generator:rando|g24_possibility_table:i1|color_counter:color_counter0|color[0]                                         ; 6       ;
-; user_input:input_receiver|current_pin[1]                                                                                      ; 6       ;
 ; Mux19~0                                                                                                                       ; 6       ;
 ; ready                                                                                                                         ; 5       ;
 ; datapath:main|g24_comp6:comparison|AeqB~3                                                                                     ; 5       ;
@@ -1297,21 +1281,17 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; datapath:main|g24_possibility_table:table|color_counter:color_counter0|process_0~0                                            ; 5       ;
 ; datapath:main|g24_mastermind_score:master_score|g24_color_matches:cm|g24_minimum3:min2|Z[0]~0                                 ; 5       ;
 ; datapath:main|g24_mastermind_score:master_score|g24_color_matches:cm|g24_minimum3:min4|e~1                                    ; 5       ;
-; datapath:main|g24_mastermind_score:master_score|g24_color_matches:cm|g24_num1s:num4|num1s[0]~1                                ; 5       ;
-; datapath:main|g24_mastermind_score:master_score|g24_color_matches:cm|g24_num1s:num10|num1s[0]~1                               ; 5       ;
+; datapath:main|g24_mastermind_score:master_score|g24_color_matches:cm|g24_num1s:num10|num1s[0]~2                               ; 5       ;
+; datapath:main|g24_mastermind_score:master_score|g24_color_matches:cm|g24_num1s:num4|num1s[0]~2                                ; 5       ;
 ; Mux0~0                                                                                                                        ; 5       ;
 ; Mux3~0                                                                                                                        ; 5       ;
-; Mux6~0                                                                                                                        ; 5       ;
-; Mux9~0                                                                                                                        ; 5       ;
-; color[0]                                                                                                                      ; 4       ;
-; color[2]                                                                                                                      ; 4       ;
-; color[1]                                                                                                                      ; 4       ;
 ; random_generator:rando|g24_possibility_table:i1|last_reached                                                                  ; 4       ;
 ; g24_mastermind_controller:controller|present_state.B~8                                                                        ; 4       ;
 ; g24_mastermind_controller:controller|present_state.A~2                                                                        ; 4       ;
 ; g24_mastermind_controller:controller|SR_SEL~5                                                                                 ; 4       ;
 ; datapath:main|g24_comp6:comparison|AeqB~2                                                                                     ; 4       ;
 ; datapath:main|g24_possibility_table:table|color_counter:color_counter2|process_0~0                                            ; 4       ;
+; user_input:input_receiver|current_pin[0]                                                                                      ; 4       ;
 ; g24_mastermind_controller:controller|TM_EN~0                                                                                  ; 4       ;
 ; user_input:input_receiver|last                                                                                                ; 4       ;
 ; datapath:main|g24_mastermind_score:master_score|g24_color_matches:cm|g24_minimum3:min1|Z[0]~0                                 ; 4       ;
@@ -1336,9 +1316,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; g24_mastermind_controller:controller|present_state.F1~1                                                                       ; 3       ;
 ; g24_mastermind_controller:controller|SR_SEL~1                                                                                 ; 3       ;
 ; g24_mastermind_controller:controller|TC_RST~1                                                                                 ; 3       ;
-; g24_mastermind_controller:controller|present_state.D~1                                                                        ; 3       ;
 ; g24_mastermind_controller:controller|GR_LD~1                                                                                  ; 3       ;
 ; g24_mastermind_controller:controller|GR_SEL~1                                                                                 ; 3       ;
+; g24_mastermind_controller:controller|present_state.D~1                                                                        ; 3       ;
 ; g24_mastermind_controller:controller|P_SEL~1                                                                                  ; 3       ;
 ; g24_mastermind_controller:controller|Selector1~5                                                                              ; 3       ;
 ; random_generator:rando|g24_possibility_table:i1|color_counter:color_counter3|process_0~2                                      ; 3       ;
@@ -1353,10 +1333,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; datapath:main|g24_mastermind_score:master_score|g24_score_encoder:se|Mux1~2                                                   ; 3       ;
 ; datapath:main|g24_possibility_table:table|color_counter:color_counter3|process_0~0                                            ; 3       ;
 ; datapath:main|g24_possibility_table:table|color_counter:color_counter1|process_0~0                                            ; 3       ;
-; user_input:input_receiver|Mux1~2                                                                                              ; 3       ;
-; user_input:input_receiver|Mux1~1                                                                                              ; 3       ;
-; user_input:input_receiver|PATTERN[3]~0                                                                                        ; 3       ;
-; user_input:input_receiver|Mux1~0                                                                                              ; 3       ;
+; user_input:input_receiver|PATTERN[9]~1                                                                                        ; 3       ;
+; user_input:input_receiver|PATTERN[6]~0                                                                                        ; 3       ;
 ; datapath:main|g24_mastermind_score:master_score|g24_color_matches:cm|g24_num1s:num1|num1s[2]~2                                ; 3       ;
 ; datapath:main|g24_mastermind_score:master_score|g24_color_matches:cm|g24_num1s:num7|num1s[1]~2                                ; 3       ;
 ; datapath:main|g24_mastermind_score:master_score|g24_color_matches:cm|g24_num1s:num1|num1s[1]~1                                ; 3       ;
@@ -1392,14 +1370,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; datapath:main|g24_mastermind_score:master_score|g24_color_matches:cm|lpm_decode:ld7|decode_s6f:auto_generated|w_anode30w[3]   ; 3       ;
 ; datapath:main|g24_mastermind_score:master_score|g24_color_matches:cm|lpm_decode:ld6|decode_s6f:auto_generated|w_anode30w[3]   ; 3       ;
 ; datapath:main|g24_mastermind_score:master_score|g24_color_matches:cm|lpm_decode:ld5|decode_s6f:auto_generated|w_anode30w[3]   ; 3       ;
-; datapath:main|g24_mastermind_score:master_score|g24_color_matches:cm|lpm_decode:ld4|decode_s6f:auto_generated|w_anode41w[3]   ; 3       ;
-; datapath:main|g24_mastermind_score:master_score|g24_color_matches:cm|lpm_decode:ld3|decode_s6f:auto_generated|w_anode41w[3]   ; 3       ;
-; datapath:main|g24_mastermind_score:master_score|g24_color_matches:cm|lpm_decode:ld2|decode_s6f:auto_generated|w_anode41w[3]   ; 3       ;
-; datapath:main|g24_mastermind_score:master_score|g24_color_matches:cm|lpm_decode:ld1|decode_s6f:auto_generated|w_anode41w[3]   ; 3       ;
 ; datapath:main|g24_mastermind_score:master_score|g24_color_matches:cm|lpm_decode:ld8|decode_s6f:auto_generated|w_anode41w[3]   ; 3       ;
 ; datapath:main|g24_mastermind_score:master_score|g24_color_matches:cm|lpm_decode:ld7|decode_s6f:auto_generated|w_anode41w[3]   ; 3       ;
 ; datapath:main|g24_mastermind_score:master_score|g24_color_matches:cm|lpm_decode:ld6|decode_s6f:auto_generated|w_anode41w[3]   ; 3       ;
 ; datapath:main|g24_mastermind_score:master_score|g24_color_matches:cm|lpm_decode:ld5|decode_s6f:auto_generated|w_anode41w[3]   ; 3       ;
+; datapath:main|g24_mastermind_score:master_score|g24_color_matches:cm|lpm_decode:ld4|decode_s6f:auto_generated|w_anode41w[3]   ; 3       ;
+; datapath:main|g24_mastermind_score:master_score|g24_color_matches:cm|lpm_decode:ld3|decode_s6f:auto_generated|w_anode41w[3]   ; 3       ;
+; datapath:main|g24_mastermind_score:master_score|g24_color_matches:cm|lpm_decode:ld2|decode_s6f:auto_generated|w_anode41w[3]   ; 3       ;
+; datapath:main|g24_mastermind_score:master_score|g24_color_matches:cm|lpm_decode:ld1|decode_s6f:auto_generated|w_anode41w[3]   ; 3       ;
 ; datapath:main|g24_mastermind_score:master_score|g24_color_matches:cm|g24_minimum3:min5|Z[0]~0                                 ; 3       ;
 ; datapath:main|g24_mastermind_score:master_score|g24_color_matches:cm|lpm_decode:ld4|decode_s6f:auto_generated|w_anode52w[3]~0 ; 3       ;
 ; datapath:main|g24_mastermind_score:master_score|g24_color_matches:cm|lpm_decode:ld3|decode_s6f:auto_generated|w_anode52w[3]~0 ; 3       ;
@@ -1420,6 +1398,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; datapath:main|g24_mastermind_score:master_score|g24_color_matches:cm|lpm_decode:ld7|decode_s6f:auto_generated|w_anode63w[3]~0 ; 3       ;
 ; datapath:main|g24_mastermind_score:master_score|g24_color_matches:cm|lpm_decode:ld6|decode_s6f:auto_generated|w_anode63w[3]~0 ; 3       ;
 ; datapath:main|g24_mastermind_score:master_score|g24_color_matches:cm|lpm_decode:ld5|decode_s6f:auto_generated|w_anode63w[3]~0 ; 3       ;
+; color[0]                                                                                                                      ; 2       ;
+; color[2]                                                                                                                      ; 2       ;
+; color[1]                                                                                                                      ; 2       ;
 ; g24_mastermind_controller:controller|SR_LD~7                                                                                  ; 2       ;
 ; g24_mastermind_controller:controller|present_input_state~6                                                                    ; 2       ;
 ; g24_mastermind_controller:controller|present_state~11                                                                         ; 2       ;
@@ -1433,7 +1414,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; g24_mastermind_controller:controller|present_state~3                                                                          ; 2       ;
 ; g24_mastermind_controller:controller|Selector2~0                                                                              ; 2       ;
 ; g24_mastermind_controller:controller|Selector14~1                                                                             ; 2       ;
-; g24_mastermind_controller:controller|present_state.C~7                                                                        ; 2       ;
+; g24_mastermind_controller:controller|present_state.A~7                                                                        ; 2       ;
 ; g24_mastermind_controller:controller|present_state~2                                                                          ; 2       ;
 ; g24_mastermind_controller:controller|present_state~1                                                                          ; 2       ;
 ; g24_mastermind_controller:controller|SR_SEL~10                                                                                ; 2       ;
@@ -1441,9 +1422,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; g24_mastermind_controller:controller|TM_EN                                                                                    ; 2       ;
 ; g24_mastermind_controller:controller|TC_RST~6                                                                                 ; 2       ;
 ; g24_mastermind_controller:controller|Selector12~0                                                                             ; 2       ;
-; g24_mastermind_controller:controller|present_state~0                                                                          ; 2       ;
 ; g24_mastermind_controller:controller|GR_LD~9                                                                                  ; 2       ;
 ; g24_mastermind_controller:controller|GR_SEL~8                                                                                 ; 2       ;
+; g24_mastermind_controller:controller|present_state~0                                                                          ; 2       ;
 ; random_generator:rando|g24_possibility_table:i1|comb~2                                                                        ; 2       ;
 ; random_generator:rando|g24_possibility_table:i1|comb~0                                                                        ; 2       ;
 ; g24_mastermind_controller:controller|P_SEL~6                                                                                  ; 2       ;
@@ -1485,22 +1466,22 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; datapath:main|g24_mastermind_score:master_score|g24_color_matches:cm|g24_minimum3:min3|e~0                                    ; 2       ;
 ; datapath:main|g24_mastermind_score:master_score|g24_color_matches:cm|g24_num1s:num3|num1s[0]~0                                ; 2       ;
 ; datapath:main|g24_mastermind_score:master_score|g24_color_matches:cm|g24_num1s:num9|num1s[0]~0                                ; 2       ;
-; datapath:main|g24_mastermind_score:master_score|g24_color_matches:cm|g24_num1s:num4|num1s[1]~2                                ; 2       ;
-; datapath:main|g24_mastermind_score:master_score|g24_color_matches:cm|g24_num1s:num10|num1s[1]~2                               ; 2       ;
-; datapath:main|g24_mastermind_score:master_score|g24_color_matches:cm|g24_num1s:num4|num1s[2]~0                                ; 2       ;
+; datapath:main|g24_mastermind_score:master_score|g24_color_matches:cm|g24_num1s:num10|num1s[1]~1                               ; 2       ;
+; datapath:main|g24_mastermind_score:master_score|g24_color_matches:cm|g24_num1s:num4|num1s[1]~1                                ; 2       ;
 ; datapath:main|g24_mastermind_score:master_score|g24_color_matches:cm|g24_num1s:num10|num1s[2]~0                               ; 2       ;
+; datapath:main|g24_mastermind_score:master_score|g24_color_matches:cm|g24_num1s:num4|num1s[2]~0                                ; 2       ;
 ; datapath:main|g24_mastermind_score:master_score|g24_color_matches:cm|g24_minimum3:min5|e~1                                    ; 2       ;
 ; datapath:main|g24_mastermind_score:master_score|g24_color_matches:cm|g24_num1s:num11|num1s[1]~2                               ; 2       ;
 ; datapath:main|g24_mastermind_score:master_score|g24_color_matches:cm|g24_num1s:num5|num1s[1]~2                                ; 2       ;
-; datapath:main|g24_mastermind_score:master_score|g24_color_matches:cm|g24_num1s:num11|num1s[2]~1                               ; 2       ;
 ; datapath:main|g24_mastermind_score:master_score|g24_color_matches:cm|g24_num1s:num5|num1s[2]~1                                ; 2       ;
+; datapath:main|g24_mastermind_score:master_score|g24_color_matches:cm|g24_num1s:num11|num1s[2]~1                               ; 2       ;
 ; datapath:main|g24_mastermind_score:master_score|g24_color_matches:cm|g24_num1s:num5|num1s[0]~0                                ; 2       ;
 ; datapath:main|g24_mastermind_score:master_score|g24_color_matches:cm|g24_num1s:num11|num1s[0]~0                               ; 2       ;
 ; datapath:main|g24_mastermind_score:master_score|g24_color_matches:cm|Add4~0                                                   ; 2       ;
 ; datapath:main|g24_mastermind_score:master_score|g24_color_matches:cm|g24_minimum3:min6|Z[1]~1                                 ; 2       ;
 ; datapath:main|g24_mastermind_score:master_score|g24_color_matches:cm|g24_minimum3:min6|Z[0]~0                                 ; 2       ;
-; datapath:main|g24_mastermind_score:master_score|g24_color_matches:cm|g24_num1s:num12|num1s[1]~2                               ; 2       ;
 ; datapath:main|g24_mastermind_score:master_score|g24_color_matches:cm|g24_num1s:num6|num1s[1]~2                                ; 2       ;
+; datapath:main|g24_mastermind_score:master_score|g24_color_matches:cm|g24_num1s:num12|num1s[1]~2                               ; 2       ;
 ; datapath:main|g24_mastermind_score:master_score|g24_color_matches:cm|g24_num1s:num12|num1s[2]~1                               ; 2       ;
 ; datapath:main|g24_mastermind_score:master_score|g24_color_matches:cm|g24_num1s:num6|num1s[2]~1                                ; 2       ;
 ; user_input:input_receiver|PATTERN[9]                                                                                          ; 2       ;
@@ -1509,13 +1490,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; user_input:input_receiver|PATTERN[6]                                                                                          ; 2       ;
 ; user_input:input_receiver|PATTERN[8]                                                                                          ; 2       ;
 ; user_input:input_receiver|PATTERN[7]                                                                                          ; 2       ;
-; user_input:input_receiver|PATTERN[3]                                                                                          ; 2       ;
-; user_input:input_receiver|PATTERN[5]                                                                                          ; 2       ;
-; user_input:input_receiver|PATTERN[4]                                                                                          ; 2       ;
-; user_input:input_receiver|PATTERN[0]                                                                                          ; 2       ;
-; user_input:input_receiver|PATTERN[2]                                                                                          ; 2       ;
-; user_input:input_receiver|PATTERN[1]                                                                                          ; 2       ;
-; user_input:input_receiver|current_pin[0]~1                                                                                    ; 1       ;
+; user_input:input_receiver|current_pin[0]~0                                                                                    ; 1       ;
 ; g24_mastermind_controller:controller|Selector11~6                                                                             ; 1       ;
 ; g24_mastermind_controller:controller|present_state.E~11                                                                       ; 1       ;
 ; Mux16~2                                                                                                                       ; 1       ;
@@ -1580,10 +1555,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; g24_mastermind_controller:controller|TC_RST~3                                                                                 ; 1       ;
 ; g24_mastermind_controller:controller|Selector12~2                                                                             ; 1       ;
 ; g24_mastermind_controller:controller|Selector12~1                                                                             ; 1       ;
-; g24_mastermind_controller:controller|present_state.D~3                                                                        ; 1       ;
-; g24_mastermind_controller:controller|Selector3~2                                                                              ; 1       ;
-; g24_mastermind_controller:controller|Selector3~1                                                                              ; 1       ;
-; g24_mastermind_controller:controller|Selector3~0                                                                              ; 1       ;
 ; g24_mastermind_controller:controller|GR_LD~3                                                                                  ; 1       ;
 ; g24_mastermind_controller:controller|GR_LD~8                                                                                  ; 1       ;
 ; g24_mastermind_controller:controller|GR_LD~7                                                                                  ; 1       ;
@@ -1591,6 +1562,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; g24_mastermind_controller:controller|GR_SEL~7                                                                                 ; 1       ;
 ; g24_mastermind_controller:controller|GR_SEL~6                                                                                 ; 1       ;
 ; g24_mastermind_controller:controller|WideOr11~0                                                                               ; 1       ;
+; g24_mastermind_controller:controller|present_state.D~3                                                                        ; 1       ;
+; g24_mastermind_controller:controller|Selector3~2                                                                              ; 1       ;
+; g24_mastermind_controller:controller|Selector3~1                                                                              ; 1       ;
+; g24_mastermind_controller:controller|Selector3~0                                                                              ; 1       ;
 ; random_generator:rando|g24_possibility_table:i1|color_counter:color_counter3|Mux1~0                                           ; 1       ;
 ; random_generator:rando|g24_possibility_table:i1|color_counter:color_counter3|Mux2~0                                           ; 1       ;
 ; random_generator:rando|g24_possibility_table:i1|comb~1                                                                        ; 1       ;
@@ -1626,10 +1601,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; datapath:main|g24_mastermind_score:master_score|g24_score_encoder:se|Mux3~0                                                   ; 1       ;
 ; datapath:main|g24_mastermind_score:master_score|g24_score_encoder:se|Mux1~1                                                   ; 1       ;
 ; g24_mastermind_controller:controller|TC_RST~_emulated                                                                         ; 1       ;
-; g24_mastermind_controller:controller|present_state.D~_emulated                                                                ; 1       ;
-; user_input:input_receiver|current_pin[1]~0                                                                                    ; 1       ;
 ; g24_mastermind_controller:controller|GR_LD~_emulated                                                                          ; 1       ;
 ; g24_mastermind_controller:controller|GR_SEL~_emulated                                                                         ; 1       ;
+; g24_mastermind_controller:controller|present_state.D~_emulated                                                                ; 1       ;
 ; user_input:input_receiver|last~0                                                                                              ; 1       ;
 ; datapath:main|g24_possibility_table:table|color_counter:color_counter3|Mux1~0                                                 ; 1       ;
 ; datapath:main|g24_possibility_table:table|color_counter:color_counter3|Mux2~0                                                 ; 1       ;
@@ -1655,8 +1629,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; datapath:main|mux_output_guess[4]~3                                                                                           ; 1       ;
 ; datapath:main|mux_output_guess[0]~2                                                                                           ; 1       ;
 ; datapath:main|mux_output_guess[2]~1                                                                                           ; 1       ;
-; g24_mastermind_controller:controller|prev_ready~0                                                                             ; 1       ;
 ; datapath:main|mux_output_guess[1]~0                                                                                           ; 1       ;
+; g24_mastermind_controller:controller|prev_ready~0                                                                             ; 1       ;
 ; Mux12~0                                                                                                                       ; 1       ;
 ; Mux13~0                                                                                                                       ; 1       ;
 ; Mux14~0                                                                                                                       ; 1       ;
@@ -1733,7 +1707,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+--------------+------------------------+-------------------------+------------------------+-------------------------+------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+---------------------+------+------+-------------+----------------------+-----------------+-----------------+
 ; Name                                                                                                              ; Type ; Mode             ; Clock Mode   ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Port A Input Registers ; Port A Output Registers ; Port B Input Registers ; Port B Output Registers ; Size ; Implementation Port A Depth ; Implementation Port A Width ; Implementation Port B Depth ; Implementation Port B Width ; Implementation Bits ; M4Ks ; MIF  ; Location    ; Mixed Width RDW Mode ; Port A RDW Mode ; Port B RDW Mode ;
 +-------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+--------------+------------------------+-------------------------+------------------------+-------------------------+------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+---------------------+------+------+-------------+----------------------+-----------------+-----------------+
-; datapath:main|g24_possibility_table:table|altsyncram:table_memory[0]__1|altsyncram_cug1:auto_generated|ALTSYNCRAM ; AUTO ; Simple Dual Port ; Single Clock ; 4096         ; 1            ; 4096         ; 1            ; yes                    ; no                      ; yes                    ; no                      ; 4096 ; 4096                        ; 1                           ; 4096                        ; 1                           ; 4096                ; 1    ; None ; M4K_X17_Y17 ; Old data             ; Don't care      ; Don't care      ;
+; datapath:main|g24_possibility_table:table|altsyncram:table_memory[0]__1|altsyncram_cug1:auto_generated|ALTSYNCRAM ; AUTO ; Simple Dual Port ; Single Clock ; 4096         ; 1            ; 4096         ; 1            ; yes                    ; no                      ; yes                    ; no                      ; 4096 ; 4096                        ; 1                           ; 4096                        ; 1                           ; 4096                ; 1    ; None ; M4K_X17_Y16 ; Old data             ; Don't care      ; Don't care      ;
 +-------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+--------------+------------------------+-------------------------+------------------------+-------------------------+------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+---------------------+------+------+-------------+----------------------+-----------------+-----------------+
 Note: Fitter may spread logical memories into multiple blocks to improve timing. The actual required RAM blocks can be found in the Fitter Resource Usage section.
 
@@ -1743,151 +1717,152 @@ Note: Fitter may spread logical memories into multiple blocks to improve timing.
 +-----------------------------+------------------------+
 ; Other Routing Resource Type ; Usage                  ;
 +-----------------------------+------------------------+
-; Block interconnects         ; 539 / 54,004 ( < 1 % ) ;
-; C16 interconnects           ; 10 / 2,100 ( < 1 % )   ;
-; C4 interconnects            ; 237 / 36,000 ( < 1 % ) ;
-; Direct links                ; 156 / 54,004 ( < 1 % ) ;
+; Block interconnects         ; 508 / 54,004 ( < 1 % ) ;
+; C16 interconnects           ; 3 / 2,100 ( < 1 % )    ;
+; C4 interconnects            ; 215 / 36,000 ( < 1 % ) ;
+; Direct links                ; 133 / 54,004 ( < 1 % ) ;
 ; Global clocks               ; 1 / 16 ( 6 % )         ;
-; Local interconnects         ; 272 / 18,752 ( 1 % )   ;
-; R24 interconnects           ; 27 / 1,900 ( 1 % )     ;
-; R4 interconnects            ; 281 / 46,920 ( < 1 % ) ;
+; Local interconnects         ; 255 / 18,752 ( 1 % )   ;
+; R24 interconnects           ; 38 / 1,900 ( 2 % )     ;
+; R4 interconnects            ; 302 / 46,920 ( < 1 % ) ;
 +-----------------------------+------------------------+
 
 
 +----------------------------------------------------------------------------+
 ; LAB Logic Elements                                                         ;
 +---------------------------------------------+------------------------------+
-; Number of Logic Elements  (Average = 13.03) ; Number of LABs  (Total = 34) ;
+; Number of Logic Elements  (Average = 13.00) ; Number of LABs  (Total = 33) ;
 +---------------------------------------------+------------------------------+
 ; 1                                           ; 1                            ;
 ; 2                                           ; 0                            ;
-; 3                                           ; 0                            ;
+; 3                                           ; 1                            ;
 ; 4                                           ; 2                            ;
-; 5                                           ; 1                            ;
+; 5                                           ; 0                            ;
 ; 6                                           ; 0                            ;
 ; 7                                           ; 3                            ;
-; 8                                           ; 0                            ;
-; 9                                           ; 1                            ;
-; 10                                          ; 0                            ;
-; 11                                          ; 1                            ;
-; 12                                          ; 1                            ;
-; 13                                          ; 0                            ;
-; 14                                          ; 2                            ;
-; 15                                          ; 4                            ;
-; 16                                          ; 18                           ;
+; 8                                           ; 1                            ;
+; 9                                           ; 0                            ;
+; 10                                          ; 1                            ;
+; 11                                          ; 0                            ;
+; 12                                          ; 0                            ;
+; 13                                          ; 1                            ;
+; 14                                          ; 0                            ;
+; 15                                          ; 3                            ;
+; 16                                          ; 20                           ;
 +---------------------------------------------+------------------------------+
 
 
 +-------------------------------------------------------------------+
 ; LAB-wide Signals                                                  ;
 +------------------------------------+------------------------------+
-; LAB-wide Signals  (Average = 1.44) ; Number of LABs  (Total = 34) ;
+; LAB-wide Signals  (Average = 1.27) ; Number of LABs  (Total = 33) ;
 +------------------------------------+------------------------------+
-; 1 Async. clear                     ; 10                           ;
-; 1 Clock                            ; 24                           ;
-; 1 Clock enable                     ; 10                           ;
-; 1 Sync. load                       ; 3                            ;
+; 1 Async. clear                     ; 7                            ;
+; 1 Clock                            ; 19                           ;
+; 1 Clock enable                     ; 11                           ;
+; 1 Sync. load                       ; 1                            ;
+; 2 Async. clears                    ; 1                            ;
 ; 2 Clock enables                    ; 1                            ;
-; 2 Clocks                           ; 1                            ;
+; 2 Clocks                           ; 2                            ;
 +------------------------------------+------------------------------+
 
 
 +-----------------------------------------------------------------------------+
 ; LAB Signals Sourced                                                         ;
 +----------------------------------------------+------------------------------+
-; Number of Signals Sourced  (Average = 15.56) ; Number of LABs  (Total = 34) ;
+; Number of Signals Sourced  (Average = 15.42) ; Number of LABs  (Total = 33) ;
 +----------------------------------------------+------------------------------+
 ; 0                                            ; 0                            ;
 ; 1                                            ; 1                            ;
 ; 2                                            ; 0                            ;
-; 3                                            ; 0                            ;
+; 3                                            ; 1                            ;
 ; 4                                            ; 1                            ;
 ; 5                                            ; 0                            ;
 ; 6                                            ; 1                            ;
-; 7                                            ; 3                            ;
+; 7                                            ; 2                            ;
 ; 8                                            ; 0                            ;
 ; 9                                            ; 0                            ;
 ; 10                                           ; 0                            ;
 ; 11                                           ; 1                            ;
-; 12                                           ; 2                            ;
-; 13                                           ; 0                            ;
+; 12                                           ; 0                            ;
+; 13                                           ; 1                            ;
 ; 14                                           ; 0                            ;
 ; 15                                           ; 2                            ;
-; 16                                           ; 3                            ;
-; 17                                           ; 4                            ;
-; 18                                           ; 5                            ;
-; 19                                           ; 6                            ;
-; 20                                           ; 2                            ;
+; 16                                           ; 6                            ;
+; 17                                           ; 0                            ;
+; 18                                           ; 4                            ;
+; 19                                           ; 8                            ;
+; 20                                           ; 3                            ;
 ; 21                                           ; 0                            ;
-; 22                                           ; 2                            ;
+; 22                                           ; 1                            ;
 ; 23                                           ; 0                            ;
 ; 24                                           ; 0                            ;
-; 25                                           ; 0                            ;
-; 26                                           ; 0                            ;
-; 27                                           ; 0                            ;
-; 28                                           ; 1                            ;
+; 25                                           ; 1                            ;
 +----------------------------------------------+------------------------------+
 
 
 +--------------------------------------------------------------------------------+
 ; LAB Signals Sourced Out                                                        ;
 +-------------------------------------------------+------------------------------+
-; Number of Signals Sourced Out  (Average = 8.74) ; Number of LABs  (Total = 34) ;
+; Number of Signals Sourced Out  (Average = 9.00) ; Number of LABs  (Total = 33) ;
 +-------------------------------------------------+------------------------------+
 ; 0                                               ; 0                            ;
-; 1                                               ; 2                            ;
+; 1                                               ; 1                            ;
 ; 2                                               ; 0                            ;
-; 3                                               ; 2                            ;
+; 3                                               ; 4                            ;
 ; 4                                               ; 2                            ;
-; 5                                               ; 3                            ;
+; 5                                               ; 4                            ;
 ; 6                                               ; 2                            ;
 ; 7                                               ; 5                            ;
-; 8                                               ; 4                            ;
-; 9                                               ; 2                            ;
-; 10                                              ; 1                            ;
-; 11                                              ; 1                            ;
+; 8                                               ; 2                            ;
+; 9                                               ; 1                            ;
+; 10                                              ; 0                            ;
+; 11                                              ; 2                            ;
 ; 12                                              ; 0                            ;
-; 13                                              ; 3                            ;
+; 13                                              ; 1                            ;
 ; 14                                              ; 1                            ;
-; 15                                              ; 3                            ;
-; 16                                              ; 1                            ;
-; 17                                              ; 2                            ;
+; 15                                              ; 1                            ;
+; 16                                              ; 5                            ;
+; 17                                              ; 0                            ;
+; 18                                              ; 1                            ;
+; 19                                              ; 0                            ;
+; 20                                              ; 0                            ;
+; 21                                              ; 0                            ;
+; 22                                              ; 1                            ;
 +-------------------------------------------------+------------------------------+
 
 
 +-----------------------------------------------------------------------------+
 ; LAB Distinct Inputs                                                         ;
 +----------------------------------------------+------------------------------+
-; Number of Distinct Inputs  (Average = 14.24) ; Number of LABs  (Total = 34) ;
+; Number of Distinct Inputs  (Average = 13.36) ; Number of LABs  (Total = 33) ;
 +----------------------------------------------+------------------------------+
 ; 0                                            ; 0                            ;
 ; 1                                            ; 0                            ;
-; 2                                            ; 3                            ;
-; 3                                            ; 2                            ;
-; 4                                            ; 0                            ;
+; 2                                            ; 2                            ;
+; 3                                            ; 1                            ;
+; 4                                            ; 2                            ;
 ; 5                                            ; 0                            ;
 ; 6                                            ; 1                            ;
-; 7                                            ; 1                            ;
+; 7                                            ; 3                            ;
 ; 8                                            ; 1                            ;
 ; 9                                            ; 0                            ;
-; 10                                           ; 1                            ;
-; 11                                           ; 2                            ;
-; 12                                           ; 1                            ;
-; 13                                           ; 1                            ;
-; 14                                           ; 4                            ;
-; 15                                           ; 3                            ;
-; 16                                           ; 1                            ;
+; 10                                           ; 0                            ;
+; 11                                           ; 1                            ;
+; 12                                           ; 2                            ;
+; 13                                           ; 3                            ;
+; 14                                           ; 5                            ;
+; 15                                           ; 0                            ;
+; 16                                           ; 0                            ;
 ; 17                                           ; 0                            ;
-; 18                                           ; 2                            ;
-; 19                                           ; 2                            ;
-; 20                                           ; 0                            ;
-; 21                                           ; 5                            ;
+; 18                                           ; 1                            ;
+; 19                                           ; 5                            ;
+; 20                                           ; 1                            ;
+; 21                                           ; 2                            ;
 ; 22                                           ; 0                            ;
 ; 23                                           ; 1                            ;
-; 24                                           ; 2                            ;
-; 25                                           ; 0                            ;
-; 26                                           ; 0                            ;
-; 27                                           ; 1                            ;
+; 24                                           ; 1                            ;
+; 25                                           ; 1                            ;
 +----------------------------------------------+------------------------------+
 
 
@@ -2046,7 +2021,7 @@ Info (176353): Automatically promoted node clk (placed in PIN L1 (CLK0, LVDSCLK0
 Info (176233): Starting register packing
 Info (176235): Finished register packing
     Extra Info (176219): No registers were packed into other blocks
-Info (171121): Fitter preparation operations ending: elapsed time is 00:00:01
+Info (171121): Fitter preparation operations ending: elapsed time is 00:00:02
 Info (170189): Fitter placement preparation operations beginning
 Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:00
 Info (170191): Fitter placement operations beginning
@@ -2054,12 +2029,12 @@ Info (170137): Fitter placement was successful
 Info (170192): Fitter placement operations ending: elapsed time is 00:00:01
 Info (170193): Fitter routing operations beginning
 Info (170195): Router estimated average interconnect usage is 0% of the available device resources
-    Info (170196): Router estimated peak interconnect usage is 3% of the available device resources in the region that extends from location X12_Y14 to location X24_Y27
+    Info (170196): Router estimated peak interconnect usage is 2% of the available device resources in the region that extends from location X12_Y14 to location X24_Y27
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:01
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
     Info (170200): Optimizations that may affect the design's timing were skipped
-Info (11888): Total time spent on timing analysis during the Fitter is 0.42 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.45 seconds.
 Info (306004): Started post-fitting delay annotation
 Warning (306006): Found 38 output pins without output pin load capacitance assignment
     Info (306007): Pin "segments0[0]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
@@ -2103,14 +2078,14 @@ Warning (306006): Found 38 output pins without output pin load capacitance assig
 Info (306005): Delay annotation completed successfully
 Info (306004): Started post-fitting delay annotation
 Info (306005): Delay annotation completed successfully
-Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:00
+Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
 Info (176045): Design uses memory blocks. Violating setup or hold times of memory block address registers for either read or write operations could cause memory contents to be corrupted. Make sure that all memory block address registers meet the setup and hold time requirements.
 Warning (169174): The Reserve All Unused Pins setting has not been specified, and will default to 'As output driving ground'.
 Info (144001): Generated suppressed messages file P:/323/lab5/user_pins/output_files/user_pins.fit.smsg
 Info: Quartus II 64-Bit Fitter was successful. 0 errors, 100 warnings
-    Info: Peak virtual memory: 1060 megabytes
-    Info: Processing ended: Fri Dec 04 19:16:37 2015
-    Info: Elapsed time: 00:00:10
+    Info: Peak virtual memory: 1062 megabytes
+    Info: Processing ended: Fri Dec 04 19:50:06 2015
+    Info: Elapsed time: 00:00:15
     Info: Total CPU time (on all processors): 00:00:07
 
 

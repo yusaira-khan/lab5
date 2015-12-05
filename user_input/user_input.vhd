@@ -26,21 +26,23 @@ if reset = '0'
 
 			 
 			when "00"=>
-			 current_pin<="01";
-			 patTERN(5 downto 3) <= color; 
+			 current_pin<="01";patTERN(2 downto 0) <= color;
+			 
 			 
 			when "01"=>
-			 current_pin<="10";
-			 patTERN(8 downto 6) <= color; 
+			 current_pin<="10";patTERN(5 downto 3) <= color; 
+			 
 			 
 			when "10"=>
-			 current_pin<="11";
-			 last<='1';
+			 current_pin<="11";patTERN(8 downto 6) <= color; 
+			 
+			when "11"=>
+			 current_pin<="UU";
 			 patTERN(11 downto 9) <= color; 
-			
+			last<='1';
 			when others=> 
 			current_pin<="00";
-			patTERN(2 downto 0) <= color; 
+			 
 			 last<='0';
 			
 			end case;
