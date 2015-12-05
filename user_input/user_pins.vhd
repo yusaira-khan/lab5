@@ -120,7 +120,7 @@ controller: g24_mastermind_controller	  port map(
 		GR_SEL => GR_SEL,
 		reset_not_pushed=>reset,
 	GR_LD =>GR_LD,
-	Waiting_for_ready=>waiting_for_ready,
+	Waiting_for_ready=>waiti,
 		SR_LD =>SR_LD,
 		SR_SEL =>SR_SEL,
 		TC_EN =>TC_EN,
@@ -152,15 +152,16 @@ main: datapath  PORT map(
 		NUM_EXACT=>NUM_EXACT,
 		NUM_Color=>NUM_Color
 	);
+	
 score_light_switch<=display_switch& waiti;
 with display_switch select padder <= "1010" when others;
-with display_switch select EXT_PATTERN <= "101100011010" when '1',  rando_pattern when others;
+with display_switch select EXT_PATTERN <= "011010011010" when '1',  rando_pattern when others;
 with  display_switch select direct_guess<=initial_guess  when  '1',user_pattern when others;
-with score_light_switch select display_pattern<=current_guess when "11", USer_pattern when others;
+with score_light_switch select display_pattern<=current_guess when "11", user_pattern when others;
 with score_light_switch select color_score_pins<="0000" when "10", color_mux when  others;
 with score_light_switch select exact_score_pins<="0000" when "10", exact_mux when others;
 
-
+waiting_for_ready<=waiti;
 input_receiver: user_input port  map(	color =>color,
 				shift 	=> shift,
 				last 	 => input_received,

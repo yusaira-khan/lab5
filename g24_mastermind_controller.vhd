@@ -21,21 +21,20 @@ architecture arch of g24_mastermind_controller is
 	signal present_input_state: user_input_state;
 	type interface_type is (User,system); 
 	signal current_interface: interface_type;
-	signal reset: std_logic;
+	signal prev_ready, reset: std_logic;
 	signal state_reset: std_logic;
 begin
+Waiting_for_ready <=  prev_ready;
 	clock: process(clk,reset_not_pushed)
 	begin
 	
 		if reset_not_pushed = '0'  then 
-		reset <= '1'; 
 			if switch_input = '1' then 
 					SOlVED <= '0';
 					present_state <= A;
 					TC_RST <='1';
 					current_interface<=system;
 			else 
-			state_reset <= '1';
 			present_input_state<=init;
 					GR_LD <='0'; --don't save table guess
 					P_Sel <='0'; --use hidden pattern
@@ -45,6 +44,7 @@ begin
 				current_interface <= user;
 			end if;
 		elsif  rising_edge(clk) then 
+
 			if switch_input = '1' then 
 				case present_state is
 				when A => --writing all possibilities as possible
@@ -70,19 +70,23 @@ begin
 						GR_SEL <='1';--0011
 						GR_LD <='1';--load 0011 into Guess register
 						P_SEL <='0';--using hidden pattern provided by user
-						Waiting_for_ready <='1';
+						--Waiting_for_ready <='1';
 						
 				when D => --main logic
-					if READY = '1' then --USer confirmed score
+				if reaDY ='1' then
+					prev_ready <='1';
+					elsif reaDY ='0' and prev_ready ='1' then --USer confirmed score
+						prev_ready  <='0';
 						present_state <= E;
 						TC_EN<='0';
 						--P_SEL<='0';
 						SR_SEL <='1';--compare with 4,0
 						SR_LD <='1';--save score
-						Waiting_for_ready <='1';
+						
 					end if;
 
 				when E => --wait for a clock cycle to check score against hidden pattern
+				--waiting_for_ready<='1';
 					if SC_CMP = '1' then --END
 						SOLVED <= '1';
 						
