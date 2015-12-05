@@ -12,40 +12,40 @@ end user_input;
 architecture behavior of user_input is
 signal prev_color 	:  std_logic_vector(2 downto 0);
 signal current_pin : std_logic_vector(1 downto 0);
+signal not_shift: std_logic;
 begin
 
 process(shift,reset) begin
-
+not_shift<=shift;
 if reset = '0'
  then current_pin<="UU";
-			 last<='0';
-	elsif falling_edge(shift) then 
+ last<='0';
+elsif falling_edge(shift) then 
 		prev_color<=color;
-		case current_pin is
-			
+		last<='0';
+	case current_pin is
+	when "00"=>
+		 current_pin<="01";
+		 patTERN(2 downto 0) <= prev_color;
+		 
+	when "01"=>
+		 current_pin<="10";
+		 patTERN(5 downto 3) <= prev_color; 
+		
+	when "10"=>
+		 current_pin<="11";
+		 patTERN(8 downto 6) <= prev_color; 
 
-			 
-			when "00"=>
-			 current_pin<="01";patTERN(2 downto 0) <= color;
-			 
-			 
-			when "01"=>
-			 current_pin<="10";patTERN(5 downto 3) <= color; 
-			 
-			 
-			when "10"=>
-			 current_pin<="11";patTERN(8 downto 6) <= color; 
-			 
-			when "11"=>
-			 current_pin<="UU";
-			 patTERN(11 downto 9) <= color; 
-			last<='1';
-			when others=> 
-			current_pin<="00";
-			 
-			 last<='0';
-			
-			end case;
-	end if;
+	when "11"=>
+		current_pin<="UU";
+		patTERN(11 downto 9) <= prev_color; 
+		last<='1';
+		
+	when others=> 
+		current_pin<="00";
+		
+
+	end case;
+end if;
 end process;
  end behavior;

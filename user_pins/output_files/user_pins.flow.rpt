@@ -1,5 +1,5 @@
 Flow report for user_pins
-Fri Dec 04 19:50:27 2015
+Sat Dec 05 16:34:10 2015
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
 
 
@@ -40,18 +40,18 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------------+
 ; Flow Summary                                                                          ;
 +------------------------------------+--------------------------------------------------+
-; Flow Status                        ; Successful - Fri Dec 04 19:50:27 2015            ;
+; Flow Status                        ; Successful - Sat Dec 05 16:34:10 2015            ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Full Version ;
 ; Revision Name                      ; user_pins                                        ;
-; Top-level Entity Name              ; user_pins                                        ;
+; Top-level Entity Name              ; datapath                                         ;
 ; Family                             ; Cyclone II                                       ;
 ; Device                             ; EP2C20F484C7                                     ;
 ; Timing Models                      ; Final                                            ;
-; Total logic elements               ; 429 / 18,752 ( 2 % )                             ;
-;     Total combinational functions  ; 419 / 18,752 ( 2 % )                             ;
-;     Dedicated logic registers      ; 84 / 18,752 ( < 1 % )                            ;
-; Total registers                    ; 84                                               ;
-; Total pins                         ; 46 / 315 ( 15 % )                                ;
+; Total logic elements               ; 210 / 18,752 ( 1 % )                             ;
+;     Total combinational functions  ; 209 / 18,752 ( 1 % )                             ;
+;     Dedicated logic registers      ; 28 / 18,752 ( < 1 % )                            ;
+; Total registers                    ; 28                                               ;
+; Total pins                         ; 56 / 315 ( 18 % )                                ;
 ; Total virtual pins                 ; 0                                                ;
 ; Total memory bits                  ; 4,096 / 239,616 ( 2 % )                          ;
 ; Embedded Multiplier 9-bit elements ; 0 / 52 ( 0 % )                                   ;
@@ -64,7 +64,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 12/04/2015 19:49:37 ;
+; Start date & time ; 12/05/2015 16:32:12 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; user_pins           ;
 +-------------------+---------------------+
@@ -75,43 +75,39 @@ applicable agreement for further details.
 +-------------------------------------+---------------------------------+---------------+-------------+----------------+
 ; Assignment Name                     ; Value                           ; Default Value ; Entity Name ; Section Id     ;
 +-------------------------------------+---------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 132129496018040.144927657640644 ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID               ; 132129496028865.144935113132524 ; --            ; --          ; --             ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Vhdl                            ; --            ; --          ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (VHDL)          ; <None>        ; --          ; --             ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                              ; --            ; --          ; --             ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                               ; --            ; --          ; --             ;
-; PARTITION_COLOR                     ; 16764057                        ; --            ; --          ; Top            ;
-; PARTITION_FITTER_PRESERVATION_LEVEL ; PLACEMENT_AND_ROUTING           ; --            ; --          ; Top            ;
-; PARTITION_NETLIST_TYPE              ; SOURCE                          ; --            ; --          ; Top            ;
+; PARTITION_COLOR                     ; 16764057                        ; --            ; datapath    ; Top            ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; PLACEMENT_AND_ROUTING           ; --            ; datapath    ; Top            ;
+; PARTITION_NETLIST_TYPE              ; SOURCE                          ; --            ; datapath    ; Top            ;
 ; PROJECT_OUTPUT_DIRECTORY            ; output_files                    ; --            ; --          ; --             ;
+; RTLV_SIMPLIFIED_LOGIC               ; Off                             ; On            ; --          ; --             ;
+; TOP_LEVEL_ENTITY                    ; datapath                        ; user_pins     ; --          ; --             ;
 +-------------------------------------+---------------------------------+---------------+-------------+----------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------+
-; Flow Elapsed Time                                                                                                             ;
-+---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
-+---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:13     ; 1.0                     ; 522 MB              ; 00:00:03                           ;
-; Fitter                    ; 00:00:14     ; 1.0                     ; 1062 MB             ; 00:00:07                           ;
-; Assembler                 ; 00:00:05     ; 1.0                     ; 428 MB              ; 00:00:01                           ;
-; TimeQuest Timing Analyzer ; 00:00:04     ; 1.0                     ; 447 MB              ; 00:00:01                           ;
-; EDA Netlist Writer        ; 00:00:04     ; 1.0                     ; 385 MB              ; 00:00:01                           ;
-; Total                     ; 00:00:40     ; --                      ; --                  ; 00:00:13                           ;
-+---------------------------+--------------+-------------------------+---------------------+------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------+
+; Flow Elapsed Time                                                                                                        ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Analysis & Synthesis ; 00:00:37     ; 1.0                     ; 525 MB              ; 00:00:03                           ;
+; Fitter               ; 00:00:45     ; 1.3                     ; 1156 MB             ; 00:00:07                           ;
+; Total                ; 00:01:22     ; --                      ; --                  ; 00:00:10                           ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
-+----------------------------------------------------------------------------------------+
-; Flow OS Summary                                                                        ;
-+---------------------------+------------------+-----------+------------+----------------+
-; Module Name               ; Machine Hostname ; OS Name   ; OS Version ; Processor type ;
-+---------------------------+------------------+-----------+------------+----------------+
-; Analysis & Synthesis      ; 156TR4060DS-06   ; Windows 7 ; 6.1        ; x86_64         ;
-; Fitter                    ; 156TR4060DS-06   ; Windows 7 ; 6.1        ; x86_64         ;
-; Assembler                 ; 156TR4060DS-06   ; Windows 7 ; 6.1        ; x86_64         ;
-; TimeQuest Timing Analyzer ; 156TR4060DS-06   ; Windows 7 ; 6.1        ; x86_64         ;
-; EDA Netlist Writer        ; 156TR4060DS-06   ; Windows 7 ; 6.1        ; x86_64         ;
-+---------------------------+------------------+-----------+------------+----------------+
++-----------------------------------------------------------------------------------+
+; Flow OS Summary                                                                   ;
++----------------------+------------------+-----------+------------+----------------+
+; Module Name          ; Machine Hostname ; OS Name   ; OS Version ; Processor type ;
++----------------------+------------------+-----------+------------+----------------+
+; Analysis & Synthesis ; 156TR4060DS-01   ; Windows 7 ; 6.1        ; x86_64         ;
+; Fitter               ; 156TR4060DS-01   ; Windows 7 ; 6.1        ; x86_64         ;
++----------------------+------------------+-----------+------------+----------------+
 
 
 ------------
@@ -119,9 +115,6 @@ applicable agreement for further details.
 ------------
 quartus_map --read_settings_files=on --write_settings_files=off user_pins -c user_pins
 quartus_fit --read_settings_files=off --write_settings_files=off user_pins -c user_pins
-quartus_asm --read_settings_files=off --write_settings_files=off user_pins -c user_pins
-quartus_sta user_pins -c user_pins
-quartus_eda --read_settings_files=off --write_settings_files=off user_pins -c user_pins
 
 
 
