@@ -42,7 +42,7 @@ SIGNAL segments1 : STD_LOGIC_VECTOR(6 DOWNTO 0);
 SIGNAL segments2 : STD_LOGIC_VECTOR(6 DOWNTO 0);
 SIGNAL segments3 : STD_LOGIC_VECTOR(6 DOWNTO 0);
 SIGNAL Waiting_for_ready,shift : STD_LOGIC;
-SIGNAL ready : STD_LOGIC:='0';
+SIGNAL ready : STD_LOGIC;--:='0';
 
 SIGNAL switch_input : STD_LOGIC;
 SIGNAL reset:  std_logic;
@@ -85,35 +85,357 @@ BEGIN
 	 ready=>ready
 	); 
 	clk <= not clk after 10 ns;
-	ready<= not ready after 3 us;
+	--ready<= not ready after 3 us;
 init : PROCESS                                               
 -- variable declarations                                     
 BEGIN
-
-		switch_input<= '1';
+color<= "000"; 
+	switch_input<= '1';
     reset <= '0';
 	 
-	 wait for 5 ns;
+	 wait for 30 ns;
 	 
 	 reset <= '1';
 	 
+	 shift <= '1';
+wait for 30 ns;
+
+
+
+shift <= '0'; 
+wait for 30 ns;
+shift <= '1';
+wait for 30 ns;
+      wait for 30 ns;                                            
+color<= "001";
+
+shift <= '0'; 
+wait for 30 ns;
+shift <= '1';
+wait for 30 ns; 
+wait for 30 ns; 
+
+color<= "010";
+shift <= '0'; 
+wait for 30 ns;
+shift <= '1';
+wait for 30 ns;
+wait for 30 ns; 
+
+color<= "011";
+shift <= '0'; 
+wait for 30 ns;
+shift <= '1';
+wait for 30 ns; 
+wait for 30 ns; 
+
+
+wait for 27 us;
+ready <='1';
+color<= "100";
+shift <= '0';
+wait for 30 ns; 
+
+ready <='0';
+wait for 30 ns; 
+shift <= '1';
+wait for 30 ns; 
+wait for 30 ns; 
+
+color<= "101";
+shift <= '0'; 
+wait for 30 ns;
+shift <= '1';
+
+wait for 30 ns;
+shift <= '0'; 	
+wait for 30 ns;
+shift <= '1';
+--
+--wait for 30 ns; 
+--color<= "100";
+--shift <= '0'; 
+--wait for 30 ns;
+--shift <= '1';
+--wait for 30 ns; 
+--wait for 30 ns; 
+
+color<= "101";
+shift <= '0'; 
+wait for 30 ns;
+shift <= '1';
+wait for 30 ns;	 
+
+shift <= '0'; 	 
+wait for 30 ns;
+shift <= '1';
+
+
+wait for 120 us;
+ready <='1';
+color<= "000";
+shift <= '0';
+wait for 30 ns; 
+
+ready <='0';
+wait for 30 ns; 
+shift <= '1';
+wait for 30 ns; 
+wait for 30 ns; 
+
+color<= "111";
+shift <= '0'; 
+wait for 30 ns;
+shift <= '1';
+
 	 
-wait;
+color<= "111";
+shift <= '0'; 
+wait for 30 ns;
+shift <= '1';
+wait for 30 ns; 
+wait for 30 ns; 
+
+color<= "111";
+shift <= '0'; 
+wait for 30 ns;
+shift <= '1';
+wait for 30 ns;	 
+shift <= '0'; 
+wait for 30 ns;
+shift <= '1';
  
+ wait for 120 us;
+ready <='1';
+color<= "100";
+shift <= '0';
+wait for 30 ns; 
+
+ready <='0';
+wait for 30 ns; 
+shift <= '1';
+wait for 30 ns; 
+wait for 30 ns; 
+
+color<= "011";
+shift <= '0'; 
+wait for 30 ns; 
+wait for 30 ns;
+shift <= '1';
+
+	 
+color<= "011";
+shift <= '0'; 
+wait for 30 ns;
+shift <= '1';
+wait for 30 ns; 
+wait for 30 ns; 
+
+color<= "011";
+shift <= '0'; 
+wait for 30 ns;
+shift <= '1';
+wait for 30 ns;	 
+
+wait for 120 us;
+ready <='1';
+color<= "000";
+shift <= '0';
+wait for 30 ns; 
+
+ready <='0';
+wait for 30 ns; 
+shift <= '1';
+wait for 30 ns; 
+wait for 30 ns; 
+
+color<= "111";
+shift <= '0'; 
+wait for 30 ns;
+shift <= '1';
+wait for 30 ns; 
+	 
+color<= "111";
+shift <= '0'; 
+wait for 30 ns; 
+wait for 30 ns;
+shift <= '1';
+wait for 30 ns; 
+wait for 30 ns; 
+
+color<= "111";
+shift <= '0'; 
+wait for 30 ns; 
+wait for 30 ns;
+shift <= '1';
+wait for 30 ns;	 
+color<= "011";
+shift <= '0'; 
+wait for 30 ns;
+shift <= '1';
+wait for 30 ns;	 
+
+wait for 120 us;
+ready <='1';
+color<= "000";
+shift <= '0';
+wait for 30 ns; 
+
+ready <='0';
+wait for 30 ns; 
+shift <= '1';
+wait for 30 ns; 
+wait for 30 ns; 
+
+color<= "111";
+shift <= '0'; 
+wait for 30 ns;
+shift <= '1';
+wait for 30 ns; 
+	 
+color<= "111";
+shift <= '0'; 
+wait for 30 ns; 
+wait for 30 ns;
+shift <= '1';
+wait for 30 ns; 
+wait for 30 ns; 
+
+color<= "111";
+shift <= '0'; 
+wait for 30 ns; 
+wait for 30 ns;
+shift <= '1';
+wait for 30 ns;	 
+color<= "011";
+shift <= '0'; 
+wait for 30 ns;
+shift <= '1';
+wait for 30 ns;	 
+
+wait for 120 us;
+ready <='1';
+color<= "000";
+shift <= '0';
+wait for 30 ns; 
+
+ready <='0';
+wait for 30 ns; 
+shift <= '1';
+wait for 30 ns; 
+wait for 30 ns; 
+
+color<= "111";
+shift <= '0'; 
+wait for 30 ns;
+shift <= '1';
+wait for 30 ns; 
+	 
+color<= "111";
+shift <= '0'; 
+wait for 30 ns; 
+wait for 30 ns;
+shift <= '1';
+wait for 30 ns; 
+wait for 30 ns; 
+
+color<= "111";
+shift <= '0'; 
+wait for 30 ns; 
+wait for 30 ns;
+shift <= '1';
+wait for 30 ns;	 
+color<= "011";
+shift <= '0'; 
+wait for 30 ns;
+shift <= '1';
+wait for 30 ns;	 
+
+wait for 120 us;
+ready <='1';
+color<= "000";
+shift <= '0';
+wait for 30 ns; 
+
+ready <='0';
+wait for 30 ns; 
+shift <= '1';
+wait for 30 ns; 
+wait for 30 ns; 
+
+color<= "111";
+shift <= '0'; 
+wait for 30 ns;
+shift <= '1';
+wait for 30 ns; 
+	 
+color<= "111";
+shift <= '0'; 
+wait for 30 ns; 
+wait for 30 ns;
+shift <= '1';
+wait for 30 ns; 
+wait for 30 ns; 
+
+color<= "111";
+shift <= '0'; 
+wait for 30 ns; 
+wait for 30 ns;
+shift <= '1';
+wait for 30 ns;	 
+color<= "011";
+shift <= '0'; 
+wait for 30 ns;
+shift <= '1';
+wait for 30 ns;	 
+
+wait for 120 us;
+ready <='1';
+color<= "000";
+shift <= '0';
+wait for 30 ns; 
+
+ready <='0';
+wait for 30 ns; 
+shift <= '1';
+wait for 30 ns; 
+wait for 30 ns; 
+
+color<= "111";
+shift <= '0'; 
+wait for 30 ns;
+shift <= '1';
+wait for 30 ns; 
+	 
+color<= "111";
+shift <= '0'; 
+wait for 30 ns; 
+wait for 30 ns;
+shift <= '1';
+wait for 30 ns; 
+wait for 30 ns; 
+
+color<= "111";
+shift <= '0'; 
+wait for 30 ns; 
+wait for 30 ns;
+shift <= '1';
+wait for 30 ns;	 
+wait;
 --shift<='1';
---wait for 5 ns;   
+--wait for 30 ns;   
 --color<= "011";
 --shift <= '0';  
 --wait for 30 ns; 
 -- 
 --shift<='1';
---wait for 5 ns;   
+--wait for 30 ns;   
 --color<= "100";
 --shift <= '0';  
 --wait for 30 ns;  
 --
 --shift<='1';
---wait for 5 ns;    
+--wait for 30 ns;    
 --color<= "101";
 
 END PROCESS;   
